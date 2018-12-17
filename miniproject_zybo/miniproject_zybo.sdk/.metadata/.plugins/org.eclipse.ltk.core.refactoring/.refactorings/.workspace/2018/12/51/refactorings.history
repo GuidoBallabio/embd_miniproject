@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;miniproject/src/main.cc&apos;" deleteContents="false" description="Delete resource &apos;miniproject/src/main.cc&apos;" element1="/miniproject/src/main.cc" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1545047160507"/>&#x0A;<refactoring comment="Delete resource &apos;standalone_bsp_1&apos;" deleteContents="true" description="Delete resource &apos;standalone_bsp_1&apos;" element1="/standalone_bsp_1" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1545049052038"/>
+</session>

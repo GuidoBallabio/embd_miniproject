@@ -1,0 +1,2348 @@
+!SESSION 2018-12-17 13:16:21.153 -----------------------------------------------
+eclipse.buildId=2017.2
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=da_DK
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk
+
+This is a continuation of log file C:\Users\au513437\Desktop\EMBD_vivado\miniproject_zybo\miniproject_zybo.sdk\.metadata\.bak_0.log
+Created Time: 2018-12-17 14:50:16.084
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:16.091
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:16.106
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:16.111
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:16.119
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:16.131
+!MESSAGE XSCT Command: [::hsi::utils::get_drivers_for_sw -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:16.146
+!MESSAGE XSCT command with result: [::hsi::utils::get_drivers_for_sw -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Result: [null, {"convolve_0": {"name": "convolve",
+"ver": "1.0",
+},
+"leds": {"name": "gpio",
+"ver": "4.3",
+},
+"ps7_afi_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_afi_1": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_afi_2": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_afi_3": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_coresight_comp_0": {"name": "coresightps_dcc",
+"ver": "1.4",
+},
+"ps7_ddr_0": {"name": "ddrps",
+"ver": "1.0",
+},
+"ps7_ddrc_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_dev_cfg_0": {"name": "devcfg",
+"ver": "3.4",
+},
+"ps7_dma_ns": {"name": "dmaps",
+"ver": "2.3",
+},
+"ps7_dma_s": {"name": "dmaps",
+"ver": "2.3",
+},
+"ps7_globaltimer_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_gpio_0": {"name": "gpiops",
+"ver": "3.3",
+},
+"ps7_gpv_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_intc_dist_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_iop_bus_config_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_l2cachec_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_ocmc_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_pl310_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_pmu_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_qspi_0": {"name": "qspips",
+"ver": "3.3",
+},
+"ps7_qspi_linear_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_ram_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_ram_1": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_scuc_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_scugic_0": {"name": "scugic",
+"ver": "3.7",
+},
+"ps7_scutimer_0": {"name": "scutimer",
+"ver": "2.1",
+},
+"ps7_scuwdt_0": {"name": "scuwdt",
+"ver": "2.1",
+},
+"ps7_sd_0": {"name": "sdps",
+"ver": "3.2",
+},
+"ps7_slcr_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_uart_1": {"name": "uartps",
+"ver": "3.4",
+},
+"ps7_xadc_0": {"name": "xadcps",
+"ver": "2.2",
+},
+"switches": {"name": "gpio",
+"ver": "4.3",
+},
+"ps7_cortexa9_0": {"name": "cpu_cortexa9",
+"ver": "2.4",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:16.221
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:16.229
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:16.235
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:16.243
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:16.250
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:16.258
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Result: [null, xilffs]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:16.264
+!MESSAGE XSCT Command: [::hsi::utils::get_sw_libs -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:16.273
+!MESSAGE XSCT command with result: [::hsi::utils::get_sw_libs -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Result: [null, {"xilffs": "3.6",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:16.285
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:16.295
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:29.060
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:29.072
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:29.078
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:29.087
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:29.092
+!MESSAGE XSCT Command: [::hsi::utils::get_config_params_for_sw -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:29.136
+!MESSAGE XSCT command with result: [::hsi::utils::get_config_params_for_sw -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Result: [null, {"ps7_cortexa9_0": {"archiver": {"category": "",
+"value": "arm-none-eabi-ar",
+"default": "arm-none-eabi-ar",
+"type": "string",
+"desc": "Archiver used to archive libraries for both BSP generation as well as for applications",
+"permit": "",
+"options": {},
+"range": "",
+},
+"compiler": {"category": "",
+"value": "arm-none-eabi-gcc",
+"default": "arm-none-eabi-gcc",
+"type": "string",
+"desc": "Compiler used to compile both BSP/Libraries and Applications.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"compiler_flags": {"category": "",
+"value": "-O2 -c",
+"default": "-O2 -c",
+"type": "string",
+"desc": "Compiler flags used in BSP and library generation. '-c' flag stands for 'compile and assemble, but do not link'. Without this flag, gcc tries to link the code, which will fail bacause there is no application involved during libgen. '-O2' can be overwritten by extra compiler flags",
+"permit": "none",
+"options": {},
+"range": "",
+},
+"extra_compiler_flags": {"category": "",
+"value": "-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra",
+"default": "-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra",
+"type": "string",
+"desc": "Extra compiler flags used in BSP and library generation.",
+"permit": "",
+"options": {},
+"range": "",
+},
+},
+"standalone": {"enable_sw_intrusive_profiling": {"category": "sw_intrusive_profiling",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enable S/W Intrusive Profiling on Hardware Targets",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"hypervisor_guest": {"category": "",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enable hypervisor guest support for A53 64bit EL1 Non-Secure. If hypervisor_guest is not selected, BSP will be built for EL3.",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"microblaze_exceptions": {"category": "microblaze_exceptions",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enable MicroBlaze Exceptions",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"predecode_fpu_exceptions": {"category": "microblaze_exceptions",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "(MicroBlaze) Predecode FPU exceptions and save operand info before invoking user registered exception handler.",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"profile_timer": {"category": "sw_intrusive_profiling",
+"value": "none",
+"default": "none",
+"type": "peripheral_instance",
+"desc": "Specify the Timer to use for Profiling. For PowerPC system, specify none to use PIT timer. For ARM system, specify none to use SCU timer",
+"permit": "",
+"options": {},
+"range": "",
+},
+"stdin": {"category": "",
+"value": "ps7_uart_1",
+"default": "none",
+"type": "peripheral_instance",
+"desc": "stdin peripheral",
+"permit": "",
+"options": {},
+"range": "ps7_coresight_comp_0 ps7_uart_1",
+},
+"stdout": {"category": "",
+"value": "ps7_uart_1",
+"default": "none",
+"type": "peripheral_instance",
+"desc": "stdout peripheral",
+"permit": "",
+"options": {},
+"range": "ps7_coresight_comp_0 ps7_uart_1",
+},
+"zynqmp_fsbl_bsp": {"category": "",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Disable or Enable Optimization for FSBL's BSP. ZynqMP FSBL will set this to true",
+"permit": "",
+"options": {},
+"range": "",
+},
+},
+"xilffs": {"enable_multi_partition": {"category": "",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "0:Single partition, 1:Enable multiple partition",
+"permit": "",
+"options": {},
+"range": "",
+},
+"fs_interface": {"category": "",
+"value": "1",
+"default": "1",
+"type": "int",
+"desc": "Enables file system with selected interface. Enter 1 for SD.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"num_logical_vol": {"category": "",
+"value": "2",
+"default": "2",
+"type": "int",
+"desc": "Number of volumes (logical drives, from 1 to 10) to be used.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"read_only": {"category": "",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enables the file system in Read_Only mode if true. ZynqMP fsbl will set this to true",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_lfn": {"category": "",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enables the Long File Name(LFN) support if true.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_mkfs": {"category": "",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Disable(0) or Enable(1) f_mkfs function. ZynqMP fsbl will set this to false",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_strfunc": {"category": "",
+"value": "0",
+"default": "0",
+"type": "int",
+"desc": "Enables the string functions (valid values 0 to 2).",
+"permit": "",
+"options": {},
+"range": "",
+},
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:29.146
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:29.155
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:29.161
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:29.170
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:29.177
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf ps7_cortexa9_0 C_ENDIANNESS], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:29.185
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf ps7_cortexa9_0 C_ENDIANNESS], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:29.600
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:29.610
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Result: [null, xilffs]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:29.617
+!MESSAGE XSCT Command: [::hsi::utils::get_sw_libs -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:29.629
+!MESSAGE XSCT command with result: [::hsi::utils::get_sw_libs -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Result: [null, {"xilffs": "3.6",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:29.637
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:29.645
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Result: [null, xilffs]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:29.651
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:29.657
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:29.709
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:29.725
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:29.731
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:29.740
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:29.747
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:29.755
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:29.761
+!MESSAGE XSCT Command: [::hsi::utils::opensw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:29.769
+!MESSAGE XSCT command with result: [::hsi::utils::opensw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:29.776
+!MESSAGE XSCT Command: [::hsi::utils::generate_app_template -hw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf -sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss -app empty_application -processor ps7_cortexa9_0 -os standalone -dir C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1_xscutimer_polled_example_1/src], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:29.867
+!MESSAGE XSCT command with result: [::hsi::utils::generate_app_template -hw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf -sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss -app empty_application -processor ps7_cortexa9_0 -os standalone -dir C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1_xscutimer_polled_example_1/src], Result: [null, ]. Thread: main
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-12-17 14:50:30.438
+!MESSAGE Indexed 'standalone_bsp_1_xscutimer_polled_example_1' (1 sources, 36 headers) in 0,242 sec: 576 declarations; 1.462 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:30.533
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:30.543
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:30.550
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:30.559
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:30.566
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:30.575
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Result: [null, xilffs]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:30.581
+!MESSAGE XSCT Command: [::hsi::utils::get_sw_libs -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:30.590
+!MESSAGE XSCT command with result: [::hsi::utils::get_sw_libs -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Result: [null, {"xilffs": "3.6",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:30.597
+!MESSAGE XSCT Command: [::hsi::utils::get_drivers_for_sw -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:30.613
+!MESSAGE XSCT command with result: [::hsi::utils::get_drivers_for_sw -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Result: [null, {"convolve_0": {"name": "convolve",
+"ver": "1.0",
+},
+"leds": {"name": "gpio",
+"ver": "4.3",
+},
+"ps7_afi_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_afi_1": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_afi_2": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_afi_3": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_coresight_comp_0": {"name": "coresightps_dcc",
+"ver": "1.4",
+},
+"ps7_ddr_0": {"name": "ddrps",
+"ver": "1.0",
+},
+"ps7_ddrc_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_dev_cfg_0": {"name": "devcfg",
+"ver": "3.4",
+},
+"ps7_dma_ns": {"name": "dmaps",
+"ver": "2.3",
+},
+"ps7_dma_s": {"name": "dmaps",
+"ver": "2.3",
+},
+"ps7_globaltimer_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_gpio_0": {"name": "gpiops",
+"ver": "3.3",
+},
+"ps7_gpv_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_intc_dist_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_iop_bus_config_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_l2cachec_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_ocmc_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_pl310_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_pmu_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_qspi_0": {"name": "qspips",
+"ver": "3.3",
+},
+"ps7_qspi_linear_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_ram_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_ram_1": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_scuc_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_scugic_0": {"name": "scugic",
+"ver": "3.7",
+},
+"ps7_scutimer_0": {"name": "scutimer",
+"ver": "2.1",
+},
+"ps7_scuwdt_0": {"name": "scuwdt",
+"ver": "2.1",
+},
+"ps7_sd_0": {"name": "sdps",
+"ver": "3.2",
+},
+"ps7_slcr_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_uart_1": {"name": "uartps",
+"ver": "3.4",
+},
+"ps7_xadc_0": {"name": "xadcps",
+"ver": "2.2",
+},
+"switches": {"name": "gpio",
+"ver": "4.3",
+},
+"ps7_cortexa9_0": {"name": "cpu_cortexa9",
+"ver": "2.4",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:30.621
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:30.629
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:30.682
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:30.694
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:30.700
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:30.709
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:30.715
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:30.724
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Result: [null, xilffs]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:30.729
+!MESSAGE XSCT Command: [::hsi::utils::get_sw_libs -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:30.739
+!MESSAGE XSCT command with result: [::hsi::utils::get_sw_libs -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Result: [null, {"xilffs": "3.6",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:30.747
+!MESSAGE XSCT Command: [::hsi::utils::get_drivers_for_sw -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:30.763
+!MESSAGE XSCT command with result: [::hsi::utils::get_drivers_for_sw -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Result: [null, {"convolve_0": {"name": "convolve",
+"ver": "1.0",
+},
+"leds": {"name": "gpio",
+"ver": "4.3",
+},
+"ps7_afi_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_afi_1": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_afi_2": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_afi_3": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_coresight_comp_0": {"name": "coresightps_dcc",
+"ver": "1.4",
+},
+"ps7_ddr_0": {"name": "ddrps",
+"ver": "1.0",
+},
+"ps7_ddrc_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_dev_cfg_0": {"name": "devcfg",
+"ver": "3.4",
+},
+"ps7_dma_ns": {"name": "dmaps",
+"ver": "2.3",
+},
+"ps7_dma_s": {"name": "dmaps",
+"ver": "2.3",
+},
+"ps7_globaltimer_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_gpio_0": {"name": "gpiops",
+"ver": "3.3",
+},
+"ps7_gpv_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_intc_dist_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_iop_bus_config_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_l2cachec_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_ocmc_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_pl310_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_pmu_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_qspi_0": {"name": "qspips",
+"ver": "3.3",
+},
+"ps7_qspi_linear_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_ram_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_ram_1": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_scuc_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_scugic_0": {"name": "scugic",
+"ver": "3.7",
+},
+"ps7_scutimer_0": {"name": "scutimer",
+"ver": "2.1",
+},
+"ps7_scuwdt_0": {"name": "scuwdt",
+"ver": "2.1",
+},
+"ps7_sd_0": {"name": "sdps",
+"ver": "3.2",
+},
+"ps7_slcr_0": {"name": "generic",
+"ver": "2.0",
+},
+"ps7_uart_1": {"name": "uartps",
+"ver": "3.4",
+},
+"ps7_xadc_0": {"name": "xadcps",
+"ver": "2.2",
+},
+"switches": {"name": "gpio",
+"ver": "4.3",
+},
+"ps7_cortexa9_0": {"name": "cpu_cortexa9",
+"ver": "2.4",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:30.770
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 14:50:30.777
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:07:02.948
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_tag_info -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_0/system.hdf ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:07:02.958
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_tag_info -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_0/system.hdf ], Result: [null, {"ps7_cortexa9_0": "",
+"ps7_cortexa9_1": "",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:07:04.457
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_0/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:07:04.466
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_0/system.hdf ], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:07:04.475
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:07:05.602
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:07:05.610
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:07:06.886
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zybo 210279A6A756A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:07:06.894
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:07:06.908
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zybo 210279A6A756A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:07:06.915
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:07:06.949
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:07:06.956
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:07:07.675
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:07:07.681
+!MESSAGE XSCT Command: [fpga -file C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_0/system_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:07:08.905
+!MESSAGE XSCT command with result: [fpga -file C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_0/system_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:07:09.714
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_0/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:07:09.729
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_0/system.hdf ], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:07:13.461
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:07:13.473
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:07:13.479
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:07:13.487
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:07:13.493
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:07:13.499
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:07:20.404
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_files_on_hw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_0/system.hdf bit], Thread: Worker-52
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:07:20.412
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_files_on_hw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_0/system.hdf bit], Result: [null, system_wrapper.bit]. Thread: Worker-52
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:07:20.601
+!MESSAGE XSCT Command: [::hsi::utils::get_cpu_nr -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_0/system.hdf], Thread: Worker-52
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:07:20.611
+!MESSAGE XSCT command with result: [::hsi::utils::get_cpu_nr -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_0/system.hdf], Result: [null, {"ps7_cortexa9_0": {"bscan": "",
+"index": "0",
+},
+"ps7_cortexa9_1": {"bscan": "",
+"index": "1",
+},
+}]. Thread: Worker-52
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:07:50.467
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:07:50.480
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:07:50.487
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:07:50.495
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:07:50.501
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:07:50.507
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY org.eclipse.ui 4 4 2018-12-17 15:15:01.036
+!MESSAGE Unable to process element: viewright in perspective extension: null
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:15:02.978
+!MESSAGE XSCT Command: [enable_info_messages], Thread: Worker-48
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:15:02.987
+!MESSAGE XSCT command with result: [enable_info_messages], Result: [null, ]. Thread: Worker-48
+
+!ENTRY org.eclipse.cdt.debug.mi.core 4 42 2018-12-17 15:17:21.787
+!MESSAGE Internal Error
+!STACK 0
+org.eclipse.cdt.debug.mi.core.cdi.MI2CDIException: Inferior terminated[]
+	at org.eclipse.cdt.debug.mi.core.cdi.SharedLibraryManager.getMIShareds(SharedLibraryManager.java:123)
+	at org.eclipse.cdt.debug.mi.core.cdi.SharedLibraryManager.updateState(SharedLibraryManager.java:189)
+	at org.eclipse.cdt.debug.mi.core.cdi.SharedLibraryManager.update(SharedLibraryManager.java:137)
+	at org.eclipse.cdt.debug.mi.core.cdi.EventManager.processSuspendedEvent(EventManager.java:329)
+	at org.eclipse.cdt.debug.mi.core.cdi.EventManager.update(EventManager.java:101)
+	at java.util.Observable.notifyObservers(Observable.java:159)
+	at org.eclipse.cdt.debug.mi.core.MISession.notifyObservers(MISession.java:797)
+	at org.eclipse.cdt.debug.mi.core.EventThread.run(EventThread.java:47)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:30.398
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:30.412
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:30.418
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:30.427
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:30.433
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:30.440
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:34.696
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:34.710
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:34.716
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:34.726
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:34.732
+!MESSAGE XSCT Command: [::hsi::utils::get_config_params_for_sw -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:34.769
+!MESSAGE XSCT command with result: [::hsi::utils::get_config_params_for_sw -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Result: [null, {"ps7_cortexa9_0": {"archiver": {"category": "",
+"value": "arm-none-eabi-ar",
+"default": "arm-none-eabi-ar",
+"type": "string",
+"desc": "Archiver used to archive libraries for both BSP generation as well as for applications",
+"permit": "",
+"options": {},
+"range": "",
+},
+"compiler": {"category": "",
+"value": "arm-none-eabi-gcc",
+"default": "arm-none-eabi-gcc",
+"type": "string",
+"desc": "Compiler used to compile both BSP/Libraries and Applications.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"compiler_flags": {"category": "",
+"value": "-O2 -c",
+"default": "-O2 -c",
+"type": "string",
+"desc": "Compiler flags used in BSP and library generation. '-c' flag stands for 'compile and assemble, but do not link'. Without this flag, gcc tries to link the code, which will fail bacause there is no application involved during libgen. '-O2' can be overwritten by extra compiler flags",
+"permit": "none",
+"options": {},
+"range": "",
+},
+"extra_compiler_flags": {"category": "",
+"value": "-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra",
+"default": "-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra",
+"type": "string",
+"desc": "Extra compiler flags used in BSP and library generation.",
+"permit": "",
+"options": {},
+"range": "",
+},
+},
+"standalone": {"enable_sw_intrusive_profiling": {"category": "sw_intrusive_profiling",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enable S/W Intrusive Profiling on Hardware Targets",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"hypervisor_guest": {"category": "",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enable hypervisor guest support for A53 64bit EL1 Non-Secure. If hypervisor_guest is not selected, BSP will be built for EL3.",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"microblaze_exceptions": {"category": "microblaze_exceptions",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enable MicroBlaze Exceptions",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"predecode_fpu_exceptions": {"category": "microblaze_exceptions",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "(MicroBlaze) Predecode FPU exceptions and save operand info before invoking user registered exception handler.",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"profile_timer": {"category": "sw_intrusive_profiling",
+"value": "none",
+"default": "none",
+"type": "peripheral_instance",
+"desc": "Specify the Timer to use for Profiling. For PowerPC system, specify none to use PIT timer. For ARM system, specify none to use SCU timer",
+"permit": "",
+"options": {},
+"range": "",
+},
+"stdin": {"category": "",
+"value": "ps7_uart_1",
+"default": "none",
+"type": "peripheral_instance",
+"desc": "stdin peripheral",
+"permit": "",
+"options": {},
+"range": "ps7_coresight_comp_0 ps7_uart_1",
+},
+"stdout": {"category": "",
+"value": "ps7_uart_1",
+"default": "none",
+"type": "peripheral_instance",
+"desc": "stdout peripheral",
+"permit": "",
+"options": {},
+"range": "ps7_coresight_comp_0 ps7_uart_1",
+},
+"zynqmp_fsbl_bsp": {"category": "",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Disable or Enable Optimization for FSBL's BSP. ZynqMP FSBL will set this to true",
+"permit": "",
+"options": {},
+"range": "",
+},
+},
+"xilffs": {"enable_multi_partition": {"category": "",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "0:Single partition, 1:Enable multiple partition",
+"permit": "",
+"options": {},
+"range": "",
+},
+"fs_interface": {"category": "",
+"value": "1",
+"default": "1",
+"type": "int",
+"desc": "Enables file system with selected interface. Enter 1 for SD.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"num_logical_vol": {"category": "",
+"value": "2",
+"default": "2",
+"type": "int",
+"desc": "Number of volumes (logical drives, from 1 to 10) to be used.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"read_only": {"category": "",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enables the file system in Read_Only mode if true. ZynqMP fsbl will set this to true",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_lfn": {"category": "",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enables the Long File Name(LFN) support if true.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_mkfs": {"category": "",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Disable(0) or Enable(1) f_mkfs function. ZynqMP fsbl will set this to false",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_strfunc": {"category": "",
+"value": "0",
+"default": "0",
+"type": "int",
+"desc": "Enables the string functions (valid values 0 to 2).",
+"permit": "",
+"options": {},
+"range": "",
+},
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:34.776
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_0/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_0/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:34.785
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_0/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_0/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:34.792
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_0/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:34.801
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_0/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:34.808
+!MESSAGE XSCT Command: [::hsi::utils::get_config_params_for_sw -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_0/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_0/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:34.843
+!MESSAGE XSCT command with result: [::hsi::utils::get_config_params_for_sw -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_0/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_0/system.mss], Result: [null, {"ps7_cortexa9_0": {"archiver": {"category": "",
+"value": "arm-none-eabi-ar",
+"default": "arm-none-eabi-ar",
+"type": "string",
+"desc": "Archiver used to archive libraries for both BSP generation as well as for applications",
+"permit": "",
+"options": {},
+"range": "",
+},
+"compiler": {"category": "",
+"value": "arm-none-eabi-gcc",
+"default": "arm-none-eabi-gcc",
+"type": "string",
+"desc": "Compiler used to compile both BSP/Libraries and Applications.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"compiler_flags": {"category": "",
+"value": "-O2 -c",
+"default": "-O2 -c",
+"type": "string",
+"desc": "Compiler flags used in BSP and library generation. '-c' flag stands for 'compile and assemble, but do not link'. Without this flag, gcc tries to link the code, which will fail bacause there is no application involved during libgen. '-O2' can be overwritten by extra compiler flags",
+"permit": "none",
+"options": {},
+"range": "",
+},
+"extra_compiler_flags": {"category": "",
+"value": "-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra",
+"default": "-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra",
+"type": "string",
+"desc": "Extra compiler flags used in BSP and library generation.",
+"permit": "",
+"options": {},
+"range": "",
+},
+},
+"standalone": {"enable_sw_intrusive_profiling": {"category": "sw_intrusive_profiling",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enable S/W Intrusive Profiling on Hardware Targets",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"hypervisor_guest": {"category": "",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enable hypervisor guest support for A53 64bit EL1 Non-Secure. If hypervisor_guest is not selected, BSP will be built for EL3.",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"microblaze_exceptions": {"category": "microblaze_exceptions",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enable MicroBlaze Exceptions",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"predecode_fpu_exceptions": {"category": "microblaze_exceptions",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "(MicroBlaze) Predecode FPU exceptions and save operand info before invoking user registered exception handler.",
+"permit": "user",
+"options": {},
+"range": "",
+},
+"profile_timer": {"category": "sw_intrusive_profiling",
+"value": "none",
+"default": "none",
+"type": "peripheral_instance",
+"desc": "Specify the Timer to use for Profiling. For PowerPC system, specify none to use PIT timer. For ARM system, specify none to use SCU timer",
+"permit": "",
+"options": {},
+"range": "",
+},
+"stdin": {"category": "",
+"value": "ps7_coresight_comp_0",
+"default": "none",
+"type": "peripheral_instance",
+"desc": "stdin peripheral",
+"permit": "",
+"options": {},
+"range": "ps7_coresight_comp_0 ps7_uart_1",
+},
+"stdout": {"category": "",
+"value": "ps7_coresight_comp_0",
+"default": "none",
+"type": "peripheral_instance",
+"desc": "stdout peripheral",
+"permit": "",
+"options": {},
+"range": "ps7_coresight_comp_0 ps7_uart_1",
+},
+"zynqmp_fsbl_bsp": {"category": "",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Disable or Enable Optimization for FSBL's BSP. ZynqMP FSBL will set this to true",
+"permit": "",
+"options": {},
+"range": "",
+},
+},
+"xilffs": {"enable_multi_partition": {"category": "",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "0:Single partition, 1:Enable multiple partition",
+"permit": "",
+"options": {},
+"range": "",
+},
+"fs_interface": {"category": "",
+"value": "1",
+"default": "1",
+"type": "int",
+"desc": "Enables file system with selected interface. Enter 1 for SD.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"num_logical_vol": {"category": "",
+"value": "2",
+"default": "2",
+"type": "int",
+"desc": "Number of volumes (logical drives, from 1 to 10) to be used.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"read_only": {"category": "",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enables the file system in Read_Only mode if true. ZynqMP fsbl will set this to true",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_lfn": {"category": "",
+"value": "false",
+"default": "false",
+"type": "bool",
+"desc": "Enables the Long File Name(LFN) support if true.",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_mkfs": {"category": "",
+"value": "true",
+"default": "true",
+"type": "bool",
+"desc": "Disable(0) or Enable(1) f_mkfs function. ZynqMP fsbl will set this to false",
+"permit": "",
+"options": {},
+"range": "",
+},
+"use_strfunc": {"category": "",
+"value": "0",
+"default": "0",
+"type": "int",
+"desc": "Enables the string functions (valid values 0 to 2).",
+"permit": "",
+"options": {},
+"range": "",
+},
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:38.999
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_files_on_hw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf bit], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:39.008
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_files_on_hw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf bit], Result: [null, system_wrapper.bit]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:39.016
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_tag_info -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:39.025
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_tag_info -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf ], Result: [null, {"ps7_cortexa9_0": "",
+"ps7_cortexa9_1": "",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:42.417
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_tag_info -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:42.427
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_tag_info -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf ], Result: [null, {"ps7_cortexa9_0": "",
+"ps7_cortexa9_1": "",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:45.021
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:45.031
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf ], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:45.037
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:45.045
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:45.052
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:45.068
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zybo 210279A6A756A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:45.074
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:45.089
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zybo 210279A6A756A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:45.096
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:45.131
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:45.138
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:45.175
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:45.182
+!MESSAGE XSCT Command: [fpga -file C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:46.404
+!MESSAGE XSCT command with result: [fpga -file C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:47.215
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:24:47.229
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf ], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:27:52.785
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:27:52.794
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:27:52.800
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:27:52.808
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:27:52.814
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:27:52.820
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 1 0 2018-12-17 15:38:13.933
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:13.944
+!MESSAGE XSCT Command: [::hsi::utils::get_ps_config_params -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:13.958
+!MESSAGE XSCT command with result: [::hsi::utils::get_ps_config_params -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf], Result: [null, {"PCW_APU_PERIPHERAL_FREQMHZ": "650",
+"PCW_DDR_HPRLPR_QUEUE_PARTITION": "HPR(0)/LPR(32)",
+"PCW_DDR_HPR_TO_CRITICAL_PRIORITY_LEVEL": "15",
+"PCW_DDR_LPR_TO_CRITICAL_PRIORITY_LEVEL": "2",
+"PCW_DDR_PORT0_HPR_ENABLE": "0",
+"PCW_DDR_PORT1_HPR_ENABLE": "0",
+"PCW_DDR_PORT2_HPR_ENABLE": "0",
+"PCW_DDR_PORT3_HPR_ENABLE": "0",
+"PCW_DDR_WRITE_TO_CRITICAL_PRIORITY_LEVEL": "2",
+"PCW_FPGA0_PERIPHERAL_FREQMHZ": "100",
+"PCW_UIPARAM_DDR_BUS_WIDTH": "32 Bit",
+"PCW_UIPARAM_DDR_FREQ_MHZ": "525",
+}]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:13.967
+!MESSAGE XSCT Command: [::hsi::utils::get_cpu_nr -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:13.981
+!MESSAGE XSCT command with result: [::hsi::utils::get_cpu_nr -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf], Result: [null, {"ps7_cortexa9_0": {"bscan": "",
+"index": "0",
+},
+"ps7_cortexa9_1": {"bscan": "",
+"index": "1",
+},
+}]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:13.990
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_ranges -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf ps7_cortexa9_1], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.022
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_ranges -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf ps7_cortexa9_1], Result: [null, {"switches_S_AXI": {"name": "switches",
+"base": "0x41200000",
+"high": "0x4120FFFF",
+"size": "65536",
+"slaveintf": "S_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"leds_S_AXI": {"name": "leds",
+"base": "0x41210000",
+"high": "0x4121FFFF",
+"size": "65536",
+"slaveintf": "S_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"convolve_0_s_axi_conv": {"name": "convolve_0",
+"base": "0x43C00000",
+"high": "0x43C0FFFF",
+"size": "65536",
+"slaveintf": "s_axi_conv",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_0": {"name": "ps7_afi_0",
+"base": "0xF8008000",
+"high": "0xF8008FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_1": {"name": "ps7_afi_1",
+"base": "0xF8009000",
+"high": "0xF8009FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_2": {"name": "ps7_afi_2",
+"base": "0xF800A000",
+"high": "0xF800AFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_3": {"name": "ps7_afi_3",
+"base": "0xF800B000",
+"high": "0xF800BFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_coresight_comp_0": {"name": "ps7_coresight_comp_0",
+"base": "0xF8800000",
+"high": "0xF88FFFFF",
+"size": "1048576",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ddrc_0": {"name": "ps7_ddrc_0",
+"base": "0xF8006000",
+"high": "0xF8006FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_dev_cfg_0": {"name": "ps7_dev_cfg_0",
+"base": "0xF8007000",
+"high": "0xF80070FF",
+"size": "256",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_dma_ns": {"name": "ps7_dma_ns",
+"base": "0xF8004000",
+"high": "0xF8004FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_dma_s": {"name": "ps7_dma_s",
+"base": "0xF8003000",
+"high": "0xF8003FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_globaltimer_0": {"name": "ps7_globaltimer_0",
+"base": "0xF8F00200",
+"high": "0xF8F002FF",
+"size": "256",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_gpio_0": {"name": "ps7_gpio_0",
+"base": "0xE000A000",
+"high": "0xE000AFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_gpv_0": {"name": "ps7_gpv_0",
+"base": "0xF8900000",
+"high": "0xF89FFFFF",
+"size": "1048576",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_intc_dist_0": {"name": "ps7_intc_dist_0",
+"base": "0xF8F01000",
+"high": "0xF8F01FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_iop_bus_config_0": {"name": "ps7_iop_bus_config_0",
+"base": "0xE0200000",
+"high": "0xE0200FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_l2cachec_0": {"name": "ps7_l2cachec_0",
+"base": "0xF8F02000",
+"high": "0xF8F02FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ocmc_0": {"name": "ps7_ocmc_0",
+"base": "0xF800C000",
+"high": "0xF800CFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_pl310_0": {"name": "ps7_pl310_0",
+"base": "0xF8F02000",
+"high": "0xF8F02FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_pmu_0": {"name": "ps7_pmu_0",
+"base": "0xF8893000",
+"high": "0xF8893FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_qspi_0": {"name": "ps7_qspi_0",
+"base": "0xE000D000",
+"high": "0xE000DFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_qspi_linear_0": {"name": "ps7_qspi_linear_0",
+"base": "0xFC000000",
+"high": "0xFCFFFFFF",
+"size": "16777216",
+"slaveintf": "",
+"type": "FLASH",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scuc_0": {"name": "ps7_scuc_0",
+"base": "0xF8F00000",
+"high": "0xF8F000FC",
+"size": "253",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scugic_0": {"name": "ps7_scugic_0",
+"base": "0xF8F00100",
+"high": "0xF8F001FF",
+"size": "256",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scutimer_0": {"name": "ps7_scutimer_0",
+"base": "0xF8F00600",
+"high": "0xF8F0061F",
+"size": "32",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scuwdt_0": {"name": "ps7_scuwdt_0",
+"base": "0xF8F00620",
+"high": "0xF8F006FF",
+"size": "224",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_sd_0": {"name": "ps7_sd_0",
+"base": "0xE0100000",
+"high": "0xE0100FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_slcr_0": {"name": "ps7_slcr_0",
+"base": "0xF8000000",
+"high": "0xF8000FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_uart_1": {"name": "ps7_uart_1",
+"base": "0xE0001000",
+"high": "0xE0001FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_xadc_0": {"name": "ps7_xadc_0",
+"base": "0xF8007100",
+"high": "0xF8007120",
+"size": "33",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ddr_0": {"name": "ps7_ddr_0",
+"base": "0x00100000",
+"high": "0x1FFFFFFF",
+"size": "535822336",
+"slaveintf": "",
+"type": "MEMORY",
+"flags": "7",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ram_0": {"name": "ps7_ram_0",
+"base": "0x00000000",
+"high": "0x0002FFFF",
+"size": "196608",
+"slaveintf": "",
+"type": "MEMORY",
+"flags": "7",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ram_1": {"name": "ps7_ram_1",
+"base": "0xFFFF0000",
+"high": "0xFFFFFDFF",
+"size": "65024",
+"slaveintf": "",
+"type": "MEMORY",
+"flags": "7",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+}]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.029
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf ps7_cortexa9_1 C_DEBUG_ENABLED], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.036
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf ps7_cortexa9_1 C_DEBUG_ENABLED], Result: [null, ]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.043
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf ps7_cortexa9_1 C_DEBUG_EVENT_COUNTERS], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.051
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf ps7_cortexa9_1 C_DEBUG_EVENT_COUNTERS], Result: [null, ]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.057
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf ps7_cortexa9_1 C_DEBUG_LATENCY_COUNTERS], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.065
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf ps7_cortexa9_1 C_DEBUG_LATENCY_COUNTERS], Result: [null, ]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.071
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf ps7_cortexa9_1 C_DEBUG_COUNTER_WIDTH], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.078
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf ps7_cortexa9_1 C_DEBUG_COUNTER_WIDTH], Result: [null, ]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.084
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf ps7_cortexa9_1 C_FREQ], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.091
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf ps7_cortexa9_1 C_FREQ], Result: [null, ]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.097
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf ps7_cortexa9_1 C_CPU_CLK_FREQ_HZ], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.105
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf ps7_cortexa9_1 C_CPU_CLK_FREQ_HZ], Result: [null, 650000000]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.130
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.137
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.143
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.159
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zybo 210279A6A756A]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.165
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.179
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zybo 210279A6A756A]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.185
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==1}], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.228
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.236
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==0} -index 1], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.274
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==0} -index 1], Result: [null, ]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.280
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.287
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.294
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.301
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.307
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.322
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zybo 210279A6A756A]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.328
+!MESSAGE XSCT Command: [version -server], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.335
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2017.2]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.340
+!MESSAGE XSCT Command: [version], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.346
+!MESSAGE XSCT command with result: [version], Result: [null, 2017.2]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.352
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.366
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zybo 210279A6A756A]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.371
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==1}], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.405
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.411
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.425
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zybo 210279A6A756A]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.431
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==1}], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.466
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.472
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.486
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zybo 210279A6A756A]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.492
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==1}], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.526
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.532
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.545
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zybo 210279A6A756A]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.551
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==1}], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.585
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.591
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.605
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zybo 210279A6A756A]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.611
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==1}], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.646
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.653
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.667
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zybo 210279A6A756A]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.672
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==1}], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.706
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.712
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Zybo 210279A6A756A" && level == 0}], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.747
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Zybo 210279A6A756A" && level == 0}], Result: [null, ]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.752
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.758
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.764
+!MESSAGE XSCT Command: [source C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/ps7_init.tcl], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.771
+!MESSAGE XSCT command with result: [source C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/ps7_init.tcl], Result: [null, ]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.777
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279A6A756A"} -index 0], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.820
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279A6A756A"} -index 0], Result: [null, ]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.826
+!MESSAGE XSCT Command: [loadhw -hw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.891
+!MESSAGE XSCT command with result: [loadhw -hw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Result: [null, system_wrapper_2]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.897
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.904
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.909
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279A6A756A"} -index 0], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.954
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279A6A756A"} -index 0], Result: [null, ]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.961
+!MESSAGE XSCT Command: [stop], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.983
+!MESSAGE XSCT command with result: [stop], Result: [null, ]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:14.989
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:15.579
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:15.586
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:15.600
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:15.607
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279A6A756A"} -index 0], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:15.651
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279A6A756A"} -index 0], Result: [null, ]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:15.658
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:15.742
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:15.752
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279A6A756A"} -index 0], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:15.813
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279A6A756A"} -index 0], Result: [null, ]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:15.820
+!MESSAGE XSCT Command: [dow C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/miniproject/Debug/miniproject.elf], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:17.861
+!MESSAGE XSCT command with result: [dow C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/miniproject/Debug/miniproject.elf], Result: [null, ]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:17.867
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:17.873
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:18.058
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279A6A756A"} -index 0], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:18.212
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279A6A756A"} -index 0], Result: [null, ]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:18.220
+!MESSAGE XSCT Command: [con], Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:38:18.236
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-62
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:06.190
+!MESSAGE XSCT Command: [disconnect tcfchan#1], Thread: Thread-1592
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:06.242
+!MESSAGE XSCT command with result: [disconnect tcfchan#1], Result: [null, ]. Thread: Thread-1592
+
+!ENTRY com.xilinx.sdk.utils 1 0 2018-12-17 15:40:07.211
+!MESSAGE Updating toolusage
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.217
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.228
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#2]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.241
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.271
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo 210279A6A756A]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.278
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.291
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo 210279A6A756A]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.297
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==1}], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.331
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.337
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==0} -index 1], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.383
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==0} -index 1], Result: [null, ]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.389
+!MESSAGE XSCT Command: [fpga -state], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.420
+!MESSAGE XSCT command with result: [fpga -state], Result: [null, FPGA is configured]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.430
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.440
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#2]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.449
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.464
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo 210279A6A756A]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.470
+!MESSAGE XSCT Command: [version -server], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.476
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2017.2]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.481
+!MESSAGE XSCT Command: [version], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.487
+!MESSAGE XSCT command with result: [version], Result: [null, 2017.2]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.492
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.506
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo 210279A6A756A]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.512
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==1}], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.547
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.554
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.568
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo 210279A6A756A]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.573
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==1}], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.608
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.614
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.628
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo 210279A6A756A]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.634
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==1}], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.668
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.674
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.688
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo 210279A6A756A]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.694
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==1}], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.732
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.738
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.752
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo 210279A6A756A]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.758
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==1}], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.793
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.798
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.812
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo 210279A6A756A]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.817
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==1}], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.853
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo 210279A6A756A" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z010 (idcode 13722093 irlen 6 fpga)]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.859
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Zybo 210279A6A756A" && level == 0}], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.902
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Zybo 210279A6A756A" && level == 0}], Result: [null, ]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.910
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.917
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.923
+!MESSAGE XSCT Command: [source C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/ps7_init.tcl], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.932
+!MESSAGE XSCT command with result: [source C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/ps7_init.tcl], Result: [null, ]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.938
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279A6A756A"} -index 0], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.987
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279A6A756A"} -index 0], Result: [null, ]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:07.993
+!MESSAGE XSCT Command: [loadhw -hw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:08.008
+!MESSAGE XSCT command with result: [loadhw -hw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]], Result: [null, system_wrapper_2]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:08.014
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:08.021
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:08.027
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279A6A756A"} -index 0], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:08.072
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent Zybo 210279A6A756A"} -index 0], Result: [null, ]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:08.079
+!MESSAGE XSCT Command: [stop], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:08.105
+!MESSAGE XSCT command with result: [stop], Result: [null, ]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:08.111
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:08.712
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:08.718
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:08.730
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:08.736
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279A6A756A"} -index 0], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:08.799
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279A6A756A"} -index 0], Result: [null, ]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:08.806
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:08.860
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:08.866
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279A6A756A"} -index 0], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:08.915
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279A6A756A"} -index 0], Result: [null, ]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:08.922
+!MESSAGE XSCT Command: [dow C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/miniproject/Debug/miniproject.elf], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:10.904
+!MESSAGE XSCT command with result: [dow C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/miniproject/Debug/miniproject.elf], Result: [null, ]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:10.910
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:10.919
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:10.960
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279A6A756A"} -index 0], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:11.119
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zybo 210279A6A756A"} -index 0], Result: [null, ]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:11.125
+!MESSAGE XSCT Command: [con], Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 15:40:11.139
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-63
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 16:01:41.468
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 16:01:41.481
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 16:01:41.487
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 16:01:41.495
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/system_wrapper_hw_platform_1/system.hdf C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 16:01:41.501
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 16:01:41.507
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/au513437/Desktop/EMBD_vivado/miniproject_zybo/miniproject_zybo.sdk/standalone_bsp_1/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 16:01:50.271
+!MESSAGE XSCT Command: [disconnect tcfchan#2], Thread: Thread-1659
+
+!ENTRY com.xilinx.sdk.utils 0 0 2018-12-17 16:01:50.282
+!MESSAGE XSCT command with result: [disconnect tcfchan#2], Result: [null, ]. Thread: Thread-1659
+
+!ENTRY com.xilinx.sdk.utils 1 0 2018-12-17 16:03:12.754
+!MESSAGE Executed Webtalk command

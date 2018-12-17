@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;miniproject/src/ImageProcessing/ImageProcessingSW.h&apos; to &apos;ConvolutionSW.h&apos;" description="Rename resource &apos;ImageProcessingSW.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/ImageProcessing/ImageProcessingSW.h" name="ConvolutionSW.h" stamp="1545049349097" updateReferences="true"/>
+</session>
