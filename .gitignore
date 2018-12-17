@@ -33,3 +33,11 @@
 
 # files generated from vivado hls
 /Convolution/convolution.prj/*
+
+#files generated from vivado 2017.2
+/miniproject_zybo/*.cache/*
+/miniproject_zybo/*.hw/*
+/miniproject_zybo/*.ip_user_files/*
+/miniproject_zybo/*.runs/*
+/miniproject_zybo/*.sim/*
+/miniproject_zybo/*.srcs/*
