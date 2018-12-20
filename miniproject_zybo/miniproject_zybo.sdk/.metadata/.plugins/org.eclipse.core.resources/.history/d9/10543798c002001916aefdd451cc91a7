@@ -1,0 +1,50 @@
+#pragma once
+#include "XScutimer.h"
+#include "ITimer.h"
+
+class XTimer : public ITimer
+{
+public:
+
+	XTimer()
+	{
+		XScuTimer_Config* configPtr = XScuTimer_LookupConfig(XPAR_XSCUTIMER_0_DEVICE_ID);
+		int status = XScuTimer_CfgInitialize(&_timer, configPtr, configPtr->BaseAddr);
+		if (status != XST_SUCCESS)
+			xil_printf("Could not instantiate XTimer\r\n");
+
+		_loadVal = one_second;
+	}
+
+	void setLoadValue(u32 seconds)
+	{
+		_loadVal = seconds * one_second;
+	}
+
+	virtual void start() override
+	{
+		XScuTimer_LoadTimer(&_timer, _loadVal);
+		XScuTimer_Start(&_timer);
+		_start = XScuTimer_GetCounterValue(&_timer);
+	}
+
+	virtual void stop() override
+	{
+		_stop = XScuTimer_GetCounterValue(&_timer);
+		XScuTimer_Stop(&_timer);
+	}
+
+	virtual u32 durationSeconds() override
+	{
+
+	}
+
+private:
+	typedef u32 time_size;
+
+	XScuTimer _timer;
+	const time_size one_second = 325000000; // half of the CPU clock speed
+	time_size _loadVal;
+	time_size _start;
+	time_size _stop;
+};

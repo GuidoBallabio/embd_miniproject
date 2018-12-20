@@ -1,0 +1,84 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Wed Dec 19 08:04:14 2018
+| Host         : DESKTOP-ECK2RKS running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file convolve_control_sets_placed.rpt
+| Design       : convolve
+| Device       : xc7z010
+-------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    21 |
+| Unused register locations in slices containing registers |    30 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              40 |           19 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              37 |           18 |
+| Yes          | No                    | No                     |             441 |          123 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              12 |            6 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++--------------+------------------------------------------------------------------+--------------------------------------------+------------------+----------------+
+| Clock Signal |                           Enable Signal                          |              Set/Reset Signal              | Slice Load Count | Bel Load Count |
++--------------+------------------------------------------------------------------+--------------------------------------------+------------------+----------------+
+|  ap_clk      | out_r_ce0                                                        | ap_CS_fsm_state5                           |                3 |              6 |
+|  ap_clk      | tmp_s_reg_6530                                                   |                                            |                2 |              6 |
+|  ap_clk      | ap_CS_fsm_state7                                                 |                                            |                2 |              6 |
+|  ap_clk      | ap_NS_fsm1                                                       | convolve_conv_s_axi_U/r1_reg_226_reg[1][0] |                3 |              6 |
+|  ap_clk      | r_reg_6000                                                       |                                            |                4 |             11 |
+|  ap_clk      | ap_CS_fsm_state3                                                 |                                            |                2 |             11 |
+|  ap_clk      | convolve_conv_s_axi_U/aw_hs                                      |                                            |                5 |             15 |
+|  ap_clk      | ap_CS_fsm_state13                                                |                                            |                4 |             16 |
+|  ap_clk      | ap_CS_fsm_state5                                                 |                                            |                5 |             22 |
+|  ap_clk      | convolve_mac_muladEe_U11/convolve_mac_muladEe_DSP48_1_U/reg_2580 |                                            |                6 |             24 |
+|  ap_clk      | convolve_mac_muladEe_U6/convolve_mac_muladEe_DSP48_1_U/p_0       |                                            |                7 |             24 |
+|  ap_clk      | ap_CS_fsm_state16                                                |                                            |                6 |             24 |
+|  ap_clk      | rdata_data_reg[31]_i_6_n_0                                       |                                            |               11 |             32 |
+|  ap_clk      | rdata_data_reg[31]_i_9_n_0                                       |                                            |                8 |             32 |
+|  ap_clk      | rdata_data_reg[7]_i_2_n_0                                        |                                            |                8 |             32 |
+|  ap_clk      | convolve_conv_s_axi_U/rdata_data[31]_i_1_n_0                     |                                            |               13 |             32 |
+|  ap_clk      | ap_CS_fsm_state6                                                 |                                            |                9 |             36 |
+|  ap_clk      |                                                                  | convolve_conv_s_axi_U/SR[0]                |               18 |             37 |
+|  ap_clk      |                                                                  |                                            |               19 |             40 |
+|  ap_clk      | ap_CS_fsm_state8                                                 |                                            |               13 |             54 |
+|  ap_clk      | reg_250_reg[15]_i_3_n_0                                          |                                            |               18 |             64 |
++--------------+------------------------------------------------------------------+--------------------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 6      |                     4 |
+| 11     |                     2 |
+| 15     |                     1 |
+| 16+    |                    14 |
++--------+-----------------------+
+
+

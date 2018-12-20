@@ -1,0 +1,10 @@
+#pragma once
+
+class ITimer
+{
+public:
+	void start() = 0;
+	void stop() = 0;
+	u32 getCounter() = 0;
+
+};

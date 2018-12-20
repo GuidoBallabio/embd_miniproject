@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'houghTransform_muqcK' is changed to 'houghTransform_muqcK_x' due to conflict." projectName="houghTransfrom.prj" solutionName="solution2" date="2018-12-18T12:03:37.087+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'houghTransform_muocq' is changed to 'houghTransform_muocq_x' due to conflict." projectName="houghTransfrom.prj" solutionName="solution2" date="2018-12-18T12:03:37.056+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'houghTransform_mupcA' is changed to 'houghTransform_mupcA_x' due to conflict." projectName="houghTransfrom.prj" solutionName="solution2" date="2018-12-18T12:03:37.041+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'houghTransform_muncg' is changed to 'houghTransform_muncg_x' due to conflict." projectName="houghTransfrom.prj" solutionName="solution2" date="2018-12-18T12:03:37.025+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] The critical path consists of the following:&#xD;&#xA;&#x9;'mul' operation ('tmp_519', HoughTransform.cpp:78) (3.36 ns)&#xD;&#xA;&#x9;'add' operation ('tmp_520', HoughTransform.cpp:78) (3.02 ns)&#xD;&#xA;&#x9;'getelementptr' operation ('out_addr', HoughTransform.cpp:78) (0 ns)&#xD;&#xA;&#x9;'store' operation (HoughTransform.cpp:78) of constant 1 on array 'out_r' (2.57 ns)" projectName="houghTransfrom.prj" solutionName="solution2" date="2018-12-18T12:02:11.904+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (8.95ns) exceeds the target (target clock period: 8ns, clock uncertainty: 1ns, effective delay budget: 7ns)." projectName="houghTransfrom.prj" solutionName="solution2" date="2018-12-18T12:02:11.886+0100" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'houghTransform/out' to 'houghTransform/out_r' to avoid the conflict with HDL keywords or other object names." projectName="houghTransfrom.prj" solutionName="solution2" date="2018-12-18T12:01:48.172+0100" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'houghTransform/in' to 'houghTransform/in_r' to avoid the conflict with HDL keywords or other object names." projectName="houghTransfrom.prj" solutionName="solution2" date="2018-12-18T12:01:48.154+0100" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'sin_or_cos&lt;double>' to 'sin_or_cos_double_s'." projectName="houghTransfrom.prj" solutionName="solution2" date="2018-12-18T12:01:48.135+0100" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name '__hls_fptosi_float_i' to 'p_hls_fptosi_float_i'." projectName="houghTransfrom.prj" solutionName="solution2" date="2018-12-18T12:01:47.603+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function '__hls_fptosi_float_i64' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/lib_floatconversion.cpp:44:54) into __hls_fptosi_float_i." projectName="houghTransfrom.prj" solutionName="solution2" date="2018-12-18T12:01:47.582+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::hotbm::sin_or_cos&lt;double>' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_hotbm.h:469) into sin_or_cos&lt;double>." projectName="houghTransfrom.prj" solutionName="solution2" date="2018-12-18T12:01:37.186+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::hotbm::generic_sincos&lt;double>' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_hotbm.h:97:1) into generic_sincos." projectName="houghTransfrom.prj" solutionName="solution2" date="2018-12-18T12:01:37.167+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-505] Pipeline directive for loop 'houghTransform_label1' (HoughTransform.cpp:52) in function 'houghTransform' has been removed because the loop is unrolled completely." projectName="houghTransfrom.prj" solutionName="solution2" date="2018-12-18T12:01:14.749+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-505] Pipeline directive for loop 'houghTransform_label0' (HoughTransform.cpp:26) in function 'houghTransform' has been removed because the loop is unrolled completely." projectName="houghTransfrom.prj" solutionName="solution2" date="2018-12-18T12:01:14.318+0100" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/utils/x_hls_float_utils.h:424: variable-indexed range selection may cause suboptimal QoR." projectName="houghTransfrom.prj" solutionName="solution2" date="2018-12-18T12:01:06.025+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/null/null'." projectName="houghTransfrom.prj" solutionName="solution2" date="2018-12-18T11:58:41.304+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'E:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/null/null.lib'." projectName="houghTransfrom.prj" solutionName="solution2" date="2018-12-18T11:58:40.652+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'houghTransform_mukbM' is changed to 'houghTransform_mukbM_x' due to conflict." projectName="houghTransfrom.prj" solutionName="solution1" date="2018-12-18T11:49:21.141+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'houghTransform_muqcK' is changed to 'houghTransform_muqcK_x' due to conflict." projectName="houghTransfrom.prj" solutionName="solution1" date="2018-12-18T11:49:21.095+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'houghTransform_mujbC' is changed to 'houghTransform_mujbC_x' due to conflict." projectName="houghTransfrom.prj" solutionName="solution1" date="2018-12-18T11:49:21.079+0100" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] RTL name 'houghTransform_muibs' is changed to 'houghTransform_muibs_x' due to conflict." projectName="houghTransfrom.prj" solutionName="solution1" date="2018-12-18T11:49:21.063+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] The critical path consists of the following:&#xD;&#xA;&#x9;'mul' operation ('tmp_34', HoughTransform.cpp:28) (3.36 ns)&#xD;&#xA;&#x9;'add' operation ('tmp_41', HoughTransform.cpp:28) (3.02 ns)&#xD;&#xA;&#x9;'getelementptr' operation ('acc_addr_2', HoughTransform.cpp:28) (0 ns)&#xD;&#xA;&#x9;'load' operation ('acc_load', HoughTransform.cpp:28) on array 'acc' (3.25 ns)" projectName="houghTransfrom.prj" solutionName="solution1" date="2018-12-18T11:49:11.064+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (9.63ns) exceeds the target (target clock period: 8ns, clock uncertainty: 1ns, effective delay budget: 7ns)." projectName="houghTransfrom.prj" solutionName="solution1" date="2018-12-18T11:49:11.048+0100" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'houghTransform/out' to 'houghTransform/out_r' to avoid the conflict with HDL keywords or other object names." projectName="houghTransfrom.prj" solutionName="solution1" date="2018-12-18T11:49:02.422+0100" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'houghTransform/in' to 'houghTransform/in_r' to avoid the conflict with HDL keywords or other object names." projectName="houghTransfrom.prj" solutionName="solution1" date="2018-12-18T11:49:02.407+0100" type="Warning"/>
+        <logs message="WARNING: [SYN 201-103] Legalizing function name 'sin_or_cos&lt;double>' to 'sin_or_cos_double_s'." projectName="houghTransfrom.prj" solutionName="solution1" date="2018-12-18T11:49:02.391+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::hotbm::generic_sincos&lt;double>' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_hotbm.h:97:1) into generic_sincos." projectName="houghTransfrom.prj" solutionName="solution1" date="2018-12-18T11:49:02.360+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::hotbm::sin_or_cos&lt;double>' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_hotbm.h:469) into sin_or_cos&lt;double>." projectName="houghTransfrom.prj" solutionName="solution1" date="2018-12-18T11:48:55.096+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-631] Renaming function 'hls::scaled_fixed2ieee&lt;63, 1>' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/utils/x_hls_float_utils.h:106:37) into scaled_fixed2ieee." projectName="houghTransfrom.prj" solutionName="solution1" date="2018-12-18T11:48:55.081+0100" type="Warning"/>
+        <logs message="WARNING: [SYNCHK 200-23] r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/utils/x_hls_float_utils.h:424: variable-indexed range selection may cause suboptimal QoR." projectName="houghTransfrom.prj" solutionName="solution1" date="2018-12-18T11:48:30.651+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

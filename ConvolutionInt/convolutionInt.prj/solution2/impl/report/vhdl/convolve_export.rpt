@@ -1,0 +1,20 @@
+
+
+Implementation tool: Xilinx Vivado v.2017.2
+Project:             convolutionInt.prj
+Solution:            solution2
+Device target:       xc7z010clg400-1
+Report date:         Wed Dec 19 08:04:47 +0100 2018
+
+#=== Post-Implementation Resource usage ===
+SLICE:          181
+LUT:            416
+FF:             530
+DSP:              9
+BRAM:            10
+SRL:              0
+#=== Final timing ===
+CP required:    8.000
+CP achieved post-synthesis:    6.272
+CP achieved post-implementation:    7.049
+Timing met

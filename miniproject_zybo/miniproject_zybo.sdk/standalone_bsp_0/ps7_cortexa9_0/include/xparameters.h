@@ -18,8 +18,46 @@
 
 #include "xparameters_ps.h"
 
-#define STDIN_BASEADDRESS 0xF8800000
-#define STDOUT_BASEADDRESS 0xF8800000
+#define STDIN_BASEADDRESS 0xE0001000
+#define STDOUT_BASEADDRESS 0xE0001000
+
+/******************************************************************/
+
+/* Definitions for driver CONVOLVE */
+#define XPAR_XCONVOLVE_NUM_INSTANCES 1
+
+/* Definitions for peripheral CONVOLVE_0 */
+#define XPAR_CONVOLVE_0_DEVICE_ID 0
+#define XPAR_CONVOLVE_0_S_AXI_CONV_BASEADDR 0x43C00000
+#define XPAR_CONVOLVE_0_S_AXI_CONV_HIGHADDR 0x43C0FFFF
+
+
+/******************************************************************/
+
+/* Canonical definitions for peripheral CONVOLVE_0 */
+#define XPAR_XCONVOLVE_0_DEVICE_ID XPAR_CONVOLVE_0_DEVICE_ID
+#define XPAR_XCONVOLVE_0_S_AXI_CONV_BASEADDR 0x43C00000
+#define XPAR_XCONVOLVE_0_S_AXI_CONV_HIGHADDR 0x43C0FFFF
+
+
+/******************************************************************/
+
+/* Definitions for driver CONVOLVEMEDIUM */
+#define XPAR_XCONVOLVEMEDIUM_NUM_INSTANCES 1
+
+/* Definitions for peripheral CONVOLVEMEDIUM_0 */
+#define XPAR_CONVOLVEMEDIUM_0_DEVICE_ID 0
+#define XPAR_CONVOLVEMEDIUM_0_S_AXI_CONVM_BASEADDR 0x43C40000
+#define XPAR_CONVOLVEMEDIUM_0_S_AXI_CONVM_HIGHADDR 0x43C7FFFF
+
+
+/******************************************************************/
+
+/* Canonical definitions for peripheral CONVOLVEMEDIUM_0 */
+#define XPAR_XCONVOLVEMEDIUM_0_DEVICE_ID XPAR_CONVOLVEMEDIUM_0_DEVICE_ID
+#define XPAR_XCONVOLVEMEDIUM_0_S_AXI_CONVM_BASEADDR 0x43C40000
+#define XPAR_XCONVOLVEMEDIUM_0_S_AXI_CONVM_HIGHADDR 0x43C7FFFF
+
 
 /******************************************************************/
 
@@ -171,11 +209,6 @@
 /* Definitions for peripheral PS7_SLCR_0 */
 #define XPAR_PS7_SLCR_0_S_AXI_BASEADDR 0xF8000000
 #define XPAR_PS7_SLCR_0_S_AXI_HIGHADDR 0xF8000FFF
-
-
-/* Definitions for peripheral CONVOLVE_0 */
-#define XPAR_CONVOLVE_0_S_AXI_CONV_BASEADDR 0x43C00000
-#define XPAR_CONVOLVE_0_S_AXI_CONV_HIGHADDR 0x43C0FFFF
 
 
 /******************************************************************/

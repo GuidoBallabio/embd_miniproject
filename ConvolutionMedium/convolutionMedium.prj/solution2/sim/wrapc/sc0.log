@@ -1,0 +1,5 @@
+   Build using "E:/Xilinx/Vivado_HLS/2017.2/msys/bin/g++.exe"
+   Compiling Convolution.cpp_pre.cpp.tb.cpp
+   Compiling Convolution_test.cpp_pre.cpp.tb.cpp
+   Compiling apatb_convolveMedium.cpp
+   Generating cosim.tv.exe

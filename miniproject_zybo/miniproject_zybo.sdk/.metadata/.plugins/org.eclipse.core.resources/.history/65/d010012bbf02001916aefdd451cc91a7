@@ -1,0 +1,16 @@
+#pragma once
+#include "XScutimer.h"
+#include "ITimer.h"
+
+class XTimer : public ITimer
+{
+public:
+
+	XTimer()
+	{
+
+	}
+
+private:
+
+};

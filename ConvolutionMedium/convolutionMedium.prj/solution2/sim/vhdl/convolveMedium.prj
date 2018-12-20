@@ -1,0 +1,10 @@
+vhdl xil_defaultlib "AESL_sim_pkg.vhd"
+vhdl xil_defaultlib "AESL_axi_slave_convm.vhd"
+vhdl xil_defaultlib "convolveMedium.autotb.vhd"
+vhdl xil_defaultlib "convolveMedium.vhd"
+vhdl xil_defaultlib "convolveMedium_convm_s_axi.vhd"
+vhdl xil_defaultlib "convolveMedium_macud.vhd"
+vhdl xil_defaultlib "convolveMedium_maeOg.vhd"
+vhdl xil_defaultlib "convolveMedium_mubkb.vhd"
+vhdl xil_defaultlib "convolveMedium_mudEe.vhd"
+

@@ -1,0 +1,107 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Wed Dec 19 08:10:08 2018
+| Host         : DESKTOP-ECK2RKS running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file convolve_control_sets_placed.rpt
+| Design       : convolve
+| Device       : xc7z010
+-------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    41 |
+| Unused register locations in slices containing registers |    80 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              41 |           18 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              65 |           32 |
+| Yes          | No                    | No                     |             719 |          218 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              39 |           13 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++--------------+----------------------------------------------------------------------------------+----------------------------------------------+------------------+----------------+
+| Clock Signal |                                   Enable Signal                                  |               Set/Reset Signal               | Slice Load Count | Bel Load Count |
++--------------+----------------------------------------------------------------------------------+----------------------------------------------+------------------+----------------+
+|  ap_clk      | convolve_conv_s_axi_U/rdata_data[31]_i_2_n_0                                     |                                              |                3 |              5 |
+|  ap_clk      | ap_CS_fsm_state47                                                                | ap_CS_fsm_state5                             |                1 |              6 |
+|  ap_clk      | ap_CS_fsm_state12                                                                |                                              |                1 |              6 |
+|  ap_clk      | convolve_mac_muladEe_U24/convolve_mac_muladEe_DSP48_1_U/E[0]                     |                                              |                3 |              6 |
+|  ap_clk      | convolve_mac_muladEe_U33/convolve_mac_muladEe_DSP48_1_U/p_0[0]                   |                                              |                4 |              6 |
+|  ap_clk      | convolve_mac_muladEe_U15/convolve_mac_muladEe_DSP48_1_U/E[0]                     |                                              |                2 |              6 |
+|  ap_clk      | ap_NS_fsm1                                                                       | convolve_conv_s_axi_U/r1_reg_364_reg[1][0]   |                2 |              6 |
+|  ap_clk      | tmp_1_reg_12050                                                                  |                                              |                2 |              6 |
+|  ap_clk      | ap_CS_fsm_state7                                                                 |                                              |                2 |              6 |
+|  ap_clk      | ap_CS_fsm_state8                                                                 |                                              |                1 |              8 |
+|  ap_clk      | r_reg_11430                                                                      |                                              |                4 |             11 |
+|  ap_clk      | ap_CS_fsm_state3                                                                 |                                              |                3 |             11 |
+|  ap_clk      | ap_CS_fsm_state21                                                                |                                              |                3 |             12 |
+|  ap_clk      | convolve_conv_s_axi_U/aw_hs                                                      |                                              |                4 |             15 |
+|  ap_clk      | convolve_mac_muladEe_U8/convolve_mac_muladEe_DSP48_1_U/E[0]                      |                                              |                4 |             16 |
+|  ap_clk      | reg_388[15]_i_1_n_0                                                              |                                              |                4 |             16 |
+|  ap_clk      | ap_CS_fsm_state18                                                                |                                              |                4 |             16 |
+|  ap_clk      | ap_CS_fsm_state30                                                                |                                              |                5 |             16 |
+|  ap_clk      | ap_CS_fsm_state37                                                                |                                              |                5 |             16 |
+|  ap_clk      | ap_CS_fsm_state41                                                                |                                              |                4 |             16 |
+|  ap_clk      | ap_CS_fsm_state5                                                                 |                                              |               11 |             22 |
+|  ap_clk      | ap_CS_fsm_state20                                                                |                                              |                7 |             23 |
+|  ap_clk      | ap_CS_fsm_state27                                                                |                                              |                7 |             23 |
+|  ap_clk      | ap_CS_fsm_state34                                                                |                                              |                8 |             23 |
+|  ap_clk      | ap_CS_fsm_state11                                                                |                                              |                6 |             24 |
+|  ap_clk      | ap_CS_fsm_state16                                                                |                                              |                7 |             24 |
+|  ap_clk      | convolve_conv_s_axi_U/rdata_data[31]_i_2_n_0                                     | convolve_conv_s_axi_U/rdata_data[31]_i_1_n_0 |               10 |             27 |
+|  ap_clk      | ap_CS_fsm_state14                                                                |                                              |                8 |             28 |
+|  ap_clk      | ap_CS_fsm_state28                                                                |                                              |                8 |             28 |
+|  ap_clk      | ap_CS_fsm_state35                                                                |                                              |                8 |             28 |
+|  ap_clk      | ap_CS_fsm_state13                                                                |                                              |               13 |             31 |
+|  ap_clk      | rdata_data_reg[31]_i_12_n_0                                                      |                                              |                9 |             32 |
+|  ap_clk      | rdata_data_reg[31]_i_4_n_0                                                       |                                              |               10 |             32 |
+|  ap_clk      | rdata_data_reg[31]_i_8_n_0                                                       |                                              |               12 |             32 |
+|  ap_clk      | reg_396_reg[15]_i_4_n_0                                                          |                                              |                8 |             32 |
+|  ap_clk      | tmp32_reg_1755_reg_i_27_n_0                                                      |                                              |                8 |             32 |
+|  ap_clk      | ap_CS_fsm_state17                                                                |                                              |               10 |             32 |
+|  ap_clk      | ap_CS_fsm_state6                                                                 |                                              |               10 |             37 |
+|  ap_clk      |                                                                                  |                                              |               18 |             41 |
+|  ap_clk      | convolve_mac_muladEe_U42/convolve_mac_muladEe_DSP48_1_U/col_offset_4_2_reg_17250 |                                              |               10 |             42 |
+|  ap_clk      |                                                                                  | convolve_conv_s_axi_U/SR[0]                  |               32 |             65 |
++--------------+----------------------------------------------------------------------------------+----------------------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 5      |                     1 |
+| 6      |                     8 |
+| 8      |                     1 |
+| 11     |                     2 |
+| 12     |                     1 |
+| 15     |                     1 |
+| 16+    |                    27 |
++--------+-----------------------+
+
+

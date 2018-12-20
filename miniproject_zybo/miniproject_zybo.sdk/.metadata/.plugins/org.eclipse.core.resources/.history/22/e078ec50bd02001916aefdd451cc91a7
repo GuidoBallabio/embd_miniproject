@@ -1,0 +1,17 @@
+#pragma once
+#include "XScutimer.h"
+#include "ITimer.h"
+#include "../ISingleton.h"
+
+class XTimer : public ITimer, public ISingleton
+{
+public:
+
+	XTimer()
+	{
+
+	}
+
+private:
+
+};

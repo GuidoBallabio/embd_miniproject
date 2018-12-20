@@ -1,0 +1,34 @@
+#pragma once
+#include "XScutimer.h"
+#include "ITimer.h"
+
+class XTimer : public ITimer
+{
+public:
+
+	XTimer()
+	{
+		XScuTimer_Config* configPtr = XScuTimer_LookupConfig(XPAR_XSCUTIMER_0_DEVICE_ID);
+		int status = XScuTimer_CfgInitialize(&_timer, configPtr, configPtr->BaseAddr);
+		if (status != XST_SUCCESS)
+			xil_printf("Could not instantiate XTimer\r\n");
+	}
+
+	virtual void start() override
+	{
+
+	}
+
+	virtual void stop() override
+	{
+
+	}
+
+	virtual u32 duration() override
+	{
+
+	}
+
+private:
+	XScuTimer _timer;
+};

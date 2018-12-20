@@ -1,0 +1,19 @@
+#pragma once
+
+
+class ISingleton
+{
+public:
+	ISingleton()
+	{
+		_instance = new ISingleton();
+	}
+
+	static ISingleton getInstance()
+	{
+		return _instance;
+	}
+
+private:
+	ISingleton* _instance;
+};

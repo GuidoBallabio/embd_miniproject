@@ -1,0 +1,86 @@
+INFO: [HLS 200-10] Running 'E:/Xilinx/Vivado_HLS/2017.2/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'au513437' on host 'desktop-eck2rks' (Windows NT_amd64 version 6.2) on Wed Dec 19 12:55:21 +0100 2018
+INFO: [HLS 200-10] In directory 'C:/Users/au513437/Desktop/embd_miniproject/ConvolutionMedium'
+INFO: [HLS 200-10] Opening project 'C:/Users/au513437/Desktop/embd_miniproject/ConvolutionMedium/convolutionMedium.prj'.
+INFO: [HLS 200-10] Adding design file 'Convolution.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'Convolution_test.cpp' to the project
+INFO: [HLS 200-10] Opening solution 'C:/Users/au513437/Desktop/embd_miniproject/ConvolutionMedium/convolutionMedium.prj/solution2'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+WARNING: [HLS 200-40] Cannot find library 'E:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/null/null.lib'.
+WARNING: [HLS 200-40] Cannot find library 'xilinx/null/null'.
+INFO: [HLS 200-10] Setting target device to 'xc7z010clg400-1'
+INFO: [HLS 200-10] Analyzing design file 'Convolution.cpp' ... 
+INFO: [HLS 200-10] Validating synthesis directives ...
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 100.539 ; gain = 50.996
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:01:05 . Memory (MB): peak = 100.559 ; gain = 51.016
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-501] Unrolling loop 'kCols' (Convolution.cpp:25) in function 'convolveMedium(short (*) [256], short (*) [256], char (*) [3])': changing partial unrolling into complete unrolling since the unrolling factor (=3) is no less than the loop trip count (=3).
+INFO: [XFORM 203-501] Unrolling loop 'kRows' (Convolution.cpp:25) in function 'convolveMedium(short (*) [256], short (*) [256], char (*) [3])': changing partial unrolling into complete unrolling since the unrolling factor (=3) is no less than the loop trip count (=3).
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<137, 84, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator<<' into 'hls::cast_IEEE754<unsigned int, (ap_q_mode)6, double>' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_round.h:485).
+INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<1, 33, false, (ap_q_mode)5, (ap_o_mode)0, 0>::overflow_adjust' into 'ap_fixed_base<1, 33, false, (ap_q_mode)5, (ap_o_mode)0, 0>::ap_fixed_base<137, 84, false, (ap_q_mode)5, (ap_o_mode)3, 0>' ().
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:35 ; elapsed = 00:02:12 . Memory (MB): peak = 1248.453 ; gain = 1198.910
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::mantissa' into 'hls::cast_IEEE754<unsigned int, (ap_q_mode)6, double>' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_round.h:482) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::expv' into 'hls::cast_IEEE754<unsigned int, (ap_q_mode)6, double>' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_round.h:485) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::__signbit' into 'hls::cast_IEEE754<unsigned int, (ap_q_mode)6, double>' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_round.h:505) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::cast_IEEE754<unsigned int, (ap_q_mode)6, double>' into 'hls::cast_IEEE754<unsigned int, double>' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_round.h:523) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::cast_IEEE754<unsigned int, double>' into '__hls_fptoui_double_i32' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/lib_floatconversion.cpp:61) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:47 ; elapsed = 00:02:25 . Memory (MB): peak = 1442.430 ; gain = 1392.887
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'kCols' (Convolution.cpp:25) in function 'convolveMedium' for pipelining.
+WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'kRows' (Convolution.cpp:25) because its parent loop or function is pipelined.
+INFO: [XFORM 203-501] Unrolling loop 'kCols' (Convolution.cpp:25) in function 'convolveMedium': changing partial unrolling into complete unrolling since the unrolling factor (=3) is no less than the loop trip count (=3).
+INFO: [XFORM 203-501] Unrolling loop 'imgRows' (Convolution.cpp:21) in function 'convolveMedium' partially with a factor of 4.
+INFO: [XFORM 203-501] Unrolling loop 'kCols' (Convolution.cpp:25) in function 'convolveMedium' completely.
+WARNING: [XFORM 203-505] Pipeline directive for loop 'kCols' (Convolution.cpp:25) in function 'convolveMedium' has been removed because the loop is unrolled completely.
+INFO: [XFORM 203-501] Unrolling loop 'kRows' (Convolution.cpp:25) in function 'convolveMedium' completely.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::mantissa' into 'hls::cast_IEEE754<unsigned int, (ap_q_mode)6, double>' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_round.h:482) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::cast_IEEE754<unsigned int, (ap_q_mode)6, double>' into 'hls::cast_IEEE754<unsigned int, double>' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_round.h:523) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::cast_IEEE754<unsigned int, double>' into '__hls_fptoui_double_i32' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/lib_floatconversion.cpp:61) automatically.
+INFO: [XFORM 203-602] Inlining function '__hls_fptoui_double_i32' into 'convolveMedium' (Convolution.cpp:13) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'convolveMedium' (Convolution.cpp:3)...32 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:59 ; elapsed = 00:02:46 . Memory (MB): peak = 2051.227 ; gain = 2001.684
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:04 ; elapsed = 00:02:51 . Memory (MB): peak = 2278.699 ; gain = 2229.156
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'convolveMedium' ...
+WARNING: [SYN 201-107] Renaming port name 'convolveMedium/in' to 'convolveMedium/in_r' to avoid the conflict with HDL keywords or other object names.
+WARNING: [SYN 201-107] Renaming port name 'convolveMedium/out' to 'convolveMedium/out_r' to avoid the conflict with HDL keywords or other object names.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Implementing module 'convolveMedium' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-21] Estimated clock period (9.4ns) exceeds the target (target clock period: 8ns, clock uncertainty: 1ns, effective delay budget: 7ns).
+WARNING: [SCHED 204-21] The critical path consists of the following:
+	'mul' operation ('tmp_22_0_2_2', Convolution.cpp:28) (3.36 ns)
+	'add' operation ('tmp6', Convolution.cpp:28) (3.02 ns)
+	'add' operation ('tmp5', Convolution.cpp:28) (3.02 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 172.044 seconds; current allocated memory: 1.996 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.094 seconds; current allocated memory: 1.997 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'convolveMedium' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolveMedium/in_r' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolveMedium/out_r' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'convolveMedium/krnl' to 's_axilite & ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'convolveMedium' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return', 'out_r' and 'krnl' to AXI-Lite port convm.
+INFO: [SYN 201-210] Renamed object name 'convolveMedium_mul_mul_16s_8s_16_1' to 'convolveMedium_mubkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolveMedium_mac_muladd_16s_8s_16s_16_1' to 'convolveMedium_macud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolveMedium_mul_mul_8s_16s_16_1' to 'convolveMedium_mudEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'convolveMedium_mac_muladd_8s_16s_16s_16_1' to 'convolveMedium_maeOg' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'convolveMedium_macud': 5 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'convolveMedium_maeOg': 15 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'convolveMedium_mubkb': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'convolveMedium_mudEe': 12 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'convolveMedium'.
+INFO: [HLS 200-111]  Elapsed time: 1.221 seconds; current allocated memory: 1.999 GB.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:08 ; elapsed = 00:02:57 . Memory (MB): peak = 2278.699 ; gain = 2229.156
+INFO: [SYSC 207-301] Generating SystemC RTL for convolveMedium.
+INFO: [VHDL 208-304] Generating VHDL RTL for convolveMedium.
+INFO: [VLOG 209-307] Generating Verilog RTL for convolveMedium.
+INFO: [HLS 200-112] Total elapsed time: 177.293 seconds; peak allocated memory: 1.999 GB.

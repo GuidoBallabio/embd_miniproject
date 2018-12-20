@@ -1,0 +1,69 @@
+#pragma once
+#include "XScutimer.h"
+#include "ITimer.h"
+
+class XTimer : public ITimer
+{
+public:
+
+	XTimer()
+	{
+		XScuTimer_Config* configPtr = XScuTimer_LookupConfig(XPAR_XSCUTIMER_0_DEVICE_ID);
+		int status = XScuTimer_CfgInitialize(&_timer, configPtr, configPtr->BaseAddr);
+		if (status != XST_SUCCESS)
+			xil_printf("Could not instantiate XTimer\r\n");
+
+		_loadVal = one_second;
+	}
+
+	void setLoadValue(u32 seconds)
+	{
+		_loadVal = seconds * one_second;
+	}
+
+	virtual void start() override
+	{
+		XScuTimer_LoadTimer(&_timer, _loadVal);
+		XScuTimer_Start(&_timer);
+		_startVal = XScuTimer_GetCounterValue(&_timer);
+	}
+
+	virtual void stop() override
+	{
+		_stopVal = XScuTimer_GetCounterValue(&_timer);
+		XScuTimer_Stop(&_timer);
+	}
+
+	virtual float durationNanoseconds() override
+	{
+		// Timer starts from load value and counts down
+		time_size ticks = _startVal - _stopVal;
+
+		// divide with definition of one second, to get the value in seconds
+		// multiply with 10^9 to convert to nanoseconds
+		float duration = (ticks * 10000000)/ one_second;
+
+		return duration;
+	}
+
+	virtual float durationMilliseconds()
+	{
+		// Timer starts from load value and counts down
+		time_size ticks = _startVal - _stopVal;
+
+		// divide with definition of one second, to get the value in seconds
+		// multiply with 1000 to convert to milliseconds
+		float duration = ticks * (1000/ one_second);
+
+		return duration;
+	}
+
+private:
+	typedef u32 time_size;
+
+	XScuTimer _timer;
+	const time_size one_second = 325000000; // half of the CPU clock speed
+	time_size _loadVal;
+	time_size _startVal;
+	time_size _stopVal;
+};

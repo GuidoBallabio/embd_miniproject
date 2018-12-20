@@ -1,0 +1,53 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="convolve" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="return" positionalBoolean="4"/>
+                <option name="bundle" value="conv"/>
+            </pragma>
+        </directive>
+        <directive functionName="convolve" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="in" positionalBoolean="4"/>
+                <option name="bundle" value="conv"/>
+            </pragma>
+        </directive>
+        <directive functionName="convolve" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="out" positionalBoolean="4"/>
+                <option name="bundle" value="conv"/>
+            </pragma>
+        </directive>
+        <directive functionName="convolve" label="" functionLabel="">
+            <pragma name="INTERFACE">
+                <option name="s_axilite" value="" positionalBoolean="mode"/>
+                <option name="port" value="krnl" positionalBoolean="4"/>
+                <option name="bundle" value="conv"/>
+            </pragma>
+        </directive>
+        <directive functionName="convolve" label="kernelCol" functionLabel="">
+            <pragma name="UNROLL">
+                <option name="factor" value="3"/>
+            </pragma>
+        </directive>
+        <directive functionName="convolve" label="kernelCol" functionLabel="">
+            <pragma name="PIPELINE">
+                <option name="II" value="2"/>
+            </pragma>
+        </directive>
+        <directive functionName="convolve" label="kernelRow" functionLabel="">
+            <pragma name="UNROLL">
+                <option name="factor" value="3"/>
+            </pragma>
+        </directive>
+        <directive functionName="convolve" label="imgRow" functionLabel="">
+            <pragma name="UNROLL">
+                <option name="factor" value="5"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

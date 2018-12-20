@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Wed Dec 19 12:44:24 2018
+# Process ID: 6788
+# Current directory: C:/Users/au513437/Desktop/embd_miniproject/ConvolutionMedium/convolutionMedium.prj/solution2/impl/vhdl
+# Command line: vivado.exe -notrace -mode batch -source run_vivado.tcl
+# Log file: C:/Users/au513437/Desktop/embd_miniproject/ConvolutionMedium/convolutionMedium.prj/solution2/impl/vhdl/vivado.log
+# Journal file: C:/Users/au513437/Desktop/embd_miniproject/ConvolutionMedium/convolutionMedium.prj/solution2/impl/vhdl\vivado.jou
+#-----------------------------------------------------------
+source run_vivado.tcl -notrace

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-21] The critical path consists of the following:&#xD;&#xA;&#x9;'mul' operation ('tmp_22_0_2_2', Convolution.cpp:28) (3.36 ns)&#xD;&#xA;&#x9;'add' operation ('tmp6', Convolution.cpp:28) (3.02 ns)&#xD;&#xA;&#x9;'add' operation ('tmp5', Convolution.cpp:28) (3.02 ns)" projectName="convolutionMedium.prj" solutionName="solution2" date="2018-12-19T12:58:12.250+0100" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-21] Estimated clock period (9.4ns) exceeds the target (target clock period: 8ns, clock uncertainty: 1ns, effective delay budget: 7ns)." projectName="convolutionMedium.prj" solutionName="solution2" date="2018-12-19T12:58:12.240+0100" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'convolveMedium/out' to 'convolveMedium/out_r' to avoid the conflict with HDL keywords or other object names." projectName="convolutionMedium.prj" solutionName="solution2" date="2018-12-19T12:58:11.907+0100" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'convolveMedium/in' to 'convolveMedium/in_r' to avoid the conflict with HDL keywords or other object names." projectName="convolutionMedium.prj" solutionName="solution2" date="2018-12-19T12:58:11.896+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-505] Pipeline directive for loop 'kCols' (Convolution.cpp:25) in function 'convolveMedium' has been removed because the loop is unrolled completely." projectName="convolutionMedium.prj" solutionName="solution2" date="2018-12-19T12:57:50.497+0100" type="Warning"/>
+        <logs message="WARNING: [XFORM 203-503] Ignored partial unroll directive for loop 'kRows' (Convolution.cpp:25) because its parent loop or function is pipelined." projectName="convolutionMedium.prj" solutionName="solution2" date="2018-12-19T12:57:50.488+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'xilinx/null/null'." projectName="convolutionMedium.prj" solutionName="solution2" date="2018-12-19T12:55:22.177+0100" type="Warning"/>
+        <logs message="WARNING: [HLS 200-40] Cannot find library 'E:/Xilinx/Vivado_HLS/2017.2/common/technology/xilinx/null/null.lib'." projectName="convolutionMedium.prj" solutionName="solution2" date="2018-12-19T12:55:21.538+0100" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'convolveMedium/out' to 'convolveMedium/out_r' to avoid the conflict with HDL keywords or other object names." projectName="convolutionMedium.prj" solutionName="solution1" date="2018-12-19T12:35:53.471+0100" type="Warning"/>
+        <logs message="WARNING: [SYN 201-107] Renaming port name 'convolveMedium/in' to 'convolveMedium/in_r' to avoid the conflict with HDL keywords or other object names." projectName="convolutionMedium.prj" solutionName="solution1" date="2018-12-19T12:35:53.463+0100" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

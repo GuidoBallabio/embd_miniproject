@@ -1,0 +1,126 @@
+#pragma once
+#include "../types.h"
+#include "xparameters.h"
+#include "xconvolve.h"
+#include "xconvolvemedium.h"
+
+template<typename T_img, typename T_kernel, size_t i_rows, size_t i_cols, size_t k_rows, size_t k_cols>
+class ConvolutionHW
+{
+public:
+
+	ConvolutionHW()
+	{
+		// Initialize the correct hardware for the img
+		if (i_rows == img_size1 && i_cols == img_size1)
+			initializeConvolve();
+		else if (i_rows == img_size2 && i_cols == img_size2)
+			initializeConvolveMedium();
+		else
+			printf("Error: no hardware supports convolution with image size with %d rows and %d cols\r\n", i_rows, i_cols);
+
+		// Check if the given kernel size is supported by the hardware
+		if (k_rows != kernel_size1 || k_cols != kernel_size1)
+			printf("Error: no hardware supports convolution with kernel size with %d rows and %d cols\r\n", k_rows, k_cols);
+	}
+
+	void convolve(T_img in[i_rows][i_cols], T_img out[i_rows][i_cols], T_kernel kernel[k_rows][k_cols])
+	{
+		// TODO: check kernel size
+		if (i_rows == img_size1 && i_cols == img_size1)
+			convolveSmall(in, out, kernel);
+		else if (i_rows == img_size2 && i_cols == img_size2)
+		{
+			convolveMedium(in, out, kernel);
+
+		}
+
+	}
+
+
+private:
+	XConvolve _convolve;
+	XConvolvemedium _convolveMedium;
+
+	// defined size for hardware ips for convolution
+	const T_size img_size1 = 50;
+	const T_size img_size2 = 256;
+	const T_size kernel_size1 = 3;
+
+
+	void initializeConvolve()
+	{
+		int status = XConvolve_Initialize(&_convolve, XPAR_CONVOLVE_0_DEVICE_ID);
+		if (status != XST_SUCCESS)
+			printf("Failed to initialize Hardware");
+	}
+
+	void initializeConvolveMedium()
+	{
+		int status = XConvolvemedium_Initialize(&_convolveMedium, XPAR_CONVOLVEMEDIUM_0_DEVICE_ID);
+		if (status != XST_SUCCESS)
+			printf("Failed to initialize Hardware");
+	}
+
+	void convolveSmall(T_img in[i_rows][i_cols], T_img out[i_rows][i_cols], T_kernel kernel[k_rows][k_cols])
+	{
+		T_size i_length = i_rows*i_cols*sizeof(T_img);
+		T_size k_length = k_rows*k_cols*sizeof(T_kernel);
+
+		while(!XConvolve_IsIdle(&_convolve));
+
+		XConvolve_Write_in_r_Bytes(
+				&_convolve,
+				0,
+				reinterpret_cast<char*>(in),
+				i_length);
+
+		XConvolve_Write_krnl_Bytes(
+						&_convolve,
+						0,
+						reinterpret_cast<char*>(kernel),
+						k_length);
+
+		XConvolve_Start(&_convolve);
+
+		while(!XConvolve_IsDone(&_convolve));
+
+		XConvolve_Read_out_r_Bytes(
+				&_convolve,
+				0,
+				reinterpret_cast<char*>(out),
+				i_length);
+	}
+
+	void convolveMedium(T_img in[i_rows][i_cols], T_img out[i_rows][i_cols], T_kernel kernel[k_rows][k_cols])
+	{
+		printf("Using 256x256 convolution\r\n");
+
+		T_size i_length = i_rows*i_cols*sizeof(T_img);
+		T_size k_length = k_rows*k_cols*sizeof(T_kernel);
+
+		while(!XConvolvemedium_IsIdle(&_convolveMedium));
+
+		XConvolvemedium_Write_in_r_Bytes(
+				&_convolveMedium,
+				0,
+				reinterpret_cast<char*>(in),
+				i_length);
+
+		XConvolvemedium_Write_krnl_Bytes(
+						&_convolveMedium,
+						0,
+						reinterpret_cast<char*>(kernel),
+						k_length);
+
+		XConvolvemedium_Start(&_convolveMedium);
+
+		while(!XConvolvemedium_IsDone(&_convolveMedium));
+
+		XConvolvemedium_Read_out_r_Bytes(
+				&_convolveMedium,
+				0,
+				reinterpret_cast<char*>(out),
+				i_length);
+	}
+};

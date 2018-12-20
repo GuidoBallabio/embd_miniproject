@@ -1,0 +1,22 @@
+#pragma once
+
+template <typename T>
+class ISingleton
+{
+public:
+	ISingleton()
+	{
+		_instance = T();
+	}
+
+	T getInstance()
+	{
+		if (_instance == NULL)
+			_instance = T();
+
+		return _instance;
+	}
+
+private:
+	T _instance;
+};

@@ -1,0 +1,216 @@
+
+
+================================================================
+== Vivado HLS Report for 'convolve'
+================================================================
+* Date:           Wed Dec 19 07:46:30 2018
+
+* Version:        2017.2 (Build 1909853 on Thu Jun 15 18:55:24 MDT 2017)
+* Project:        convolutionInt.prj
+* Solution:       solution2
+* Product family: zynq
+* Target device:  xc7z010clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   8.00|      9.40|        1.00|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-------+-------+-------+-------+---------+
+    |    Latency    |    Interval   | Pipeline|
+    |  min  |  max  |  min  |  max  |   Type  |
+    +-------+-------+-------+-------+---------+
+    |  32498|  32498|  32499|  32499|   none  |
+    +-------+-------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------+-------+-------+----------+-----------+-----------+------+----------+
+        |           |    Latency    | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name |  min  |  max  |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------+-------+-------+----------+-----------+-----------+------+----------+
+        |- Loop 1   |  32497|  32497|       677|          -|          -|    48|    no    |
+        | + imgRow  |    672|    672|        14|          -|          -|    48|    no    |
+        +-----------+-------+-------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT  |
++-----------------+---------+-------+-------+-------+
+|DSP              |        -|      9|      -|      -|
+|Expression       |        -|      -|    514|    256|
+|FIFO             |        -|      -|      -|      -|
+|Instance         |       10|      0|    411|    445|
+|Memory           |        -|      -|      -|      -|
+|Multiplexer      |        -|      -|      -|    229|
+|Register         |        -|      -|    393|      -|
++-----------------+---------+-------+-------+-------+
+|Total            |       10|      9|   1318|    930|
++-----------------+---------+-------+-------+-------+
+|Available        |      120|     80|  35200|  17600|
++-----------------+---------+-------+-------+-------+
+|Utilization (%)  |        8|     11|      3|      5|
++-----------------+---------+-------+-------+-------+
+
++ Detail: 
+    * Instance: 
+    +-------------------------+----------------------+---------+-------+-----+-----+
+    |         Instance        |        Module        | BRAM_18K| DSP48E|  FF | LUT |
+    +-------------------------+----------------------+---------+-------+-----+-----+
+    |convolve_conv_s_axi_U    |convolve_conv_s_axi   |       10|      0|  276|  250|
+    |convolve_mul_6ns_bkb_U0  |convolve_mul_6ns_bkb  |        0|      0|   45|   65|
+    |convolve_mul_6ns_bkb_U1  |convolve_mul_6ns_bkb  |        0|      0|   45|   65|
+    |convolve_mul_6ns_bkb_U2  |convolve_mul_6ns_bkb  |        0|      0|   45|   65|
+    +-------------------------+----------------------+---------+-------+-----+-----+
+    |Total                    |                      |       10|      0|  411|  445|
+    +-------------------------+----------------------+---------+-------+-----+-----+
+
+    * DSP48: 
+    +--------------------------+----------------------+--------------+
+    |         Instance         |        Module        |  Expression  |
+    +--------------------------+----------------------+--------------+
+    |convolve_mac_muladEe_U4   |convolve_mac_muladEe  | i0 + i1 * i2 |
+    |convolve_mac_muladEe_U6   |convolve_mac_muladEe  | i0 + i1 * i2 |
+    |convolve_mac_muladEe_U8   |convolve_mac_muladEe  | i0 + i1 * i2 |
+    |convolve_mac_muladEe_U10  |convolve_mac_muladEe  | i0 * i1 + i2 |
+    |convolve_mac_muladEe_U11  |convolve_mac_muladEe  | i0 + i1 * i2 |
+    |convolve_mul_mul_cud_U3   |convolve_mul_mul_cud  |    i0 * i1   |
+    |convolve_mul_mul_cud_U5   |convolve_mul_mul_cud  |    i0 * i1   |
+    |convolve_mul_mul_cud_U7   |convolve_mul_mul_cud  |    i0 * i1   |
+    |convolve_mul_mul_cud_U9   |convolve_mul_mul_cud  |    i0 * i1   |
+    +--------------------------+----------------------+--------------+
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+-------+----+----+------------+------------+
+    |    Variable Name    | Operation| DSP48E| FF | LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+-------+----+----+------------+------------+
+    |c_1_fu_385_p2        |     +    |      0|  23|  11|           6|           1|
+    |out_r_d0             |     +    |      0|   0|  16|          16|          16|
+    |r_fu_288_p2          |     +    |      0|  23|  11|           6|           1|
+    |tmp3_fu_465_p2       |     +    |      0|   0|  16|          16|          16|
+    |tmp_10_fu_362_p2     |     +    |      0|  41|  17|          12|          12|
+    |tmp_11_fu_372_p2     |     +    |      0|  41|  17|          12|          12|
+    |tmp_12_fu_381_p2     |     +    |      0|  41|  17|          12|          12|
+    |tmp_13_fu_395_p2     |     +    |      0|  41|  17|          12|          12|
+    |tmp_14_fu_400_p2     |     +    |      0|  41|  17|          12|          12|
+    |tmp_15_fu_405_p2     |     +    |      0|  41|  17|          12|          12|
+    |tmp_1_fu_282_p2      |     +    |      0|  23|  11|           6|           2|
+    |tmp_7_fu_316_p2      |     +    |      0|  41|  17|          12|          12|
+    |tmp_8_fu_326_p2      |     +    |      0|  41|  17|          12|          12|
+    |tmp_9_fu_337_p2      |     +    |      0|  41|  17|          12|          12|
+    |tmp_fu_434_p2        |     +    |      0|  53|  21|          16|          16|
+    |tmp_s_fu_353_p2      |     +    |      0|  23|  11|           6|           2|
+    |exitcond1_fu_276_p2  |   icmp   |      0|   0|   3|           6|           5|
+    |exitcond_fu_347_p2   |   icmp   |      0|   0|   3|           6|           5|
+    +---------------------+----------+-------+----+----+------------+------------+
+    |Total                |          |      0| 514| 256|         192|         172|
+    +---------------------+----------+-------+----+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------+-----+-----------+-----+-----------+
+    |      Name     | LUT | Input Size| Bits| Total Bits|
+    +---------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm      |  101|         20|    1|         20|
+    |c_reg_238      |    9|          2|    6|         12|
+    |in_r_address0  |   55|         10|   12|        120|
+    |krnl_address0  |   55|         10|    4|         40|
+    |r1_reg_226     |    9|          2|    6|         12|
+    +---------------+-----+-----------+-----+-----------+
+    |Total          |  229|         44|   29|        204|
+    +---------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------+----+----+-----+-----------+
+    |          Name         | FF | LUT| Bits| Const Bits|
+    +-----------------------+----+----+-----+-----------+
+    |ap_CS_fsm              |  19|   0|   19|          0|
+    |c_1_reg_679            |   6|   0|    6|          0|
+    |c_reg_238              |   6|   0|    6|          0|
+    |in_addr_3_reg_630      |  12|   0|   12|          0|
+    |in_addr_4_reg_635      |  12|   0|   12|          0|
+    |in_addr_5_reg_640      |  12|   0|   12|          0|
+    |in_load_8_reg_749      |  16|   0|   16|          0|
+    |krnl_load_8_reg_754    |   8|   0|    8|          0|
+    |out_addr_reg_645       |  12|   0|   12|          0|
+    |r1_reg_226             |   6|   0|    6|          0|
+    |r_reg_600              |   6|   0|    6|          0|
+    |reg_250                |  16|   0|   16|          0|
+    |reg_254                |   8|   0|    8|          0|
+    |reg_258                |  16|   0|   16|          0|
+    |reg_262                |   8|   0|    8|          0|
+    |tmp1_reg_709           |  16|   0|   16|          0|
+    |tmp4_reg_744           |  16|   0|   16|          0|
+    |tmp5_reg_764           |  16|   0|   16|          0|
+    |tmp_12_reg_674         |  12|   0|   12|          0|
+    |tmp_13_reg_684         |  12|   0|   12|          0|
+    |tmp_14_reg_689         |  12|   0|   12|          0|
+    |tmp_15_reg_694         |  12|   0|   12|          0|
+    |tmp_1_reg_595          |   6|   0|    6|          0|
+    |tmp_22_1_2_reg_729     |  16|   0|   16|          0|
+    |tmp_22_1_reg_714       |  16|   0|   16|          0|
+    |tmp_22_2_2_reg_759     |  16|   0|   16|          0|
+    |tmp_3_reg_704          |  16|   0|   16|          0|
+    |tmp_4_reg_585          |  12|   0|   12|          0|
+    |tmp_5_reg_616          |  12|   0|   12|          0|
+    |tmp_6_reg_623          |  12|   0|   12|          0|
+    |tmp_cast_cast_reg_658  |   6|   0|   12|          6|
+    |tmp_reg_724            |  16|   0|   16|          0|
+    |tmp_s_reg_653          |   6|   0|    6|          0|
+    +-----------------------+----+----+-----+-----------+
+    |Total                  | 393|   0|  399|          6|
+    +-----------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------+-----+-----+------------+--------------+--------------+
+|      RTL Ports     | Dir | Bits|  Protocol  | Source Object|    C Type    |
++--------------------+-----+-----+------------+--------------+--------------+
+|s_axi_conv_AWVALID  |  in |    1|    s_axi   |     conv     |     array    |
+|s_axi_conv_AWREADY  | out |    1|    s_axi   |     conv     |     array    |
+|s_axi_conv_AWADDR   |  in |   15|    s_axi   |     conv     |     array    |
+|s_axi_conv_WVALID   |  in |    1|    s_axi   |     conv     |     array    |
+|s_axi_conv_WREADY   | out |    1|    s_axi   |     conv     |     array    |
+|s_axi_conv_WDATA    |  in |   32|    s_axi   |     conv     |     array    |
+|s_axi_conv_WSTRB    |  in |    4|    s_axi   |     conv     |     array    |
+|s_axi_conv_ARVALID  |  in |    1|    s_axi   |     conv     |     array    |
+|s_axi_conv_ARREADY  | out |    1|    s_axi   |     conv     |     array    |
+|s_axi_conv_ARADDR   |  in |   15|    s_axi   |     conv     |     array    |
+|s_axi_conv_RVALID   | out |    1|    s_axi   |     conv     |     array    |
+|s_axi_conv_RREADY   |  in |    1|    s_axi   |     conv     |     array    |
+|s_axi_conv_RDATA    | out |   32|    s_axi   |     conv     |     array    |
+|s_axi_conv_RRESP    | out |    2|    s_axi   |     conv     |     array    |
+|s_axi_conv_BVALID   | out |    1|    s_axi   |     conv     |     array    |
+|s_axi_conv_BREADY   |  in |    1|    s_axi   |     conv     |     array    |
+|s_axi_conv_BRESP    | out |    2|    s_axi   |     conv     |     array    |
+|ap_clk              |  in |    1| ap_ctrl_hs |   convolve   | return value |
+|ap_rst_n            |  in |    1| ap_ctrl_hs |   convolve   | return value |
+|interrupt           | out |    1| ap_ctrl_hs |   convolve   | return value |
++--------------------+-----+-----+------------+--------------+--------------+
+

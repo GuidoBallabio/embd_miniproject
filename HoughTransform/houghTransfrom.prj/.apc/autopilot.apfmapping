@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="HoughTransform.cpp" path="C:\Users\au513437\Desktop\embd_miniproject\HoughTransform\HoughTransform.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="HoughTransform_test.cpp" path="C:\Users\au513437\Desktop\embd_miniproject\HoughTransform\HoughTransform_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
