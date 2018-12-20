@@ -32,7 +32,8 @@
 *.app
 
 # files generated from vivado hls
-/Convolution/convolution.prj/*
+/*/*/*/*.autopilot
+/*/*/*/.autopilot
 
 #files generated from vivado 2017.2
 /miniproject_zybo/*.cache/*
