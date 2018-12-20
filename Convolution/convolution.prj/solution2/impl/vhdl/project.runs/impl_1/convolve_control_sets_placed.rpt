@@ -1,0 +1,101 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Tue Dec 18 15:00:04 2018
+| Host         : DESKTOP-ECK2RKS running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file convolve_control_sets_placed.rpt
+| Design       : convolve
+| Device       : xc7z010
+-------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    34 |
+| Unused register locations in slices containing registers |    67 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             346 |          101 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             260 |           66 |
+| Yes          | No                    | No                     |             628 |          187 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              75 |           35 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++--------------+----------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+| Clock Signal |                          Enable Signal                         |                                                                               Set/Reset Signal                                                                              | Slice Load Count | Bel Load Count |
++--------------+----------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|  ap_clk      | convolve_conv_s_axi_U/rdata_data[31]_i_2_n_0                   |                                                                                                                                                                             |                3 |              5 |
+|  ap_clk      | ap_NS_fsm18_out                                                | convolve_conv_s_axi_U/r1_reg_226_reg[1][0]                                                                                                                                  |                3 |              6 |
+|  ap_clk      | tmp_s_reg_6610                                                 |                                                                                                                                                                             |                1 |              6 |
+|  ap_clk      | grp_p_hls_fptosi_float_i_fu_250/E[0]                           | ap_CS_fsm_state5                                                                                                                                                            |                2 |              6 |
+|  ap_clk      | ap_CS_fsm_state7                                               |                                                                                                                                                                             |                2 |              6 |
+|  ap_clk      |                                                                | convolve_fmul_32ncud_U2/convolve_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/EXP/STATE_DELAY/i_pipe/p_26_out__0                                                               |                2 |              7 |
+|  ap_clk      |                                                                | convolve_fadd_32nbkb_U1/convolve_ap_fadd_5_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/STATE_DELAY/i_pipe/RESULT_REG.NORMAL.exp_op_reg[7][0] |                3 |              8 |
+|  ap_clk      | ap_NS_fsm[3]                                                   |                                                                                                                                                                             |                4 |             11 |
+|  ap_clk      | ap_CS_fsm_state3                                               |                                                                                                                                                                             |                4 |             11 |
+|  ap_clk      | grp_p_hls_fptosi_float_i_fu_250/ap_CS_fsm_state2               | grp_p_hls_fptosi_float_i_fu_250/p_Val2_2_reg_207[14]                                                                                                                        |                6 |             14 |
+|  ap_clk      | convolve_conv_s_axi_U/aw_hs                                    |                                                                                                                                                                             |                5 |             15 |
+|  ap_clk      | reg_2680                                                       |                                                                                                                                                                             |                5 |             16 |
+|  ap_clk      | grp_p_hls_fptosi_float_i_fu_250/reg_294_reg[0][0]              |                                                                                                                                                                             |                5 |             16 |
+|  ap_clk      |                                                                | convolve_fadd_32nbkb_U1/convolve_ap_fadd_5_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/SPEED_OP.DSP.OP/DSP48E1_BODY.EXP/NOT_LOW_LATENCY_NORM_DIST.NORM_EXP_DELAY/i_pipe/SR[0] |                4 |             22 |
+|  ap_clk      |                                                                | convolve_fmul_32ncud_U2/convolve_ap_fmul_2_max_dsp_32_u/U0/i_synth/MULT.OP/EXP/SIG_DELAY/i_pipe/SR[0]                                                                       |                6 |             22 |
+|  ap_clk      | grp_p_hls_fptosi_float_i_fu_250/opt_has_pipe.first_q_reg[0][0] | convolve_sitofp_3dEe_U3/convolve_ap_sitofp_4_no_dsp_32_u/U0/i_synth/FIX_TO_FLT_OP.SPD.OP/EXP/ZERO_DELAY/i_pipe/SR[0]                                                        |                7 |             22 |
+|  ap_clk      | ap_CS_fsm_state5                                               |                                                                                                                                                                             |                7 |             22 |
+|  ap_clk      | convolve_conv_s_axi_U/rdata_data[31]_i_2_n_0                   | convolve_conv_s_axi_U/rdata_data[31]_i_1_n_0                                                                                                                                |               17 |             27 |
+|  ap_clk      | reg_2830                                                       |                                                                                                                                                                             |               11 |             32 |
+|  ap_clk      | reg_2890                                                       |                                                                                                                                                                             |                9 |             32 |
+|  ap_clk      |                                                                | convolve_fadd_32nbkb_U1/din1_buf1[31]_i_1_n_0                                                                                                                               |                8 |             32 |
+|  ap_clk      | rdata_data_reg[31]_i_6_n_0                                     |                                                                                                                                                                             |               11 |             32 |
+|  ap_clk      | rdata_data_reg[31]_i_9_n_0                                     |                                                                                                                                                                             |                9 |             32 |
+|  ap_clk      | rdata_data_reg[7]_i_7_n_0                                      |                                                                                                                                                                             |               10 |             32 |
+|  ap_clk      | reg_268_reg[15]_i_5_n_0                                        |                                                                                                                                                                             |                8 |             32 |
+|  ap_clk      | reg_2720                                                       |                                                                                                                                                                             |               13 |             32 |
+|  ap_clk      | reg_2780                                                       |                                                                                                                                                                             |                7 |             32 |
+|  ap_clk      | reg_278_reg[31]_i_4_n_0                                        |                                                                                                                                                                             |                6 |             32 |
+|  ap_clk      | grp_p_hls_fptosi_float_i_fu_250/ap_NS_fsm1                     |                                                                                                                                                                             |               11 |             33 |
+|  ap_clk      | ap_CS_fsm_state6                                               |                                                                                                                                                                             |                9 |             36 |
+|  ap_clk      | ap_CS_fsm_state22                                              |                                                                                                                                                                             |               14 |             54 |
+|  ap_clk      | grp_p_hls_fptosi_float_i_fu_250/opt_has_pipe.first_q_reg[0][0] |                                                                                                                                                                             |               34 |            110 |
+|  ap_clk      |                                                                | convolve_conv_s_axi_U/SR[0]                                                                                                                                                 |               43 |            169 |
+|  ap_clk      |                                                                |                                                                                                                                                                             |              101 |            346 |
++--------------+----------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 5      |                     1 |
+| 6      |                     4 |
+| 7      |                     1 |
+| 8      |                     1 |
+| 11     |                     2 |
+| 14     |                     1 |
+| 15     |                     1 |
+| 16+    |                    23 |
++--------+-----------------------+
+
+

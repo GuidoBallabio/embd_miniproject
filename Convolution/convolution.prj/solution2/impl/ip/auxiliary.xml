@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="convolve" xd:componentRef="convolve" xd:initiationInterval="368883" xd:clockPeriod="8.000000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_conv" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+  <xd:arg xd:name="in[][]" xd:originalName="in" xd:direction="in" xd:interfaceRef="s_axi_conv" xd:busTypeRef="axilite" xd:offset="0x2000" xd:arraySize="2500" xd:dataWidth="16"/>
+  <xd:arg xd:name="out[][]" xd:originalName="out" xd:direction="out" xd:interfaceRef="s_axi_conv" xd:busTypeRef="axilite" xd:offset="0x4000" xd:arraySize="2500" xd:dataWidth="16"/>
+  <xd:arg xd:name="krnl[][]" xd:originalName="krnl" xd:direction="in" xd:interfaceRef="s_axi_conv" xd:busTypeRef="axilite" xd:offset="0x6000" xd:arraySize="9" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="368882" xd:worst-case="368882" xd:average-case="368882"/>
+  <xd:resourceEstimates xd:LUT="3372" xd:FF="2555" xd:BRAM="10" xd:DSP="5"/>
+</xd:acceleratorMap>

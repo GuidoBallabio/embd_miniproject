@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# xsim v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Sun Dec 16 14:46:08 2018
+# Process ID: 6624
+# Current directory: C:/Users/au513437/Desktop/EMBD_vivado/Convolution/convolution.prj/solution1/sim/vhdl
+# Command line: xsim.exe -mode tcl -source {xsim.dir/convolve/xsim_script.tcl}
+# Log file: C:/Users/au513437/Desktop/EMBD_vivado/Convolution/convolution.prj/solution1/sim/vhdl/xsim.log
+# Journal file: C:/Users/au513437/Desktop/EMBD_vivado/Convolution/convolution.prj/solution1/sim/vhdl\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/convolve/xsim_script.tcl
+# xsim {convolve} -autoloadwcfg -tclbatch {convolve.tcl}
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source convolve.tcl
+## run all
+Warning: OPMODE Input Warning : The OPMODE 0110X0X with CARRYINSEL  000 to DSP48E1 instance is invalid.
+Time: 100010 ps  Iteration: 0  Process: /apatb_convolve_top/AESL_inst_convolve/convolve_fadd_32nbkb_U0/convolve_ap_fadd_5_full_dsp_32_u/U0/i_synth/addsub_op/ADDSUB/speed_op/dsp/OP/dsp48e1_body/ALIGN_ADD/DSP2/DSP/prcs_opmode_drc  File: /wrk/2017.2/nightly/2017_06_15_1909853/data/vhdl/src/unisims/primitive/DSP48E1.vhd
+Note: simulation done!
+Time: 4294716 ns  Iteration: 1  Process: /apatb_convolve_top/generate_sim_done_proc  File: C:/Users/au513437/Desktop/EMBD_vivado/Convolution/convolution.prj/solution1/sim/vhdl/convolve.autotb.vhd
+Failure: NORMAL EXIT (note: failure is to force the simulator to stop)
+Time: 4294716 ns  Iteration: 1  Process: /apatb_convolve_top/generate_sim_done_proc  File: C:/Users/au513437/Desktop/EMBD_vivado/Convolution/convolution.prj/solution1/sim/vhdl/convolve.autotb.vhd
+$finish called at time : 4294716 ns
+run: Time (s): cpu = 00:00:00 ; elapsed = 00:00:51 . Memory (MB): peak = 217.953 ; gain = 0.000
+## quit
+INFO: [Common 17-206] Exiting xsim at Sun Dec 16 14:47:06 2018...

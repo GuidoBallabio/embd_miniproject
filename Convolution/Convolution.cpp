@@ -14,11 +14,11 @@ void convolve(T_data in[img_rows][img_cols], T_data out[img_rows][img_cols], T_k
 	const TOffset ce = img_cols - cs;
 
 	for (TOffset r = rs; r < re; ++r)
-		for (TOffset c = cs; c < ce; ++c)
+		imgRow:for (TOffset c = cs; c < ce; ++c)
 		{
 			T_data sum = 0;
-			for (TOffset kc = 0; kc < kernel_size; ++kc)
-				for (TOffset kr = 0; kr < kernel_size; ++kr)
+			kernelCol:for (TOffset kc = 0; kc < kernel_size; ++kc)
+				kernelRow:for (TOffset kr = 0; kr < kernel_size; ++kr)
 				{
 					unsigned int row_offset = r - rs + kr;
 					unsigned int col_offset = c - cs + kc;
