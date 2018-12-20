@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# 
+# Start of session at: Thu Dec 20 11:56:40 2018
+# Process ID: 7224
+# Current directory: C:/Users/au513437/Desktop/embd_miniproject/miniproject_zybo/miniproject_zybo.sdk/webtalk
+# Command line: wbtcv.exe -mode batch -source sdk_webtalk.tcl
+# Log file: C:/Users/au513437/Desktop/embd_miniproject/miniproject_zybo/miniproject_zybo.sdk/webtalk/webtalk.log
+# Journal file: C:/Users/au513437/Desktop/embd_miniproject/miniproject_zybo/miniproject_zybo.sdk/webtalk\webtalk.jou
+#-----------------------------------------------------------
+source sdk_webtalk.tcl

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="convolveMedium" xd:componentRef="convolveMedium" xd:initiationInterval="510542" xd:clockPeriod="8.000000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
   <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_convm" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
-  <xd:arg xd:name="in[][]" xd:originalName="in" xd:direction="in" xd:interfaceRef="s_axi_convm" xd:busTypeRef="axilite" xd:offset="0x20000" xd:arraySize="65536" xd:dataWidth="16"/>
-  <xd:arg xd:name="out[][]" xd:originalName="out" xd:direction="out" xd:interfaceRef="s_axi_convm" xd:busTypeRef="axilite" xd:offset="0x40000" xd:arraySize="65536" xd:dataWidth="16"/>
-  <xd:arg xd:name="krnl[][]" xd:originalName="krnl" xd:direction="in" xd:interfaceRef="s_axi_convm" xd:busTypeRef="axilite" xd:offset="0x60000" xd:arraySize="9" xd:dataWidth="8"/>
+  <xd:arg xd:name="in[][]" xd:originalName="in" xd:direction="in" xd:interfaceRef="s_axi_convm" xd:busTypeRef="axilite" xd:offset="0x10000" xd:arraySize="65536" xd:dataWidth="8"/>
+  <xd:arg xd:name="out[][]" xd:originalName="out" xd:direction="out" xd:interfaceRef="s_axi_convm" xd:busTypeRef="axilite" xd:offset="0x20000" xd:arraySize="65536" xd:dataWidth="8"/>
+  <xd:arg xd:name="krnl[][]" xd:originalName="krnl" xd:direction="in" xd:interfaceRef="s_axi_convm" xd:busTypeRef="axilite" xd:offset="0x30000" xd:arraySize="9" xd:dataWidth="8"/>
   <xd:latencyEstimates xd:best-case="8383" xd:worst-case="510541" xd:average-case="256033"/>
-  <xd:resourceEstimates xd:LUT="1348" xd:FF="2916" xd:BRAM="130" xd:DSP="36"/>
+  <xd:resourceEstimates xd:LUT="2182" xd:FF="2324" xd:BRAM="66" xd:DSP="20"/>
 </xd:acceleratorMap>

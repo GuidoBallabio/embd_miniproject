@@ -11,10 +11,13 @@ use IEEE.numeric_std.all;
 
 entity convolveMedium_macud_DSP48_1 is
 port (
-    in0:  in  std_logic_vector(16 - 1 downto 0);
+    in0:  in  std_logic_vector(8 - 1 downto 0);
     in1:  in  std_logic_vector(8 - 1 downto 0);
-    in2:  in  std_logic_vector(16 - 1 downto 0);
-    dout: out std_logic_vector(16 - 1 downto 0));
+    in2:  in  std_logic_vector(8 - 1 downto 0);
+    dout: out std_logic_vector(8 - 1 downto 0));
+
+    attribute use_dsp48 : string;
+    attribute use_dsp48 of convolveMedium_macud_DSP48_1 : entity is "yes";
 
 end entity;
 
@@ -32,7 +35,7 @@ c  <= signed(resize(signed(in2), 48));
 m  <= a * b;
 p  <= m + c;
 
-dout <= std_logic_vector(resize(unsigned(p), 16));
+dout <= std_logic_vector(resize(unsigned(p), 8));
 
 end architecture;
 

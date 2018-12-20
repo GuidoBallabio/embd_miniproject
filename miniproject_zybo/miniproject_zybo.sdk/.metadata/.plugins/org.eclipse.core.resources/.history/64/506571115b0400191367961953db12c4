@@ -1,0 +1,26 @@
+#pragma once
+#include "IGPIO.h"
+#include "xgpio.h"
+
+class Buttons : public IGPIO
+{
+public:
+	Buttons()
+	{
+		int status = XGpio_Initialize(&BTNInst, BTNS_DEVICE_ID);
+		if(status != XST_SUCCESS)
+			return XST_FAILURE;
+	}
+
+	virtual void setValue(T_value value) override
+	{
+
+	}
+
+	virtual T_value getValue() override
+	{
+
+	}
+private:
+	XGpio _buttons;
+};

@@ -1,0 +1,9 @@
+#pragma once
+
+class IHWInput
+{
+public:
+	typedef uint8_t T_value;
+
+	virtual T_value getInputValue() = 0;
+};

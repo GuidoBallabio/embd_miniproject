@@ -1,0 +1,29 @@
+#pragma once
+#include "xgpio.h"
+
+class Switches
+{
+public:
+
+	Switches()
+	{
+		// Initialize switches driver
+		int status = XGpio_Initialize(&_switches, XPAR_SWITCHES_DEVICE_ID);
+		if(status != XST_SUCCESS)
+		{
+			printf("Error: Failed to initialize switches hardware driver\r\n");
+			return;
+		}
+
+		// Set switches as inputs
+		XGpio_SetDataDirection(&_switches, 1, 0xFF);
+	}
+
+	uint8_t getValue()
+	{
+		return XGpio_DiscreteRead(&_switches, 1);
+	}
+
+private:
+	XGpio _switches;
+};

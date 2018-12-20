@@ -13,5 +13,5 @@ create_clock -period 8 -name default
 source "./convolutionMedium.prj/solution2/directives.tcl"
 csim_design
 csynth_design
-cosim_design -rtl vhdl
+cosim_design -setup -rtl vhdl
 export_design -flow impl -rtl vhdl -format ip_catalog

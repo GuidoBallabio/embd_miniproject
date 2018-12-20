@@ -16,10 +16,8 @@ set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
   C:/Users/au513437/Desktop/embd_miniproject/ConvolutionMedium/convolutionMedium.prj/solution2/impl/vhdl/convolveMedium.vhd
   C:/Users/au513437/Desktop/embd_miniproject/ConvolutionMedium/convolutionMedium.prj/solution2/impl/vhdl/convolveMedium_convm_s_axi.vhd
+  C:/Users/au513437/Desktop/embd_miniproject/ConvolutionMedium/convolutionMedium.prj/solution2/impl/vhdl/convolveMedium_mabkb.vhd
   C:/Users/au513437/Desktop/embd_miniproject/ConvolutionMedium/convolutionMedium.prj/solution2/impl/vhdl/convolveMedium_macud.vhd
-  C:/Users/au513437/Desktop/embd_miniproject/ConvolutionMedium/convolutionMedium.prj/solution2/impl/vhdl/convolveMedium_maeOg.vhd
-  C:/Users/au513437/Desktop/embd_miniproject/ConvolutionMedium/convolutionMedium.prj/solution2/impl/vhdl/convolveMedium_mubkb.vhd
-  C:/Users/au513437/Desktop/embd_miniproject/ConvolutionMedium/convolutionMedium.prj/solution2/impl/vhdl/convolveMedium_mudEe.vhd
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

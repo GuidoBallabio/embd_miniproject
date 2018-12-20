@@ -1,0 +1,28 @@
+#pragma once
+#include "xgpio.h"
+
+class Buttons
+{
+public:
+	Buttons()
+	{
+		// Initialize buttons driver
+		int status = XGpio_Initialize(&_buttons, XPAR_BUTTONS_DEVICE_ID);
+		if(status != XST_SUCCESS)
+		{
+			printf("Error: Failed to initialize button hardware driver\r\n");
+			return;
+		}
+
+		// Set buttons as inputs
+		XGpio_SetDataDirection(&BTNInst, 1, 0xFF);
+	}
+
+	uint8_t getValue()
+	{
+		return XGpio_DiscreteRead(&_button, 1);
+	}
+
+private:
+	XGpio _buttons;
+};

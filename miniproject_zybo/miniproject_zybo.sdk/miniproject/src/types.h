@@ -11,3 +11,4 @@ union Image
 	T vect[rows*cols];
 	T mat[rows][cols];
 };
+

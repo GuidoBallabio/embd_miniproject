@@ -7,11 +7,11 @@
 
 `timescale 1 ns / 1 ps
 
-module convolveMedium_macud_DSP48_1(
-    input  [16 - 1:0] in0,
+(* use_dsp48 = "yes" *) module convolveMedium_macud_DSP48_1(
+    input  [8 - 1:0] in0,
     input  [8 - 1:0] in1,
-    input  [16 - 1:0] in2,
-    output [16 - 1:0]  dout);
+    input  [8 - 1:0] in2,
+    output [8 - 1:0]  dout);
 
 wire signed [25 - 1:0]     a;
 wire signed [18 - 1:0]     b;

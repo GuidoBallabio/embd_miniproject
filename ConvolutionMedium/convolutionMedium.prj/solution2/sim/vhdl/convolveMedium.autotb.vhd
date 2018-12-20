@@ -52,14 +52,14 @@ architecture behav of apatb_convolveMedium_top is
   signal ready :   STD_LOGIC := '0';
   signal ready_wire :   STD_LOGIC := '0';
 
-  signal convm_AWADDR:  STD_LOGIC_VECTOR (18 DOWNTO 0);
+  signal convm_AWADDR:  STD_LOGIC_VECTOR (17 DOWNTO 0);
   signal convm_AWVALID:  STD_LOGIC;
   signal convm_AWREADY:  STD_LOGIC;
   signal convm_WVALID:  STD_LOGIC;
   signal convm_WREADY:  STD_LOGIC;
   signal convm_WDATA:  STD_LOGIC_VECTOR (31 DOWNTO 0);
   signal convm_WSTRB:  STD_LOGIC_VECTOR (3 DOWNTO 0);
-  signal convm_ARADDR:  STD_LOGIC_VECTOR (18 DOWNTO 0);
+  signal convm_ARADDR:  STD_LOGIC_VECTOR (17 DOWNTO 0);
   signal convm_ARVALID:  STD_LOGIC;
   signal convm_ARREADY:  STD_LOGIC;
   signal convm_RVALID:  STD_LOGIC;
@@ -99,14 +99,14 @@ port (
     ap_rst_n :  IN STD_LOGIC;
     s_axi_convm_AWVALID :  IN STD_LOGIC;
     s_axi_convm_AWREADY :  OUT STD_LOGIC;
-    s_axi_convm_AWADDR :  IN STD_LOGIC_VECTOR (18 DOWNTO 0);
+    s_axi_convm_AWADDR :  IN STD_LOGIC_VECTOR (17 DOWNTO 0);
     s_axi_convm_WVALID :  IN STD_LOGIC;
     s_axi_convm_WREADY :  OUT STD_LOGIC;
     s_axi_convm_WDATA :  IN STD_LOGIC_VECTOR (31 DOWNTO 0);
     s_axi_convm_WSTRB :  IN STD_LOGIC_VECTOR (3 DOWNTO 0);
     s_axi_convm_ARVALID :  IN STD_LOGIC;
     s_axi_convm_ARREADY :  OUT STD_LOGIC;
-    s_axi_convm_ARADDR :  IN STD_LOGIC_VECTOR (18 DOWNTO 0);
+    s_axi_convm_ARADDR :  IN STD_LOGIC_VECTOR (17 DOWNTO 0);
     s_axi_convm_RVALID :  OUT STD_LOGIC;
     s_axi_convm_RREADY :  IN STD_LOGIC;
     s_axi_convm_RDATA :  OUT STD_LOGIC_VECTOR (31 DOWNTO 0);
@@ -118,9 +118,9 @@ port (
 end component;
 
 -- The signal of port in_r
-shared variable AESL_REG_in_r : STD_LOGIC_VECTOR(15 downto 0) := (others => '0');
+shared variable AESL_REG_in_r : STD_LOGIC_VECTOR(7 downto 0) := (others => '0');
 -- The signal of port out_r
-shared variable AESL_REG_out_r : STD_LOGIC_VECTOR(15 downto 0) := (others => '0');
+shared variable AESL_REG_out_r : STD_LOGIC_VECTOR(7 downto 0) := (others => '0');
 -- The signal of port krnl
 shared variable AESL_REG_krnl : STD_LOGIC_VECTOR(7 downto 0) := (others => '0');
     signal AESL_slave_output_done : STD_LOGIC;

@@ -1,0 +1,32 @@
+/*
+ * \class HWInterrupt
+ * \brief This class is used for creating hardware interrupts using GPIOs on the Zybo board.
+ * \note The main content of the code used in this class is taken from an example project from
+ * exercise 2 in the tutorial at http://www.zynqbook.com/download-tuts.html
+ * \author Daniella Tola
+ * \date 20/12/2018
+ */
+#pragma once
+#include "xscugic.h"
+#include "xil_exception.h"
+
+class HWInterrupt
+{
+public:
+	HWInterrupt(XGpio gpio, u32 mask)
+	{
+		// Enable interrupt
+		XGpio_InterruptEnable(&gpio, mask);
+		XGpio_InterruptGlobalEnable(&gpio);
+
+		Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+									 (Xil_ExceptionHandler)XScuGic_InterruptHandler,
+									 &_interrupt);
+		Xil_ExceptionEnable();
+	}
+
+
+
+private:
+	XScuGic _interrupt;
+};

@@ -1,0 +1,22 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+#include "xparameters.h"
+#include "xgpio.h"
+#include "./ImageProcessing/HoughTransformSW.h"
+#include "./ImageProcessing/ImageMaths.h"
+#include "./DataLoader/LoaderSDFile.h"
+#include "ImageProcessing/ConvolutionSW.h"
+#include "./ImageProcessing/ConvolutionHW.h"
+#include "./Timer/XTimer.h"
+
+
+int main(int, char**)
+{
+	xil_printf("Starting program\r\n");
+
+
+	xil_printf("Exiting program\r\n");
+
+	return 0;
+}

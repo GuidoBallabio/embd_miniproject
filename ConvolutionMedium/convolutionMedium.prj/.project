@@ -39,7 +39,7 @@
 		<link>
 			<name>.reference/convolveMedium.xdc</name>
 			<type>1</type>
-			<location>C:/Users/au513437/Desktop/embd_miniproject/ConvolutionMedium/convolutionMedium.prj/solution4/impl/vhdl/convolveMedium.xdc</location>
+			<location>C:/Users/au513437/Desktop/embd_miniproject/ConvolutionMedium/convolutionMedium.prj/solution2/impl/vhdl/convolveMedium.xdc</location>
 		</link>
 		<link>
 			<name>solution1/constraints</name>
@@ -50,6 +50,11 @@
 			<name>solution2/constraints</name>
 			<type>2</type>
 			<location>C:/Users/au513437/Desktop/embd_miniproject/ConvolutionMedium/convolutionMedium.prj/solution2/.tcls</location>
+		</link>
+		<link>
+			<name>solution3/constraints</name>
+			<type>2</type>
+			<location>C:/Users/au513437/Desktop/embd_miniproject/ConvolutionMedium/convolutionMedium.prj/solution3/.tcls</location>
 		</link>
 		<link>
 			<name>source/Convolution.cpp</name>
@@ -90,6 +95,21 @@
 			<name>solution2/constraints/script.tcl</name>
 			<type>1</type>
 			<location>C:/Users/au513437/Desktop/embd_miniproject/ConvolutionMedium/convolutionMedium.prj/solution2/script.tcl</location>
+		</link>
+		<link>
+			<name>solution3/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>C:/Users/au513437/Desktop/embd_miniproject/ConvolutionMedium/convolutionMedium.prj/solution3/solution3.directive</location>
+		</link>
+		<link>
+			<name>solution3/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>C:/Users/au513437/Desktop/embd_miniproject/ConvolutionMedium/convolutionMedium.prj/solution3/directives.tcl</location>
+		</link>
+		<link>
+			<name>solution3/constraints/script.tcl</name>
+			<type>1</type>
+			<location>C:/Users/au513437/Desktop/embd_miniproject/ConvolutionMedium/convolutionMedium.prj/solution3/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

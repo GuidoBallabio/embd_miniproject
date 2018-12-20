@@ -1,0 +1,194 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date             : Thu Dec 20 11:39:29 2018
+| Host             : DESKTOP-ECK2RKS running 64-bit major release  (build 9200)
+| Command          : report_power -file convolveMedium_power_routed.rpt -pb convolveMedium_power_summary_routed.pb -rpx convolveMedium_power_routed.rpx
+| Design           : convolveMedium
+| Device           : xc7z010clg400-1
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------+
+| Total On-Chip Power (W)  | 0.304  |
+| Dynamic (W)              | 0.201  |
+| Device Static (W)        | 0.104  |
+| Effective TJA (C/W)      | 11.5   |
+| Max Ambient (C)          | 81.5   |
+| Junction Temperature (C) | 28.5   |
+| Confidence Level         | Medium |
+| Setting File             | ---    |
+| Simulation Activity File | ---    |
+| Design Nets Matched      | NA     |
++--------------------------+--------+
+
+
+1.1 On-Chip Components
+----------------------
+
++----------------+-----------+----------+-----------+-----------------+
+| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
++----------------+-----------+----------+-----------+-----------------+
+| Clocks         |     0.009 |        3 |       --- |             --- |
+| Slice Logic    |     0.007 |     2089 |       --- |             --- |
+|   LUT as Logic |     0.006 |     1053 |     17600 |            5.98 |
+|   CARRY4       |    <0.001 |      147 |      4400 |            3.34 |
+|   Register     |    <0.001 |      649 |     35200 |            1.84 |
+|   F7/F8 Muxes  |    <0.001 |       16 |     17600 |            0.09 |
+|   Others       |     0.000 |       68 |       --- |             --- |
+| Signals        |     0.024 |     2078 |       --- |             --- |
+| Block RAM      |     0.133 |       33 |        60 |           55.00 |
+| DSPs           |     0.027 |       19 |        80 |           23.75 |
+| Static Power   |     0.104 |          |           |                 |
+| Total          |     0.304 |          |           |                 |
++----------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     0.195 |       0.190 |      0.005 |
+| Vccaux    |       1.800 |     0.011 |       0.000 |      0.011 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.012 |       0.011 |      0.001 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccpint   |       1.000 |     0.018 |       0.000 |      0.018 |
+| Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |
+| Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |
+| Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio0 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco_mio1 |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                        | Action                                                                                                     |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                               |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks         |                                                                                                            |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                            |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                   |                                                                                                            |
+|                             |            |                                                |                                                                                                            |
+| Overall confidence level    | Medium     |                                                |                                                                                                            |
++-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+------------------------+
+| Ambient Temp (C)      | 25.0                   |
+| ThetaJA (C/W)         | 11.5                   |
+| Airflow (LFM)         | 250                    |
+| Heat Sink             | none                   |
+| ThetaSA (C/W)         | 0.0                    |
+| Board Selection       | medium (10"x10")       |
+| # of Board Layers     | 8to11 (8 to 11 Layers) |
+| Board Temperature (C) | 25.0                   |
++-----------------------+------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++--------+--------+-----------------+
+| Clock  | Domain | Constraint (ns) |
++--------+--------+-----------------+
+| ap_clk | ap_clk |             8.0 |
++--------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++------------------------------------+-----------+
+| Name                               | Power (W) |
++------------------------------------+-----------+
+| convolveMedium                     |     0.201 |
+|   convolveMedium_convm_s_axi_U     |     0.149 |
+|     int_in_r                       |     0.087 |
+|     int_krnl                       |     0.005 |
+|     int_out_r                      |     0.049 |
+|   convolveMedium_mabkb_U0          |     0.002 |
+|     convolveMedium_mabkb_DSP48_0_U |     0.002 |
+|   convolveMedium_mabkb_U1          |     0.002 |
+|     convolveMedium_mabkb_DSP48_0_U |     0.002 |
+|   convolveMedium_mabkb_U11         |     0.002 |
+|     convolveMedium_mabkb_DSP48_0_U |     0.002 |
+|   convolveMedium_mabkb_U12         |     0.002 |
+|     convolveMedium_mabkb_DSP48_0_U |     0.002 |
+|   convolveMedium_mabkb_U14         |     0.002 |
+|     convolveMedium_mabkb_DSP48_0_U |     0.002 |
+|   convolveMedium_mabkb_U15         |     0.002 |
+|     convolveMedium_mabkb_DSP48_0_U |     0.002 |
+|   convolveMedium_mabkb_U16         |     0.002 |
+|     convolveMedium_mabkb_DSP48_0_U |     0.002 |
+|   convolveMedium_mabkb_U17         |     0.003 |
+|     convolveMedium_mabkb_DSP48_0_U |     0.003 |
+|   convolveMedium_mabkb_U19         |     0.002 |
+|     convolveMedium_mabkb_DSP48_0_U |     0.002 |
+|   convolveMedium_mabkb_U2          |     0.002 |
+|     convolveMedium_mabkb_DSP48_0_U |     0.002 |
+|   convolveMedium_mabkb_U3          |     0.002 |
+|     convolveMedium_mabkb_DSP48_0_U |     0.002 |
+|   convolveMedium_mabkb_U4          |     0.002 |
+|     convolveMedium_mabkb_DSP48_0_U |     0.002 |
+|   convolveMedium_mabkb_U6          |     0.002 |
+|     convolveMedium_mabkb_DSP48_0_U |     0.002 |
+|   convolveMedium_mabkb_U7          |     0.002 |
+|     convolveMedium_mabkb_DSP48_0_U |     0.002 |
+|   convolveMedium_mabkb_U9          |     0.002 |
+|     convolveMedium_mabkb_DSP48_0_U |     0.002 |
+|   convolveMedium_macud_U13         |     0.002 |
+|     convolveMedium_macud_DSP48_1_U |     0.002 |
+|   convolveMedium_macud_U18         |     0.002 |
+|     convolveMedium_macud_DSP48_1_U |     0.002 |
+|   convolveMedium_macud_U5          |     0.002 |
+|     convolveMedium_macud_DSP48_1_U |     0.002 |
+|   convolveMedium_macud_U8          |     0.002 |
+|     convolveMedium_macud_DSP48_1_U |     0.002 |
++------------------------------------+-----------+
+
+

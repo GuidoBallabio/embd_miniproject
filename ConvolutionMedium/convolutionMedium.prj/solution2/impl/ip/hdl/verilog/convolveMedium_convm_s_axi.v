@@ -8,7 +8,7 @@
 `timescale 1ns/1ps
 module convolveMedium_convm_s_axi
 #(parameter
-    C_S_AXI_ADDR_WIDTH = 19,
+    C_S_AXI_ADDR_WIDTH = 18,
     C_S_AXI_DATA_WIDTH = 32
 )(
     // axi4 lite slave signals
@@ -40,11 +40,11 @@ module convolveMedium_convm_s_axi
     input  wire                          ap_idle,
     input  wire [15:0]                   in_r_address0,
     input  wire                          in_r_ce0,
-    output wire [15:0]                   in_r_q0,
+    output wire [7:0]                    in_r_q0,
     input  wire [15:0]                   out_r_address0,
     input  wire                          out_r_ce0,
     input  wire                          out_r_we0,
-    input  wire [15:0]                   out_r_d0,
+    input  wire [7:0]                    out_r_d0,
     input  wire [3:0]                    krnl_address0,
     input  wire                          krnl_ce0,
     output wire [7:0]                    krnl_q0
@@ -68,16 +68,20 @@ module convolveMedium_convm_s_axi
 //           bit 0  - Channel 0 (ap_done)
 //           bit 1  - Channel 1 (ap_ready)
 //           others - reserved
+// 0x10000 ~
+// 0x1ffff : Memory 'in_r' (65536 * 8b)
+//           Word n : bit [ 7: 0] - in_r[4n]
+//                    bit [15: 8] - in_r[4n+1]
+//                    bit [23:16] - in_r[4n+2]
+//                    bit [31:24] - in_r[4n+3]
 // 0x20000 ~
-// 0x3ffff : Memory 'in_r' (65536 * 16b)
-//           Word n : bit [15: 0] - in_r[2n]
-//                    bit [31:16] - in_r[2n+1]
-// 0x40000 ~
-// 0x5ffff : Memory 'out_r' (65536 * 16b)
-//           Word n : bit [15: 0] - out_r[2n]
-//                    bit [31:16] - out_r[2n+1]
-// 0x60000 ~
-// 0x6000f : Memory 'krnl' (9 * 8b)
+// 0x2ffff : Memory 'out_r' (65536 * 8b)
+//           Word n : bit [ 7: 0] - out_r[4n]
+//                    bit [15: 8] - out_r[4n+1]
+//                    bit [23:16] - out_r[4n+2]
+//                    bit [31:24] - out_r[4n+3]
+// 0x30000 ~
+// 0x3000f : Memory 'krnl' (9 * 8b)
 //           Word n : bit [ 7: 0] - krnl[4n]
 //                    bit [15: 8] - krnl[4n+1]
 //                    bit [23:16] - krnl[4n+2]
@@ -86,16 +90,16 @@ module convolveMedium_convm_s_axi
 
 //------------------------Parameter----------------------
 localparam
-    ADDR_AP_CTRL    = 19'h00000,
-    ADDR_GIE        = 19'h00004,
-    ADDR_IER        = 19'h00008,
-    ADDR_ISR        = 19'h0000c,
-    ADDR_IN_R_BASE  = 19'h20000,
-    ADDR_IN_R_HIGH  = 19'h3ffff,
-    ADDR_OUT_R_BASE = 19'h40000,
-    ADDR_OUT_R_HIGH = 19'h5ffff,
-    ADDR_KRNL_BASE  = 19'h60000,
-    ADDR_KRNL_HIGH  = 19'h6000f,
+    ADDR_AP_CTRL    = 18'h00000,
+    ADDR_GIE        = 18'h00004,
+    ADDR_IER        = 18'h00008,
+    ADDR_ISR        = 18'h0000c,
+    ADDR_IN_R_BASE  = 18'h10000,
+    ADDR_IN_R_HIGH  = 18'h1ffff,
+    ADDR_OUT_R_BASE = 18'h20000,
+    ADDR_OUT_R_HIGH = 18'h2ffff,
+    ADDR_KRNL_BASE  = 18'h30000,
+    ADDR_KRNL_HIGH  = 18'h3000f,
     WRIDLE          = 2'd0,
     WRDATA          = 2'd1,
     WRRESP          = 2'd2,
@@ -103,7 +107,7 @@ localparam
     RDIDLE          = 2'd0,
     RDDATA          = 2'd1,
     RDRESET         = 2'd2,
-    ADDR_BITS         = 19;
+    ADDR_BITS         = 18;
 
 //------------------------Local signal-------------------
     reg  [1:0]                    wstate = WRRESET;
@@ -127,13 +131,13 @@ localparam
     reg  [1:0]                    int_ier = 2'b0;
     reg  [1:0]                    int_isr = 2'b0;
     // memory signals
-    wire [14:0]                   int_in_r_address0;
+    wire [13:0]                   int_in_r_address0;
     wire                          int_in_r_ce0;
     wire                          int_in_r_we0;
     wire [3:0]                    int_in_r_be0;
     wire [31:0]                   int_in_r_d0;
     wire [31:0]                   int_in_r_q0;
-    wire [14:0]                   int_in_r_address1;
+    wire [13:0]                   int_in_r_address1;
     wire                          int_in_r_ce1;
     wire                          int_in_r_we1;
     wire [3:0]                    int_in_r_be1;
@@ -141,14 +145,14 @@ localparam
     wire [31:0]                   int_in_r_q1;
     reg                           int_in_r_read;
     reg                           int_in_r_write;
-    reg  [0:0]                    int_in_r_shift;
-    wire [14:0]                   int_out_r_address0;
+    reg  [1:0]                    int_in_r_shift;
+    wire [13:0]                   int_out_r_address0;
     wire                          int_out_r_ce0;
     wire                          int_out_r_we0;
     wire [3:0]                    int_out_r_be0;
     wire [31:0]                   int_out_r_d0;
     wire [31:0]                   int_out_r_q0;
-    wire [14:0]                   int_out_r_address1;
+    wire [13:0]                   int_out_r_address1;
     wire                          int_out_r_ce1;
     wire                          int_out_r_we1;
     wire [3:0]                    int_out_r_be1;
@@ -156,7 +160,7 @@ localparam
     wire [31:0]                   int_out_r_q1;
     reg                           int_out_r_read;
     reg                           int_out_r_write;
-    reg  [0:0]                    int_out_r_shift;
+    reg  [1:0]                    int_out_r_shift;
     wire [1:0]                    int_krnl_address0;
     wire                          int_krnl_ce0;
     wire                          int_krnl_we0;
@@ -177,7 +181,7 @@ localparam
 // int_in_r
 convolveMedium_convm_s_axi_ram #(
     .BYTES    ( 4 ),
-    .DEPTH    ( 32768 )
+    .DEPTH    ( 16384 )
 ) int_in_r (
     .clk0     ( ACLK ),
     .address0 ( int_in_r_address0 ),
@@ -197,7 +201,7 @@ convolveMedium_convm_s_axi_ram #(
 // int_out_r
 convolveMedium_convm_s_axi_ram #(
     .BYTES    ( 4 ),
-    .DEPTH    ( 32768 )
+    .DEPTH    ( 16384 )
 ) int_out_r (
     .clk0     ( ACLK ),
     .address0 ( int_out_r_address0 ),
@@ -440,24 +444,24 @@ end
 
 //------------------------Memory logic-------------------
 // in_r
-assign int_in_r_address0  = in_r_address0 >> 1;
+assign int_in_r_address0  = in_r_address0 >> 2;
 assign int_in_r_ce0       = in_r_ce0;
 assign int_in_r_we0       = 1'b0;
 assign int_in_r_be0       = 1'b0;
 assign int_in_r_d0        = 1'b0;
-assign in_r_q0            = int_in_r_q0 >> (int_in_r_shift * 16);
-assign int_in_r_address1  = ar_hs? raddr[16:2] : waddr[16:2];
+assign in_r_q0            = int_in_r_q0 >> (int_in_r_shift * 8);
+assign int_in_r_address1  = ar_hs? raddr[15:2] : waddr[15:2];
 assign int_in_r_ce1       = ar_hs | (int_in_r_write & WVALID);
 assign int_in_r_we1       = int_in_r_write & WVALID;
 assign int_in_r_be1       = WSTRB;
 assign int_in_r_d1        = WDATA;
 // out_r
-assign int_out_r_address0 = out_r_address0 >> 1;
+assign int_out_r_address0 = out_r_address0 >> 2;
 assign int_out_r_ce0      = out_r_ce0;
 assign int_out_r_we0      = out_r_we0;
-assign int_out_r_be0      = 3 << (out_r_address0[0] * 2);
-assign int_out_r_d0       = {2{out_r_d0}};
-assign int_out_r_address1 = ar_hs? raddr[16:2] : waddr[16:2];
+assign int_out_r_be0      = 1 << out_r_address0[1:0];
+assign int_out_r_d0       = {4{out_r_d0}};
+assign int_out_r_address1 = ar_hs? raddr[15:2] : waddr[15:2];
 assign int_out_r_ce1      = ar_hs | (int_out_r_write & WVALID);
 assign int_out_r_we1      = int_out_r_write & WVALID;
 assign int_out_r_be1      = WSTRB;
@@ -502,7 +506,7 @@ end
 always @(posedge ACLK) begin
     if (ACLK_EN) begin
         if (in_r_ce0)
-            int_in_r_shift <= in_r_address0[0];
+            int_in_r_shift <= in_r_address0[1:0];
     end
 end
 
@@ -534,7 +538,7 @@ end
 always @(posedge ACLK) begin
     if (ACLK_EN) begin
         if (out_r_ce0)
-            int_out_r_shift <= out_r_address0[0];
+            int_out_r_shift <= out_r_address0[1:0];
     end
 end
 

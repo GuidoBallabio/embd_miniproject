@@ -214,12 +214,20 @@
 /******************************************************************/
 
 /* Definitions for driver GPIO */
-#define XPAR_XGPIO_NUM_INSTANCES 2
+#define XPAR_XGPIO_NUM_INSTANCES 3
+
+/* Definitions for peripheral BUTTONS */
+#define XPAR_BUTTONS_BASEADDR 0x41220000
+#define XPAR_BUTTONS_HIGHADDR 0x4122FFFF
+#define XPAR_BUTTONS_DEVICE_ID 0
+#define XPAR_BUTTONS_INTERRUPT_PRESENT 1
+#define XPAR_BUTTONS_IS_DUAL 0
+
 
 /* Definitions for peripheral LEDS */
 #define XPAR_LEDS_BASEADDR 0x41210000
 #define XPAR_LEDS_HIGHADDR 0x4121FFFF
-#define XPAR_LEDS_DEVICE_ID 0
+#define XPAR_LEDS_DEVICE_ID 1
 #define XPAR_LEDS_INTERRUPT_PRESENT 0
 #define XPAR_LEDS_IS_DUAL 0
 
@@ -227,26 +235,33 @@
 /* Definitions for peripheral SWITCHES */
 #define XPAR_SWITCHES_BASEADDR 0x41200000
 #define XPAR_SWITCHES_HIGHADDR 0x4120FFFF
-#define XPAR_SWITCHES_DEVICE_ID 1
+#define XPAR_SWITCHES_DEVICE_ID 2
 #define XPAR_SWITCHES_INTERRUPT_PRESENT 0
 #define XPAR_SWITCHES_IS_DUAL 0
 
 
 /******************************************************************/
 
-/* Canonical definitions for peripheral LEDS */
-#define XPAR_GPIO_0_BASEADDR 0x41210000
-#define XPAR_GPIO_0_HIGHADDR 0x4121FFFF
-#define XPAR_GPIO_0_DEVICE_ID XPAR_LEDS_DEVICE_ID
-#define XPAR_GPIO_0_INTERRUPT_PRESENT 0
+/* Canonical definitions for peripheral BUTTONS */
+#define XPAR_GPIO_0_BASEADDR 0x41220000
+#define XPAR_GPIO_0_HIGHADDR 0x4122FFFF
+#define XPAR_GPIO_0_DEVICE_ID XPAR_BUTTONS_DEVICE_ID
+#define XPAR_GPIO_0_INTERRUPT_PRESENT 1
 #define XPAR_GPIO_0_IS_DUAL 0
 
-/* Canonical definitions for peripheral SWITCHES */
-#define XPAR_GPIO_1_BASEADDR 0x41200000
-#define XPAR_GPIO_1_HIGHADDR 0x4120FFFF
-#define XPAR_GPIO_1_DEVICE_ID XPAR_SWITCHES_DEVICE_ID
+/* Canonical definitions for peripheral LEDS */
+#define XPAR_GPIO_1_BASEADDR 0x41210000
+#define XPAR_GPIO_1_HIGHADDR 0x4121FFFF
+#define XPAR_GPIO_1_DEVICE_ID XPAR_LEDS_DEVICE_ID
 #define XPAR_GPIO_1_INTERRUPT_PRESENT 0
 #define XPAR_GPIO_1_IS_DUAL 0
+
+/* Canonical definitions for peripheral SWITCHES */
+#define XPAR_GPIO_2_BASEADDR 0x41200000
+#define XPAR_GPIO_2_HIGHADDR 0x4120FFFF
+#define XPAR_GPIO_2_DEVICE_ID XPAR_SWITCHES_DEVICE_ID
+#define XPAR_GPIO_2_INTERRUPT_PRESENT 0
+#define XPAR_GPIO_2_IS_DUAL 0
 
 
 /******************************************************************/
@@ -290,6 +305,15 @@
 #define XPAR_XQSPIPS_0_QSPI_CLK_FREQ_HZ 200000000
 #define XPAR_XQSPIPS_0_QSPI_MODE 0
 
+
+/******************************************************************/
+
+/* Definitions for Fabric interrupts connected to ps7_scugic_0 */
+#define XPAR_FABRIC_BUTTONS_IP2INTC_IRPT_INTR 61U
+
+/******************************************************************/
+
+/* Canonical definitions for Fabric interrupts connected to ps7_scugic_0 */
 
 /******************************************************************/
 

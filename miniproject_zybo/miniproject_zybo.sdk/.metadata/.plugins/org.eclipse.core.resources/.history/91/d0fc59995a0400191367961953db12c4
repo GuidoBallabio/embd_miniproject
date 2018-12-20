@@ -1,0 +1,10 @@
+#pragma once
+
+
+class IGPIO
+{
+public:
+	typedef T_value;
+	void setValue(T_value value);
+	uint8_t
+};

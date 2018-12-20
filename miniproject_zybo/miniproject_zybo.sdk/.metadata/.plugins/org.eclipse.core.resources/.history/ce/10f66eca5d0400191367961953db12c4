@@ -1,0 +1,11 @@
+#pragma once
+#include "xscugic.h"
+
+class HWInterrupt
+{
+public:
+	HWInterrupt()
+	{
+
+	}
+};

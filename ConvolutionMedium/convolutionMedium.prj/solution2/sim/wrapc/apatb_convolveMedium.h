@@ -5,6 +5,6 @@
 // ==============================================================
 
 extern void AESL_WRAP_convolveMedium (
-short in[256][256],
-short out[256][256],
+unsigned char in[256][256],
+unsigned char out[256][256],
 char krnl[3][3]);

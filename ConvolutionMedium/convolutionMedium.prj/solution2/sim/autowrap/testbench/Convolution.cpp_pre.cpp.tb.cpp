@@ -31,7 +31,7 @@ union Image
 };
 #4 "C:/Users/au513437/Desktop/embd_miniproject/ConvolutionMedium/camera_man.h" 2
 
-typedef short T_data;
+typedef unsigned char T_data;
 
 const T_size img_rows = 256;
 const T_size img_cols = 256;
@@ -1501,6 +1501,7 @@ void convolveMedium(T_data in[img_rows][img_cols], T_data out[img_rows][img_cols
 
 void convolveMedium(T_data in[img_rows][img_cols], T_data out[img_rows][img_cols], T_kernel krnl[kernel_size][kernel_size])
 {
+
  typedef unsigned int TOffset;
 
 

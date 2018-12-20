@@ -19,20 +19,20 @@ entity AESL_axi_slave_convm is
       constant    TV_IN_in_r : STRING (1 to 50) := "../tv/cdatafile/c.convolveMedium.autotvin_in_r.dat";
       constant    TV_OUT_out_r : STRING (1 to 56) := "../tv/rtldatafile/rtl.convolveMedium.autotvout_out_r.dat";
       constant    TV_IN_krnl : STRING (1 to 50) := "../tv/cdatafile/c.convolveMedium.autotvin_krnl.dat";
-constant ADDR_WIDTH : INTEGER := 19;
+constant ADDR_WIDTH : INTEGER := 18;
 constant DATA_WIDTH : INTEGER := 32;
 constant in_r_DEPTH : INTEGER := 65536;
-constant in_r_c_bitwidth : INTEGER := 16;
+constant in_r_c_bitwidth : INTEGER := 8;
 constant out_r_DEPTH : INTEGER := 65536;
-constant out_r_c_bitwidth : INTEGER := 16;
+constant out_r_c_bitwidth : INTEGER := 8;
 constant krnl_DEPTH : INTEGER := 9;
 constant krnl_c_bitwidth : INTEGER := 8;
 constant START_ADDR : INTEGER := 0;
 constant convolveMedium_continue_addr : INTEGER := 0;
 constant convolveMedium_auto_start_addr : INTEGER := 0;
-constant in_r_data_in_addr : INTEGER := 131072;
-constant krnl_data_in_addr : INTEGER := 393216;
-constant out_r_data_out_addr : INTEGER := 262144;
+constant in_r_data_in_addr : INTEGER := 65536;
+constant krnl_data_in_addr : INTEGER := 196608;
+constant out_r_data_out_addr : INTEGER := 131072;
 constant STATUS_ADDR : INTEGER := 0;
       constant    INTERFACE_TYPE : STRING (1 to 5) := "convm"
 

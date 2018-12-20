@@ -1,0 +1,64 @@
+/*
+ * \class HWInterrupt
+ * \brief This class is used for creating hardware interrupts using GPIOs on the Zybo board.
+ * \note The main content of the code used in this class is taken from an example project in
+ * exercise 2 in the tutorial at http://www.zynqbook.com/download-tuts.html
+ * \author Daniella Tola
+ * \date 20/12/2018
+ */
+#pragma once
+#include "xscugic.h"
+#include "xil_exception.h"
+#include "types.h"
+
+class HWInterrupt
+{
+public:
+
+
+	HWInterrupt(XGpio gpio, u32 mask, u32 gpioInterruptID, interrupt_handle interruptHandler)
+	{
+		XScuGic_Config *IntcConfig;
+		int status;
+
+		// Interrupt controller initialisation
+		IntcConfig = XScuGic_LookupConfig(XPAR_SCUGIC_0_DEVICE_ID);
+		status = XScuGic_CfgInitialize(&_interrupt, IntcConfig, IntcConfig->CpuBaseAddress);
+		if(status != XST_SUCCESS)
+		{
+			printf("Failed to initialize interrupt controller\r\n");
+			return;
+		}
+
+		// Call to interrupt setup
+		//XGpio_InterruptEnable(&gpio, mask);
+		//XGpio_InterruptGlobalEnable(&gpio);
+
+		Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+									 (Xil_ExceptionHandler)XScuGic_InterruptHandler,
+									 &_interrupt);
+		Xil_ExceptionEnable();
+
+		// Connect GPIO interrupt to handler
+		status = XScuGic_Connect(&_interrupt,
+								 gpioInterruptID,
+								 (Xil_ExceptionHandler)interruptHandler,
+								 (void *)&gpio);
+		if(status != XST_SUCCESS)
+		{
+			printf("Failed to connect GPIO to interrupt handler\r\n");
+			return;
+		}
+
+		// Enable GPIO interrupts interrupt
+		XGpio_InterruptEnable(&gpio, mask);
+		XGpio_InterruptGlobalEnable(&gpio);
+
+		// Enable GPIO and timer interrupts in the controller
+		XScuGic_Enable(&_interrupt, gpioInterruptID);
+	}
+
+private:
+	XScuGic _interrupt;
+
+};

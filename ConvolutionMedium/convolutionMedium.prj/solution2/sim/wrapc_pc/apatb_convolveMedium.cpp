@@ -90,13 +90,13 @@ class INTER_TCL_FILE {
 };
 
 extern void convolveMedium (
-short in[256][256],
-short out[256][256],
+unsigned char in[256][256],
+unsigned char out[256][256],
 char krnl[3][3]);
 
 void AESL_WRAP_convolveMedium (
-short in[256][256],
-short out[256][256],
+unsigned char in[256][256],
+unsigned char out[256][256],
 char krnl[3][3])
 {
 	refine_signal_handler();
@@ -124,7 +124,7 @@ char krnl[3][3])
 		{
 			aesl_fh.read(AUTOTB_TVOUT_PC_out_r, AESL_token); // data
 
-			sc_bv<16> *out_r_pc_buffer = new sc_bv<16>[65536];
+			sc_bv<8> *out_r_pc_buffer = new sc_bv<8>[65536];
 			int i = 0;
 
 			while (AESL_token != "[[/transaction]]")
@@ -193,18 +193,18 @@ char krnl[3][3])
 			{
 				// RTL Name: out_r
 				{
-					// bitslice(15, 0)
+					// bitslice(7, 0)
 					// {
-						// celement: out(15, 0)
+						// celement: out(7, 0)
 						// {
-							sc_lv<16>* out_lv0_0_255_1_lv1_0_255_1 = new sc_lv<16>[65536];
+							sc_lv<8>* out_lv0_0_255_1_lv1_0_255_1 = new sc_lv<8>[65536];
 						// }
 					// }
 
-					// bitslice(15, 0)
+					// bitslice(7, 0)
 					{
 						int hls_map_index = 0;
-						// celement: out(15, 0)
+						// celement: out(7, 0)
 						{
 							// carray: (0) => (255) @ (1)
 							for (int i_0 = 0; i_0 <= 255; i_0 += 1)
@@ -214,7 +214,7 @@ char krnl[3][3])
 								{
 									if (&(out[0][0]) != NULL) // check the null address if the c port is array or others
 									{
-										out_lv0_0_255_1_lv1_0_255_1[hls_map_index].range(15, 0) = sc_bv<16>(out_r_pc_buffer[hls_map_index].range(15, 0));
+										out_lv0_0_255_1_lv1_0_255_1[hls_map_index].range(7, 0) = sc_bv<8>(out_r_pc_buffer[hls_map_index].range(7, 0));
 										hls_map_index++;
 									}
 								}
@@ -222,10 +222,10 @@ char krnl[3][3])
 						}
 					}
 
-					// bitslice(15, 0)
+					// bitslice(7, 0)
 					{
 						int hls_map_index = 0;
-						// celement: out(15, 0)
+						// celement: out(7, 0)
 						{
 							// carray: (0) => (255) @ (1)
 							for (int i_0 = 0; i_0 <= 255; i_0 += 1)
@@ -284,14 +284,14 @@ char krnl[3][3])
 		sprintf(tvin_in_r, "[[transaction]] %d\n", AESL_transaction);
 		aesl_fh.write(AUTOTB_TVIN_in_r, tvin_in_r);
 
-		sc_bv<16>* in_r_tvin_wrapc_buffer = new sc_bv<16>[65536];
+		sc_bv<8>* in_r_tvin_wrapc_buffer = new sc_bv<8>[65536];
 
 		// RTL Name: in_r
 		{
-			// bitslice(15, 0)
+			// bitslice(7, 0)
 			{
 				int hls_map_index = 0;
-				// celement: in(15, 0)
+				// celement: in(7, 0)
 				{
 					// carray: (0) => (255) @ (1)
 					for (int i_0 = 0; i_0 <= 255; i_0 += 1)
@@ -307,9 +307,9 @@ char krnl[3][3])
 							// input_type_conversion : in[i_0][i_1]
 							if (&(in[0][0]) != NULL) // check the null address if the c port is array or others
 							{
-								sc_lv<16> in_tmp_mem;
+								sc_lv<8> in_tmp_mem;
 								in_tmp_mem = in[i_0][i_1];
-								in_r_tvin_wrapc_buffer[hls_map_index].range(15, 0) = in_tmp_mem.range(15, 0);
+								in_r_tvin_wrapc_buffer[hls_map_index].range(7, 0) = in_tmp_mem.range(7, 0);
                                  		       hls_map_index++;
 							}
 						}
@@ -395,14 +395,14 @@ char krnl[3][3])
 		sprintf(tvout_out_r, "[[transaction]] %d\n", AESL_transaction);
 		aesl_fh.write(AUTOTB_TVOUT_out_r, tvout_out_r);
 
-		sc_bv<16>* out_r_tvout_wrapc_buffer = new sc_bv<16>[65536];
+		sc_bv<8>* out_r_tvout_wrapc_buffer = new sc_bv<8>[65536];
 
 		// RTL Name: out_r
 		{
-			// bitslice(15, 0)
+			// bitslice(7, 0)
 			{
 				int hls_map_index = 0;
-				// celement: out(15, 0)
+				// celement: out(7, 0)
 				{
 					// carray: (0) => (255) @ (1)
 					for (int i_0 = 0; i_0 <= 255; i_0 += 1)
@@ -418,9 +418,9 @@ char krnl[3][3])
 							// input_type_conversion : out[i_0][i_1]
 							if (&(out[0][0]) != NULL) // check the null address if the c port is array or others
 							{
-								sc_lv<16> out_tmp_mem;
+								sc_lv<8> out_tmp_mem;
 								out_tmp_mem = out[i_0][i_1];
-								out_r_tvout_wrapc_buffer[hls_map_index].range(15, 0) = out_tmp_mem.range(15, 0);
+								out_r_tvout_wrapc_buffer[hls_map_index].range(7, 0) = out_tmp_mem.range(7, 0);
                                  		       hls_map_index++;
 							}
 						}

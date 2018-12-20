@@ -24,16 +24,20 @@
 //           bit 0  - Channel 0 (ap_done)
 //           bit 1  - Channel 1 (ap_ready)
 //           others - reserved
+// 0x10000 ~
+// 0x1ffff : Memory 'in_r' (65536 * 8b)
+//           Word n : bit [ 7: 0] - in_r[4n]
+//                    bit [15: 8] - in_r[4n+1]
+//                    bit [23:16] - in_r[4n+2]
+//                    bit [31:24] - in_r[4n+3]
 // 0x20000 ~
-// 0x3ffff : Memory 'in_r' (65536 * 16b)
-//           Word n : bit [15: 0] - in_r[2n]
-//                    bit [31:16] - in_r[2n+1]
-// 0x40000 ~
-// 0x5ffff : Memory 'out_r' (65536 * 16b)
-//           Word n : bit [15: 0] - out_r[2n]
-//                    bit [31:16] - out_r[2n+1]
-// 0x60000 ~
-// 0x6000f : Memory 'krnl' (9 * 8b)
+// 0x2ffff : Memory 'out_r' (65536 * 8b)
+//           Word n : bit [ 7: 0] - out_r[4n]
+//                    bit [15: 8] - out_r[4n+1]
+//                    bit [23:16] - out_r[4n+2]
+//                    bit [31:24] - out_r[4n+3]
+// 0x30000 ~
+// 0x3000f : Memory 'krnl' (9 * 8b)
 //           Word n : bit [ 7: 0] - krnl[4n]
 //                    bit [15: 8] - krnl[4n+1]
 //                    bit [23:16] - krnl[4n+2]
@@ -44,16 +48,16 @@
 #define XCONVOLVEMEDIUM_CONVM_ADDR_GIE        0x00004
 #define XCONVOLVEMEDIUM_CONVM_ADDR_IER        0x00008
 #define XCONVOLVEMEDIUM_CONVM_ADDR_ISR        0x0000c
-#define XCONVOLVEMEDIUM_CONVM_ADDR_IN_R_BASE  0x20000
-#define XCONVOLVEMEDIUM_CONVM_ADDR_IN_R_HIGH  0x3ffff
-#define XCONVOLVEMEDIUM_CONVM_WIDTH_IN_R      16
+#define XCONVOLVEMEDIUM_CONVM_ADDR_IN_R_BASE  0x10000
+#define XCONVOLVEMEDIUM_CONVM_ADDR_IN_R_HIGH  0x1ffff
+#define XCONVOLVEMEDIUM_CONVM_WIDTH_IN_R      8
 #define XCONVOLVEMEDIUM_CONVM_DEPTH_IN_R      65536
-#define XCONVOLVEMEDIUM_CONVM_ADDR_OUT_R_BASE 0x40000
-#define XCONVOLVEMEDIUM_CONVM_ADDR_OUT_R_HIGH 0x5ffff
-#define XCONVOLVEMEDIUM_CONVM_WIDTH_OUT_R     16
+#define XCONVOLVEMEDIUM_CONVM_ADDR_OUT_R_BASE 0x20000
+#define XCONVOLVEMEDIUM_CONVM_ADDR_OUT_R_HIGH 0x2ffff
+#define XCONVOLVEMEDIUM_CONVM_WIDTH_OUT_R     8
 #define XCONVOLVEMEDIUM_CONVM_DEPTH_OUT_R     65536
-#define XCONVOLVEMEDIUM_CONVM_ADDR_KRNL_BASE  0x60000
-#define XCONVOLVEMEDIUM_CONVM_ADDR_KRNL_HIGH  0x6000f
+#define XCONVOLVEMEDIUM_CONVM_ADDR_KRNL_BASE  0x30000
+#define XCONVOLVEMEDIUM_CONVM_ADDR_KRNL_HIGH  0x3000f
 #define XCONVOLVEMEDIUM_CONVM_WIDTH_KRNL      8
 #define XCONVOLVEMEDIUM_CONVM_DEPTH_KRNL      9
 

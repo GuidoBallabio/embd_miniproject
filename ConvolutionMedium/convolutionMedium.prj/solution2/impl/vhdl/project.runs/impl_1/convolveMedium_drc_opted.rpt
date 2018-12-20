@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Wed Dec 19 12:47:04 2018
+| Date         : Thu Dec 20 11:38:32 2018
 | Host         : DESKTOP-ECK2RKS running 64-bit major release  (build 9200)
 | Command      : report_drc -file convolveMedium_drc_opted.rpt
 | Design       : convolveMedium
@@ -24,462 +24,176 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 90
+             Violations found: 33
 +--------+----------+------------------------+------------+
 | Rule   | Severity | Description            | Violations |
 +--------+----------+------------------------+------------+
-| UTLZ-1 | Error    | Resource utilization   | 3          |
-| DPIP-1 | Warning  | Input pipelining       | 32         |
-| DPOP-1 | Warning  | PREG Output pipelining | 22         |
-| DPOP-2 | Warning  | MREG Output pipelining | 32         |
+| DPIP-1 | Warning  | Input pipelining       | 4          |
+| DPOP-1 | Warning  | PREG Output pipelining | 9          |
+| DPOP-2 | Warning  | MREG Output pipelining | 19         |
 | ZPS7-1 | Warning  | PS7 block required     | 1          |
 +--------+----------+------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
-UTLZ-1#1 Error
-Resource utilization  - PBlock:ROOT
-RAMB18 and RAMB36/FIFO over-utilized in Top Level Design (This design requires more RAMB18 and RAMB36/FIFO cells than are available in the target device. This design requires 130 of such cell types but only 120 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)ROOT
-Related violations: <none>
-
-UTLZ-1#2 Error
-Resource utilization  - PBlock:ROOT
-RAMB36/FIFO over-utilized in Top Level Design (This design requires more RAMB36/FIFO cells than are available in the target device. This design requires 65 of such cell types but only 60 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)ROOT
-Related violations: <none>
-
-UTLZ-1#3 Error
-Resource utilization  - PBlock:ROOT
-RAMB36E1 over-utilized in Top Level Design (This design requires more RAMB36E1 cells than are available in the target device. This design requires 65 of such cell types but only 60 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)ROOT
-Related violations: <none>
-
 DPIP-1#1 Warning
 Input pipelining  
-DSP convolveMedium_mubkb_U0/convolveMedium_mubkb_DSP48_0_U/in00 input convolveMedium_mubkb_U0/convolveMedium_mubkb_DSP48_0_U/in00/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP convolveMedium_macud_U13/convolveMedium_macud_DSP48_1_U/p input convolveMedium_macud_U13/convolveMedium_macud_DSP48_1_U/p/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#2 Warning
 Input pipelining  
-DSP convolveMedium_mubkb_U0/convolveMedium_mubkb_DSP48_0_U/in00 input convolveMedium_mubkb_U0/convolveMedium_mubkb_DSP48_0_U/in00/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP convolveMedium_macud_U18/convolveMedium_macud_DSP48_1_U/p input convolveMedium_macud_U18/convolveMedium_macud_DSP48_1_U/p/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#3 Warning
 Input pipelining  
-DSP convolveMedium_mubkb_U1/convolveMedium_mubkb_DSP48_0_U/in00 input convolveMedium_mubkb_U1/convolveMedium_mubkb_DSP48_0_U/in00/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP convolveMedium_macud_U5/convolveMedium_macud_DSP48_1_U/p input convolveMedium_macud_U5/convolveMedium_macud_DSP48_1_U/p/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#4 Warning
 Input pipelining  
-DSP convolveMedium_mubkb_U1/convolveMedium_mubkb_DSP48_0_U/in00 input convolveMedium_mubkb_U1/convolveMedium_mubkb_DSP48_0_U/in00/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#5 Warning
-Input pipelining  
-DSP convolveMedium_mubkb_U4/convolveMedium_mubkb_DSP48_0_U/in00 input convolveMedium_mubkb_U4/convolveMedium_mubkb_DSP48_0_U/in00/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#6 Warning
-Input pipelining  
-DSP convolveMedium_mubkb_U4/convolveMedium_mubkb_DSP48_0_U/in00 input convolveMedium_mubkb_U4/convolveMedium_mubkb_DSP48_0_U/in00/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#7 Warning
-Input pipelining  
-DSP convolveMedium_mubkb_U5/convolveMedium_mubkb_DSP48_0_U/in00 input convolveMedium_mubkb_U5/convolveMedium_mubkb_DSP48_0_U/in00/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#8 Warning
-Input pipelining  
-DSP convolveMedium_mubkb_U5/convolveMedium_mubkb_DSP48_0_U/in00 input convolveMedium_mubkb_U5/convolveMedium_mubkb_DSP48_0_U/in00/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#9 Warning
-Input pipelining  
-DSP convolveMedium_mudEe_U13/convolveMedium_mudEe_DSP48_2_U/in00 input convolveMedium_mudEe_U13/convolveMedium_mudEe_DSP48_2_U/in00/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#10 Warning
-Input pipelining  
-DSP convolveMedium_mudEe_U13/convolveMedium_mudEe_DSP48_2_U/in00 input convolveMedium_mudEe_U13/convolveMedium_mudEe_DSP48_2_U/in00/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#11 Warning
-Input pipelining  
-DSP convolveMedium_mudEe_U14/convolveMedium_mudEe_DSP48_2_U/in00 input convolveMedium_mudEe_U14/convolveMedium_mudEe_DSP48_2_U/in00/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#12 Warning
-Input pipelining  
-DSP convolveMedium_mudEe_U14/convolveMedium_mudEe_DSP48_2_U/in00 input convolveMedium_mudEe_U14/convolveMedium_mudEe_DSP48_2_U/in00/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#13 Warning
-Input pipelining  
-DSP convolveMedium_mudEe_U18/convolveMedium_mudEe_DSP48_2_U/in00 input convolveMedium_mudEe_U18/convolveMedium_mudEe_DSP48_2_U/in00/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#14 Warning
-Input pipelining  
-DSP convolveMedium_mudEe_U18/convolveMedium_mudEe_DSP48_2_U/in00 input convolveMedium_mudEe_U18/convolveMedium_mudEe_DSP48_2_U/in00/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#15 Warning
-Input pipelining  
-DSP convolveMedium_mudEe_U19/convolveMedium_mudEe_DSP48_2_U/in00 input convolveMedium_mudEe_U19/convolveMedium_mudEe_DSP48_2_U/in00/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#16 Warning
-Input pipelining  
-DSP convolveMedium_mudEe_U19/convolveMedium_mudEe_DSP48_2_U/in00 input convolveMedium_mudEe_U19/convolveMedium_mudEe_DSP48_2_U/in00/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#17 Warning
-Input pipelining  
-DSP convolveMedium_mudEe_U22/convolveMedium_mudEe_DSP48_2_U/in00 input convolveMedium_mudEe_U22/convolveMedium_mudEe_DSP48_2_U/in00/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#18 Warning
-Input pipelining  
-DSP convolveMedium_mudEe_U22/convolveMedium_mudEe_DSP48_2_U/in00 input convolveMedium_mudEe_U22/convolveMedium_mudEe_DSP48_2_U/in00/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#19 Warning
-Input pipelining  
-DSP convolveMedium_mudEe_U23/convolveMedium_mudEe_DSP48_2_U/in00 input convolveMedium_mudEe_U23/convolveMedium_mudEe_DSP48_2_U/in00/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#20 Warning
-Input pipelining  
-DSP convolveMedium_mudEe_U23/convolveMedium_mudEe_DSP48_2_U/in00 input convolveMedium_mudEe_U23/convolveMedium_mudEe_DSP48_2_U/in00/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#21 Warning
-Input pipelining  
-DSP convolveMedium_mudEe_U27/convolveMedium_mudEe_DSP48_2_U/in00 input convolveMedium_mudEe_U27/convolveMedium_mudEe_DSP48_2_U/in00/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#22 Warning
-Input pipelining  
-DSP convolveMedium_mudEe_U27/convolveMedium_mudEe_DSP48_2_U/in00 input convolveMedium_mudEe_U27/convolveMedium_mudEe_DSP48_2_U/in00/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#23 Warning
-Input pipelining  
-DSP convolveMedium_mudEe_U28/convolveMedium_mudEe_DSP48_2_U/in00 input convolveMedium_mudEe_U28/convolveMedium_mudEe_DSP48_2_U/in00/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#24 Warning
-Input pipelining  
-DSP convolveMedium_mudEe_U28/convolveMedium_mudEe_DSP48_2_U/in00 input convolveMedium_mudEe_U28/convolveMedium_mudEe_DSP48_2_U/in00/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#25 Warning
-Input pipelining  
-DSP convolveMedium_mudEe_U29/convolveMedium_mudEe_DSP48_2_U/in00 input convolveMedium_mudEe_U29/convolveMedium_mudEe_DSP48_2_U/in00/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#26 Warning
-Input pipelining  
-DSP convolveMedium_mudEe_U29/convolveMedium_mudEe_DSP48_2_U/in00 input convolveMedium_mudEe_U29/convolveMedium_mudEe_DSP48_2_U/in00/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#27 Warning
-Input pipelining  
-DSP convolveMedium_mudEe_U33/convolveMedium_mudEe_DSP48_2_U/in00 input convolveMedium_mudEe_U33/convolveMedium_mudEe_DSP48_2_U/in00/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#28 Warning
-Input pipelining  
-DSP convolveMedium_mudEe_U33/convolveMedium_mudEe_DSP48_2_U/in00 input convolveMedium_mudEe_U33/convolveMedium_mudEe_DSP48_2_U/in00/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#29 Warning
-Input pipelining  
-DSP convolveMedium_mudEe_U6/convolveMedium_mudEe_DSP48_2_U/in00 input convolveMedium_mudEe_U6/convolveMedium_mudEe_DSP48_2_U/in00/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#30 Warning
-Input pipelining  
-DSP convolveMedium_mudEe_U6/convolveMedium_mudEe_DSP48_2_U/in00 input convolveMedium_mudEe_U6/convolveMedium_mudEe_DSP48_2_U/in00/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#31 Warning
-Input pipelining  
-DSP convolveMedium_mudEe_U7/convolveMedium_mudEe_DSP48_2_U/in00 input convolveMedium_mudEe_U7/convolveMedium_mudEe_DSP48_2_U/in00/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#32 Warning
-Input pipelining  
-DSP convolveMedium_mudEe_U7/convolveMedium_mudEe_DSP48_2_U/in00 input convolveMedium_mudEe_U7/convolveMedium_mudEe_DSP48_2_U/in00/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP convolveMedium_macud_U8/convolveMedium_macud_DSP48_1_U/p input convolveMedium_macud_U8/convolveMedium_macud_DSP48_1_U/p/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPOP-1#1 Warning
 PREG Output pipelining  
-DSP convolveMedium_maeOg_U11/convolveMedium_maeOg_DSP48_3_U/p output convolveMedium_maeOg_U11/convolveMedium_maeOg_DSP48_3_U/p/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP convolveMedium_mabkb_U11/convolveMedium_mabkb_DSP48_0_U/p output convolveMedium_mabkb_U11/convolveMedium_mabkb_DSP48_0_U/p/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#2 Warning
 PREG Output pipelining  
-DSP convolveMedium_maeOg_U12/convolveMedium_maeOg_DSP48_3_U/p output convolveMedium_maeOg_U12/convolveMedium_maeOg_DSP48_3_U/p/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP convolveMedium_mabkb_U14/convolveMedium_mabkb_DSP48_0_U/p output convolveMedium_mabkb_U14/convolveMedium_mabkb_DSP48_0_U/p/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#3 Warning
 PREG Output pipelining  
-DSP convolveMedium_maeOg_U20/convolveMedium_maeOg_DSP48_3_U/p output convolveMedium_maeOg_U20/convolveMedium_maeOg_DSP48_3_U/p/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP convolveMedium_mabkb_U15/convolveMedium_mabkb_DSP48_0_U/p output convolveMedium_mabkb_U15/convolveMedium_mabkb_DSP48_0_U/p/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#4 Warning
 PREG Output pipelining  
-DSP convolveMedium_maeOg_U21/convolveMedium_maeOg_DSP48_3_U/p output convolveMedium_maeOg_U21/convolveMedium_maeOg_DSP48_3_U/p/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP convolveMedium_mabkb_U16/convolveMedium_mabkb_DSP48_0_U/p output convolveMedium_mabkb_U16/convolveMedium_mabkb_DSP48_0_U/p/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#5 Warning
 PREG Output pipelining  
-DSP convolveMedium_maeOg_U30/convolveMedium_maeOg_DSP48_3_U/p output convolveMedium_maeOg_U30/convolveMedium_maeOg_DSP48_3_U/p/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP convolveMedium_mabkb_U19/convolveMedium_mabkb_DSP48_0_U/p output convolveMedium_mabkb_U19/convolveMedium_mabkb_DSP48_0_U/p/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#6 Warning
 PREG Output pipelining  
-DSP convolveMedium_maeOg_U31/convolveMedium_maeOg_DSP48_3_U/p output convolveMedium_maeOg_U31/convolveMedium_maeOg_DSP48_3_U/p/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP convolveMedium_mabkb_U2/convolveMedium_mabkb_DSP48_0_U/p output convolveMedium_mabkb_U2/convolveMedium_mabkb_DSP48_0_U/p/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#7 Warning
 PREG Output pipelining  
-DSP convolveMedium_mubkb_U0/convolveMedium_mubkb_DSP48_0_U/in00 output convolveMedium_mubkb_U0/convolveMedium_mubkb_DSP48_0_U/in00/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP convolveMedium_mabkb_U4/convolveMedium_mabkb_DSP48_0_U/p output convolveMedium_mabkb_U4/convolveMedium_mabkb_DSP48_0_U/p/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#8 Warning
 PREG Output pipelining  
-DSP convolveMedium_mubkb_U1/convolveMedium_mubkb_DSP48_0_U/in00 output convolveMedium_mubkb_U1/convolveMedium_mubkb_DSP48_0_U/in00/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP convolveMedium_mabkb_U6/convolveMedium_mabkb_DSP48_0_U/p output convolveMedium_mabkb_U6/convolveMedium_mabkb_DSP48_0_U/p/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-1#9 Warning
 PREG Output pipelining  
-DSP convolveMedium_mubkb_U4/convolveMedium_mubkb_DSP48_0_U/in00 output convolveMedium_mubkb_U4/convolveMedium_mubkb_DSP48_0_U/in00/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#10 Warning
-PREG Output pipelining  
-DSP convolveMedium_mubkb_U5/convolveMedium_mubkb_DSP48_0_U/in00 output convolveMedium_mubkb_U5/convolveMedium_mubkb_DSP48_0_U/in00/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#11 Warning
-PREG Output pipelining  
-DSP convolveMedium_mudEe_U13/convolveMedium_mudEe_DSP48_2_U/in00 output convolveMedium_mudEe_U13/convolveMedium_mudEe_DSP48_2_U/in00/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#12 Warning
-PREG Output pipelining  
-DSP convolveMedium_mudEe_U14/convolveMedium_mudEe_DSP48_2_U/in00 output convolveMedium_mudEe_U14/convolveMedium_mudEe_DSP48_2_U/in00/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#13 Warning
-PREG Output pipelining  
-DSP convolveMedium_mudEe_U18/convolveMedium_mudEe_DSP48_2_U/in00 output convolveMedium_mudEe_U18/convolveMedium_mudEe_DSP48_2_U/in00/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#14 Warning
-PREG Output pipelining  
-DSP convolveMedium_mudEe_U19/convolveMedium_mudEe_DSP48_2_U/in00 output convolveMedium_mudEe_U19/convolveMedium_mudEe_DSP48_2_U/in00/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#15 Warning
-PREG Output pipelining  
-DSP convolveMedium_mudEe_U22/convolveMedium_mudEe_DSP48_2_U/in00 output convolveMedium_mudEe_U22/convolveMedium_mudEe_DSP48_2_U/in00/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#16 Warning
-PREG Output pipelining  
-DSP convolveMedium_mudEe_U23/convolveMedium_mudEe_DSP48_2_U/in00 output convolveMedium_mudEe_U23/convolveMedium_mudEe_DSP48_2_U/in00/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#17 Warning
-PREG Output pipelining  
-DSP convolveMedium_mudEe_U27/convolveMedium_mudEe_DSP48_2_U/in00 output convolveMedium_mudEe_U27/convolveMedium_mudEe_DSP48_2_U/in00/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#18 Warning
-PREG Output pipelining  
-DSP convolveMedium_mudEe_U28/convolveMedium_mudEe_DSP48_2_U/in00 output convolveMedium_mudEe_U28/convolveMedium_mudEe_DSP48_2_U/in00/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#19 Warning
-PREG Output pipelining  
-DSP convolveMedium_mudEe_U29/convolveMedium_mudEe_DSP48_2_U/in00 output convolveMedium_mudEe_U29/convolveMedium_mudEe_DSP48_2_U/in00/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#20 Warning
-PREG Output pipelining  
-DSP convolveMedium_mudEe_U33/convolveMedium_mudEe_DSP48_2_U/in00 output convolveMedium_mudEe_U33/convolveMedium_mudEe_DSP48_2_U/in00/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#21 Warning
-PREG Output pipelining  
-DSP convolveMedium_mudEe_U6/convolveMedium_mudEe_DSP48_2_U/in00 output convolveMedium_mudEe_U6/convolveMedium_mudEe_DSP48_2_U/in00/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#22 Warning
-PREG Output pipelining  
-DSP convolveMedium_mudEe_U7/convolveMedium_mudEe_DSP48_2_U/in00 output convolveMedium_mudEe_U7/convolveMedium_mudEe_DSP48_2_U/in00/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+DSP convolveMedium_mabkb_U9/convolveMedium_mabkb_DSP48_0_U/p output convolveMedium_mabkb_U9/convolveMedium_mabkb_DSP48_0_U/p/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
 DPOP-2#1 Warning
 MREG Output pipelining  
-DSP convolveMedium_maeOg_U11/convolveMedium_maeOg_DSP48_3_U/p multiplier stage convolveMedium_maeOg_U11/convolveMedium_maeOg_DSP48_3_U/p/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP convolveMedium_mabkb_U0/convolveMedium_mabkb_DSP48_0_U/p multiplier stage convolveMedium_mabkb_U0/convolveMedium_mabkb_DSP48_0_U/p/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#2 Warning
 MREG Output pipelining  
-DSP convolveMedium_maeOg_U12/convolveMedium_maeOg_DSP48_3_U/p multiplier stage convolveMedium_maeOg_U12/convolveMedium_maeOg_DSP48_3_U/p/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP convolveMedium_mabkb_U1/convolveMedium_mabkb_DSP48_0_U/p multiplier stage convolveMedium_mabkb_U1/convolveMedium_mabkb_DSP48_0_U/p/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#3 Warning
 MREG Output pipelining  
-DSP convolveMedium_maeOg_U20/convolveMedium_maeOg_DSP48_3_U/p multiplier stage convolveMedium_maeOg_U20/convolveMedium_maeOg_DSP48_3_U/p/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP convolveMedium_mabkb_U11/convolveMedium_mabkb_DSP48_0_U/p multiplier stage convolveMedium_mabkb_U11/convolveMedium_mabkb_DSP48_0_U/p/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#4 Warning
 MREG Output pipelining  
-DSP convolveMedium_maeOg_U21/convolveMedium_maeOg_DSP48_3_U/p multiplier stage convolveMedium_maeOg_U21/convolveMedium_maeOg_DSP48_3_U/p/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP convolveMedium_mabkb_U12/convolveMedium_mabkb_DSP48_0_U/p multiplier stage convolveMedium_mabkb_U12/convolveMedium_mabkb_DSP48_0_U/p/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#5 Warning
 MREG Output pipelining  
-DSP convolveMedium_maeOg_U30/convolveMedium_maeOg_DSP48_3_U/p multiplier stage convolveMedium_maeOg_U30/convolveMedium_maeOg_DSP48_3_U/p/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP convolveMedium_mabkb_U14/convolveMedium_mabkb_DSP48_0_U/p multiplier stage convolveMedium_mabkb_U14/convolveMedium_mabkb_DSP48_0_U/p/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#6 Warning
 MREG Output pipelining  
-DSP convolveMedium_maeOg_U31/convolveMedium_maeOg_DSP48_3_U/p multiplier stage convolveMedium_maeOg_U31/convolveMedium_maeOg_DSP48_3_U/p/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP convolveMedium_mabkb_U15/convolveMedium_mabkb_DSP48_0_U/p multiplier stage convolveMedium_mabkb_U15/convolveMedium_mabkb_DSP48_0_U/p/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#7 Warning
 MREG Output pipelining  
-DSP convolveMedium_mubkb_U0/convolveMedium_mubkb_DSP48_0_U/in00 multiplier stage convolveMedium_mubkb_U0/convolveMedium_mubkb_DSP48_0_U/in00/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP convolveMedium_mabkb_U16/convolveMedium_mabkb_DSP48_0_U/p multiplier stage convolveMedium_mabkb_U16/convolveMedium_mabkb_DSP48_0_U/p/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#8 Warning
 MREG Output pipelining  
-DSP convolveMedium_mubkb_U1/convolveMedium_mubkb_DSP48_0_U/in00 multiplier stage convolveMedium_mubkb_U1/convolveMedium_mubkb_DSP48_0_U/in00/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP convolveMedium_mabkb_U17/convolveMedium_mabkb_DSP48_0_U/p multiplier stage convolveMedium_mabkb_U17/convolveMedium_mabkb_DSP48_0_U/p/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#9 Warning
 MREG Output pipelining  
-DSP convolveMedium_mubkb_U4/convolveMedium_mubkb_DSP48_0_U/in00 multiplier stage convolveMedium_mubkb_U4/convolveMedium_mubkb_DSP48_0_U/in00/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP convolveMedium_mabkb_U19/convolveMedium_mabkb_DSP48_0_U/p multiplier stage convolveMedium_mabkb_U19/convolveMedium_mabkb_DSP48_0_U/p/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#10 Warning
 MREG Output pipelining  
-DSP convolveMedium_mubkb_U5/convolveMedium_mubkb_DSP48_0_U/in00 multiplier stage convolveMedium_mubkb_U5/convolveMedium_mubkb_DSP48_0_U/in00/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP convolveMedium_mabkb_U2/convolveMedium_mabkb_DSP48_0_U/p multiplier stage convolveMedium_mabkb_U2/convolveMedium_mabkb_DSP48_0_U/p/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#11 Warning
 MREG Output pipelining  
-DSP convolveMedium_mudEe_U13/convolveMedium_mudEe_DSP48_2_U/in00 multiplier stage convolveMedium_mudEe_U13/convolveMedium_mudEe_DSP48_2_U/in00/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP convolveMedium_mabkb_U3/convolveMedium_mabkb_DSP48_0_U/p multiplier stage convolveMedium_mabkb_U3/convolveMedium_mabkb_DSP48_0_U/p/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#12 Warning
 MREG Output pipelining  
-DSP convolveMedium_mudEe_U14/convolveMedium_mudEe_DSP48_2_U/in00 multiplier stage convolveMedium_mudEe_U14/convolveMedium_mudEe_DSP48_2_U/in00/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP convolveMedium_mabkb_U4/convolveMedium_mabkb_DSP48_0_U/p multiplier stage convolveMedium_mabkb_U4/convolveMedium_mabkb_DSP48_0_U/p/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#13 Warning
 MREG Output pipelining  
-DSP convolveMedium_mudEe_U18/convolveMedium_mudEe_DSP48_2_U/in00 multiplier stage convolveMedium_mudEe_U18/convolveMedium_mudEe_DSP48_2_U/in00/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP convolveMedium_mabkb_U6/convolveMedium_mabkb_DSP48_0_U/p multiplier stage convolveMedium_mabkb_U6/convolveMedium_mabkb_DSP48_0_U/p/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#14 Warning
 MREG Output pipelining  
-DSP convolveMedium_mudEe_U19/convolveMedium_mudEe_DSP48_2_U/in00 multiplier stage convolveMedium_mudEe_U19/convolveMedium_mudEe_DSP48_2_U/in00/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP convolveMedium_mabkb_U7/convolveMedium_mabkb_DSP48_0_U/p multiplier stage convolveMedium_mabkb_U7/convolveMedium_mabkb_DSP48_0_U/p/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#15 Warning
 MREG Output pipelining  
-DSP convolveMedium_mudEe_U22/convolveMedium_mudEe_DSP48_2_U/in00 multiplier stage convolveMedium_mudEe_U22/convolveMedium_mudEe_DSP48_2_U/in00/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP convolveMedium_mabkb_U9/convolveMedium_mabkb_DSP48_0_U/p multiplier stage convolveMedium_mabkb_U9/convolveMedium_mabkb_DSP48_0_U/p/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#16 Warning
 MREG Output pipelining  
-DSP convolveMedium_mudEe_U23/convolveMedium_mudEe_DSP48_2_U/in00 multiplier stage convolveMedium_mudEe_U23/convolveMedium_mudEe_DSP48_2_U/in00/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP convolveMedium_macud_U13/convolveMedium_macud_DSP48_1_U/p multiplier stage convolveMedium_macud_U13/convolveMedium_macud_DSP48_1_U/p/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#17 Warning
 MREG Output pipelining  
-DSP convolveMedium_mudEe_U27/convolveMedium_mudEe_DSP48_2_U/in00 multiplier stage convolveMedium_mudEe_U27/convolveMedium_mudEe_DSP48_2_U/in00/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP convolveMedium_macud_U18/convolveMedium_macud_DSP48_1_U/p multiplier stage convolveMedium_macud_U18/convolveMedium_macud_DSP48_1_U/p/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#18 Warning
 MREG Output pipelining  
-DSP convolveMedium_mudEe_U28/convolveMedium_mudEe_DSP48_2_U/in00 multiplier stage convolveMedium_mudEe_U28/convolveMedium_mudEe_DSP48_2_U/in00/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP convolveMedium_macud_U5/convolveMedium_macud_DSP48_1_U/p multiplier stage convolveMedium_macud_U5/convolveMedium_macud_DSP48_1_U/p/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 DPOP-2#19 Warning
 MREG Output pipelining  
-DSP convolveMedium_mudEe_U29/convolveMedium_mudEe_DSP48_2_U/in00 multiplier stage convolveMedium_mudEe_U29/convolveMedium_mudEe_DSP48_2_U/in00/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-2#20 Warning
-MREG Output pipelining  
-DSP convolveMedium_mudEe_U33/convolveMedium_mudEe_DSP48_2_U/in00 multiplier stage convolveMedium_mudEe_U33/convolveMedium_mudEe_DSP48_2_U/in00/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-2#21 Warning
-MREG Output pipelining  
-DSP convolveMedium_mudEe_U6/convolveMedium_mudEe_DSP48_2_U/in00 multiplier stage convolveMedium_mudEe_U6/convolveMedium_mudEe_DSP48_2_U/in00/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-2#22 Warning
-MREG Output pipelining  
-DSP convolveMedium_mudEe_U7/convolveMedium_mudEe_DSP48_2_U/in00 multiplier stage convolveMedium_mudEe_U7/convolveMedium_mudEe_DSP48_2_U/in00/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-2#23 Warning
-MREG Output pipelining  
-DSP tmp11_reg_1355_reg multiplier stage tmp11_reg_1355_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-2#24 Warning
-MREG Output pipelining  
-DSP tmp12_reg_1360_reg multiplier stage tmp12_reg_1360_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-2#25 Warning
-MREG Output pipelining  
-DSP tmp18_reg_1444_reg multiplier stage tmp18_reg_1444_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-2#26 Warning
-MREG Output pipelining  
-DSP tmp19_reg_1449_reg multiplier stage tmp19_reg_1449_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-2#27 Warning
-MREG Output pipelining  
-DSP tmp1_reg_1291_reg multiplier stage tmp1_reg_1291_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-2#28 Warning
-MREG Output pipelining  
-DSP tmp25_reg_1499_reg multiplier stage tmp25_reg_1499_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-2#29 Warning
-MREG Output pipelining  
-DSP tmp26_reg_1519_reg multiplier stage tmp26_reg_1519_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-2#30 Warning
-MREG Output pipelining  
-DSP tmp2_reg_1296_reg multiplier stage tmp2_reg_1296_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-2#31 Warning
-MREG Output pipelining  
-DSP tmp4_reg_1330_reg multiplier stage tmp4_reg_1330_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-2#32 Warning
-MREG Output pipelining  
-DSP tmp5_reg_1335_reg multiplier stage tmp5_reg_1335_reg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+DSP convolveMedium_macud_U8/convolveMedium_macud_DSP48_1_U/p multiplier stage convolveMedium_macud_U8/convolveMedium_macud_DSP48_1_U/p/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 ZPS7-1#1 Warning

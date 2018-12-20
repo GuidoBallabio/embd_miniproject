@@ -22,6 +22,7 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../ConvolutionInt/convolutionInt.prj/solution3/impl/ip"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../ConvolutionMedium/convolutionMedium.prj/solution2/impl/ip"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPCachePermission" Val="read"/>
     <Option Name="IPCachePermission" Val="write"/>
@@ -79,6 +80,12 @@
         <CompFileExtendedInfo CompFileName="system.bd" FileRelPathName="ip/system_convolve_0_0/system_convolve_0_0.xci">
           <Proxy FileSetName="system_convolve_0_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="system.bd" FileRelPathName="ip/system_convolveMedium_0_0/system_convolveMedium_0_0.xci">
+          <Proxy FileSetName="system_convolveMedium_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="system.bd" FileRelPathName="ip/system_axi_gpio_0_2/system_axi_gpio_0_2.xci">
+          <Proxy FileSetName="system_axi_gpio_0_2"/>
+        </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/system/hdl/system_wrapper.vhd">
         <FileInfo>
@@ -112,8 +119,8 @@
       </File>
       <File Path="$PSRCDIR/constrs_1/imports/constraints/convolveMedium_ooc.xdc">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../ConvolutionMedium/convolutionMedium.prj/solution4/impl/ip/constraints/convolveMedium_ooc.xdc"/>
-          <Attr Name="ImportTime" Val="1545217522"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ConvolutionMedium/convolutionMedium.prj/solution2/impl/ip/constraints/convolveMedium_ooc.xdc"/>
+          <Attr Name="ImportTime" Val="1545302118"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
@@ -167,6 +174,18 @@
     <FileSet Name="system_convolve_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/system_convolve_0_0">
       <Config>
         <Option Name="TopModule" Val="system_convolve_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="system_convolveMedium_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/system_convolveMedium_0_0">
+      <Config>
+        <Option Name="TopModule" Val="system_convolveMedium_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="system_axi_gpio_0_2" Type="BlockSrcs" RelSrcDir="$PSRCDIR/system_axi_gpio_0_2">
+      <Config>
+        <Option Name="TopModule" Val="system_axi_gpio_0_2"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -245,6 +264,26 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
     <Run Id="system_convolve_0_0_synth_1" Type="Ft3:Synth" SrcSet="system_convolve_0_0" Part="xc7z010clg400-1" ConstrsSet="system_convolve_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/system_convolve_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="system_convolveMedium_0_0_synth_1" Type="Ft3:Synth" SrcSet="system_convolveMedium_0_0" Part="xc7z010clg400-1" ConstrsSet="system_convolveMedium_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/system_convolveMedium_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="system_axi_gpio_0_2_synth_1" Type="Ft3:Synth" SrcSet="system_axi_gpio_0_2" Part="xc7z010clg400-1" ConstrsSet="system_axi_gpio_0_2" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/system_axi_gpio_0_2_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -353,6 +392,40 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
     <Run Id="system_convolve_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="system_convolve_0_0" Description="Default settings for Implementation." SynthRun="system_convolve_0_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="system_convolveMedium_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="system_convolveMedium_0_0" Description="Default settings for Implementation." SynthRun="system_convolveMedium_0_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="system_axi_gpio_0_2_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="system_axi_gpio_0_2" Description="Default settings for Implementation." SynthRun="system_axi_gpio_0_2_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
           <Desc>Default settings for Implementation.</Desc>

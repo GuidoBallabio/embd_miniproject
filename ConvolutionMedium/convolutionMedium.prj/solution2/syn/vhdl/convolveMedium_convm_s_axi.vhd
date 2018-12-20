@@ -11,7 +11,7 @@ use IEEE.NUMERIC_STD.all;
 
 entity convolveMedium_convm_s_axi is
 generic (
-    C_S_AXI_ADDR_WIDTH    : INTEGER := 19;
+    C_S_AXI_ADDR_WIDTH    : INTEGER := 18;
     C_S_AXI_DATA_WIDTH    : INTEGER := 32);
 port (
     -- axi4 lite slave signals
@@ -43,11 +43,11 @@ port (
     ap_idle               :in   STD_LOGIC;
     in_r_address0         :in   STD_LOGIC_VECTOR(15 downto 0);
     in_r_ce0              :in   STD_LOGIC;
-    in_r_q0               :out  STD_LOGIC_VECTOR(15 downto 0);
+    in_r_q0               :out  STD_LOGIC_VECTOR(7 downto 0);
     out_r_address0        :in   STD_LOGIC_VECTOR(15 downto 0);
     out_r_ce0             :in   STD_LOGIC;
     out_r_we0             :in   STD_LOGIC;
-    out_r_d0              :in   STD_LOGIC_VECTOR(15 downto 0);
+    out_r_d0              :in   STD_LOGIC_VECTOR(7 downto 0);
     krnl_address0         :in   STD_LOGIC_VECTOR(3 downto 0);
     krnl_ce0              :in   STD_LOGIC;
     krnl_q0               :out  STD_LOGIC_VECTOR(7 downto 0)
@@ -73,16 +73,20 @@ end entity convolveMedium_convm_s_axi;
 --           bit 0  - Channel 0 (ap_done)
 --           bit 1  - Channel 1 (ap_ready)
 --           others - reserved
+-- 0x10000 ~
+-- 0x1ffff : Memory 'in_r' (65536 * 8b)
+--           Word n : bit [ 7: 0] - in_r[4n]
+--                    bit [15: 8] - in_r[4n+1]
+--                    bit [23:16] - in_r[4n+2]
+--                    bit [31:24] - in_r[4n+3]
 -- 0x20000 ~
--- 0x3ffff : Memory 'in_r' (65536 * 16b)
---           Word n : bit [15: 0] - in_r[2n]
---                    bit [31:16] - in_r[2n+1]
--- 0x40000 ~
--- 0x5ffff : Memory 'out_r' (65536 * 16b)
---           Word n : bit [15: 0] - out_r[2n]
---                    bit [31:16] - out_r[2n+1]
--- 0x60000 ~
--- 0x6000f : Memory 'krnl' (9 * 8b)
+-- 0x2ffff : Memory 'out_r' (65536 * 8b)
+--           Word n : bit [ 7: 0] - out_r[4n]
+--                    bit [15: 8] - out_r[4n+1]
+--                    bit [23:16] - out_r[4n+2]
+--                    bit [31:24] - out_r[4n+3]
+-- 0x30000 ~
+-- 0x3000f : Memory 'krnl' (9 * 8b)
 --           Word n : bit [ 7: 0] - krnl[4n]
 --                    bit [15: 8] - krnl[4n+1]
 --                    bit [23:16] - krnl[4n+2]
@@ -98,13 +102,13 @@ architecture behave of convolveMedium_convm_s_axi is
     constant ADDR_GIE        : INTEGER := 16#00004#;
     constant ADDR_IER        : INTEGER := 16#00008#;
     constant ADDR_ISR        : INTEGER := 16#0000c#;
-    constant ADDR_IN_R_BASE  : INTEGER := 16#20000#;
-    constant ADDR_IN_R_HIGH  : INTEGER := 16#3ffff#;
-    constant ADDR_OUT_R_BASE : INTEGER := 16#40000#;
-    constant ADDR_OUT_R_HIGH : INTEGER := 16#5ffff#;
-    constant ADDR_KRNL_BASE  : INTEGER := 16#60000#;
-    constant ADDR_KRNL_HIGH  : INTEGER := 16#6000f#;
-    constant ADDR_BITS         : INTEGER := 19;
+    constant ADDR_IN_R_BASE  : INTEGER := 16#10000#;
+    constant ADDR_IN_R_HIGH  : INTEGER := 16#1ffff#;
+    constant ADDR_OUT_R_BASE : INTEGER := 16#20000#;
+    constant ADDR_OUT_R_HIGH : INTEGER := 16#2ffff#;
+    constant ADDR_KRNL_BASE  : INTEGER := 16#30000#;
+    constant ADDR_KRNL_HIGH  : INTEGER := 16#3000f#;
+    constant ADDR_BITS         : INTEGER := 18;
 
     signal waddr               : UNSIGNED(ADDR_BITS-1 downto 0);
     signal wmask               : UNSIGNED(31 downto 0);
@@ -127,13 +131,13 @@ architecture behave of convolveMedium_convm_s_axi is
     signal int_ier             : UNSIGNED(1 downto 0) := (others => '0');
     signal int_isr             : UNSIGNED(1 downto 0) := (others => '0');
     -- memory signals
-    signal int_in_r_address0   : UNSIGNED(14 downto 0);
+    signal int_in_r_address0   : UNSIGNED(13 downto 0);
     signal int_in_r_ce0        : STD_LOGIC;
     signal int_in_r_we0        : STD_LOGIC;
     signal int_in_r_be0        : UNSIGNED(3 downto 0);
     signal int_in_r_d0         : UNSIGNED(31 downto 0);
     signal int_in_r_q0         : UNSIGNED(31 downto 0);
-    signal int_in_r_address1   : UNSIGNED(14 downto 0);
+    signal int_in_r_address1   : UNSIGNED(13 downto 0);
     signal int_in_r_ce1        : STD_LOGIC;
     signal int_in_r_we1        : STD_LOGIC;
     signal int_in_r_be1        : UNSIGNED(3 downto 0);
@@ -141,14 +145,14 @@ architecture behave of convolveMedium_convm_s_axi is
     signal int_in_r_q1         : UNSIGNED(31 downto 0);
     signal int_in_r_read       : STD_LOGIC;
     signal int_in_r_write      : STD_LOGIC;
-    signal int_in_r_shift      : UNSIGNED(0 downto 0);
-    signal int_out_r_address0  : UNSIGNED(14 downto 0);
+    signal int_in_r_shift      : UNSIGNED(1 downto 0);
+    signal int_out_r_address0  : UNSIGNED(13 downto 0);
     signal int_out_r_ce0       : STD_LOGIC;
     signal int_out_r_we0       : STD_LOGIC;
     signal int_out_r_be0       : UNSIGNED(3 downto 0);
     signal int_out_r_d0        : UNSIGNED(31 downto 0);
     signal int_out_r_q0        : UNSIGNED(31 downto 0);
-    signal int_out_r_address1  : UNSIGNED(14 downto 0);
+    signal int_out_r_address1  : UNSIGNED(13 downto 0);
     signal int_out_r_ce1       : STD_LOGIC;
     signal int_out_r_we1       : STD_LOGIC;
     signal int_out_r_be1       : UNSIGNED(3 downto 0);
@@ -156,7 +160,7 @@ architecture behave of convolveMedium_convm_s_axi is
     signal int_out_r_q1        : UNSIGNED(31 downto 0);
     signal int_out_r_read      : STD_LOGIC;
     signal int_out_r_write     : STD_LOGIC;
-    signal int_out_r_shift     : UNSIGNED(0 downto 0);
+    signal int_out_r_shift     : UNSIGNED(1 downto 0);
     signal int_krnl_address0   : UNSIGNED(1 downto 0);
     signal int_krnl_ce0        : STD_LOGIC;
     signal int_krnl_we0        : STD_LOGIC;
@@ -213,8 +217,8 @@ begin
 int_in_r : convolveMedium_convm_s_axi_ram
 generic map (
      BYTES    => 4,
-     DEPTH    => 32768,
-     AWIDTH   => log2(32768))
+     DEPTH    => 16384,
+     AWIDTH   => log2(16384))
 port map (
      clk0     => ACLK,
      address0 => int_in_r_address0,
@@ -234,8 +238,8 @@ port map (
 int_out_r : convolveMedium_convm_s_axi_ram
 generic map (
      BYTES    => 4,
-     DEPTH    => 32768,
-     AWIDTH   => log2(32768))
+     DEPTH    => 16384,
+     AWIDTH   => log2(16384))
 port map (
      clk0     => ACLK,
      address0 => int_out_r_address0,
@@ -511,24 +515,24 @@ port map (
 
 -- ----------------------- Memory logic ------------------
     -- in_r
-    int_in_r_address0    <= SHIFT_RIGHT(UNSIGNED(in_r_address0), 1)(14 downto 0);
+    int_in_r_address0    <= SHIFT_RIGHT(UNSIGNED(in_r_address0), 2)(13 downto 0);
     int_in_r_ce0         <= in_r_ce0;
     int_in_r_we0         <= '0';
     int_in_r_be0         <= (others => '0');
     int_in_r_d0          <= (others => '0');
-    in_r_q0              <= STD_LOGIC_VECTOR(SHIFT_RIGHT(int_in_r_q0, TO_INTEGER(int_in_r_shift) * 16)(15 downto 0));
-    int_in_r_address1    <= raddr(16 downto 2) when ar_hs = '1' else waddr(16 downto 2);
+    in_r_q0              <= STD_LOGIC_VECTOR(SHIFT_RIGHT(int_in_r_q0, TO_INTEGER(int_in_r_shift) * 8)(7 downto 0));
+    int_in_r_address1    <= raddr(15 downto 2) when ar_hs = '1' else waddr(15 downto 2);
     int_in_r_ce1         <= '1' when ar_hs = '1' or (int_in_r_write = '1' and WVALID  = '1') else '0';
     int_in_r_we1         <= '1' when int_in_r_write = '1' and WVALID = '1' else '0';
     int_in_r_be1         <= UNSIGNED(WSTRB);
     int_in_r_d1          <= UNSIGNED(WDATA);
     -- out_r
-    int_out_r_address0   <= SHIFT_RIGHT(UNSIGNED(out_r_address0), 1)(14 downto 0);
+    int_out_r_address0   <= SHIFT_RIGHT(UNSIGNED(out_r_address0), 2)(13 downto 0);
     int_out_r_ce0        <= out_r_ce0;
     int_out_r_we0        <= out_r_we0;
-    int_out_r_be0        <= SHIFT_LEFT(TO_UNSIGNED(3, 4), TO_INTEGER(UNSIGNED(out_r_address0(0 downto 0)))*2);
-    int_out_r_d0         <= UNSIGNED(out_r_d0) & UNSIGNED(out_r_d0);
-    int_out_r_address1   <= raddr(16 downto 2) when ar_hs = '1' else waddr(16 downto 2);
+    int_out_r_be0        <= SHIFT_LEFT(TO_UNSIGNED(1, 4), TO_INTEGER(UNSIGNED(out_r_address0(1 downto 0))));
+    int_out_r_d0         <= UNSIGNED(out_r_d0) & UNSIGNED(out_r_d0) & UNSIGNED(out_r_d0) & UNSIGNED(out_r_d0);
+    int_out_r_address1   <= raddr(15 downto 2) when ar_hs = '1' else waddr(15 downto 2);
     int_out_r_ce1        <= '1' when ar_hs = '1' or (int_out_r_write = '1' and WVALID  = '1') else '0';
     int_out_r_we1        <= '1' when int_out_r_write = '1' and WVALID = '1' else '0';
     int_out_r_be1        <= UNSIGNED(WSTRB);
@@ -581,7 +585,7 @@ port map (
         if (ACLK'event and ACLK = '1') then
             if (ACLK_EN = '1') then
                 if (in_r_ce0 = '1') then
-                    int_in_r_shift(0) <= in_r_address0(0);
+                    int_in_r_shift <= UNSIGNED(in_r_address0(1 downto 0));
                 end if;
             end if;
         end if;
@@ -622,7 +626,7 @@ port map (
         if (ACLK'event and ACLK = '1') then
             if (ACLK_EN = '1') then
                 if (out_r_ce0 = '1') then
-                    int_out_r_shift(0) <= out_r_address0(0);
+                    int_out_r_shift <= UNSIGNED(out_r_address0(1 downto 0));
                 end if;
             end if;
         end if;
