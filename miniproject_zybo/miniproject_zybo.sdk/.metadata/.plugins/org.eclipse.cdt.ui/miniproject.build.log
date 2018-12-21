@@ -1,23 +1,8 @@
-16:32:08 **** Auto Build of configuration Debug for project miniproject ****
+18:35:23 **** Incremental Build of configuration Debug for project miniproject ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-'Building file: ../src/main.cpp'
-'Invoking: ARM v7 g++ compiler'
-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../standalone_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
-'Finished building: ../src/main.cpp'
-' '
-'Building target: miniproject.elf'
-'Invoking: ARM v7 g++ linker'
-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_0/lib -o "miniproject.elf"  ./src/SDCard/FileSDCard.o ./src/SDCard/TestFileSDCard.o  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: miniproject.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size miniproject.elf  |tee "miniproject.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 822503	   4492	  32320	 859315	  d1cb3	miniproject.elf
-'Finished building: miniproject.elf.size'
-' '
+make: Ingenting at gøre for 'main-build'.
 
-16:32:11 Build Finished (took 2s.101ms)
+18:35:23 Build Finished (took 234ms)
 

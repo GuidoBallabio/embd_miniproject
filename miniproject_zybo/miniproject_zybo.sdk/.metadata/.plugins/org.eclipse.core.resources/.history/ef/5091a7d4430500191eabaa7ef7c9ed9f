@@ -1,0 +1,201 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+
+// Include GPIO and hardware interrupts
+#include "./GPIOs/Buttons.h"
+#include "./GPIOs/Leds.h"
+#include "HWInterrupt.h"
+// Include image processing software and hardware
+#include "./ImageProcessing/HoughTransformSW.h"
+#include "./ImageProcessing/ImageMaths.h"
+#include "ImageProcessing/ConvolutionSW.h"
+#include "./ImageProcessing/ConvolutionHW.h"
+// Include writing/reading data to/from files
+#include "./DataLoader/LoaderSDFile.h"
+// Include timer
+#include "./Timer/XTimer.h"
+
+
+/*
+ * Define variables and constants for BTN hw interrupt
+ */
+#define BTN_INT 			XGPIO_IR_CH1_MASK
+
+static int led_data;
+static int btn_value;
+static bool led8On = false;
+
+Buttons btn;
+IHWInput& btns = btn;
+Leds leds;
+
+XGpio b = btn.getGPIOInstance();
+XGpio l = leds.getGPIOInstance();
+
+/*
+ * Define variables and constants for Image processing
+ */
+// constant values
+constexpr size_t img_rows = 50;
+constexpr size_t img_cols = 50;
+constexpr size_t kernel_size = 3;
+constexpr int8_t f = 9;
+constexpr size_t acc_rows = (img_rows + img_cols) * 2;
+constexpr size_t acc_cols = 180;
+
+// type defs
+typedef int16_t T_data;
+typedef int8_t T_kernel;
+typedef float T_accumulator;
+
+// images
+Image<T_data, img_rows, img_cols> in;
+Image<T_data, img_rows, img_cols> buffer;
+Image<T_data, img_rows, img_cols> out;
+// kernels for blur and edge detection
+Image<T_kernel, kernel_size, kernel_size> blur_kernel = { f,f,f,f,f,f,f,f,f };
+Image<T_kernel, kernel_size, kernel_size> sobel_kernel = { 2,2,0,2,0,-2,0,-2,-2 };
+// arrays for hough transform
+Image<T_accumulator, acc_rows, acc_cols> accumulator = { 0 };
+float dNonZero[img_cols * img_rows] = { 0 };
+float fiNonZero[img_cols * img_rows] = { 0 };
+constexpr char* cameramanFileNames[] = { "in_file", "hwBlurC", "hwEdgeC", "swBlurC", "swEdgeC"};
+constexpr char* minishapesFileNames[] = { "input", "hwBlurM", "hwEdgeM", "swBlurM", "swEdgeM"};
+char* fileNames[5];
+
+
+/*
+ * Define interrupt handler for buttons
+ */
+static void BTN_Intr_Handler(void *InstancePtr)
+{
+	// Disable GPIO interrupts
+	XGpio_InterruptDisable(&b, BTN_INT);
+
+	// Ignore additional button presses
+	if ((XGpio_InterruptGetStatus(&b) & BTN_INT) != BTN_INT) {
+			printf("Error\r\n");
+		}
+	btn_value = XGpio_DiscreteRead(&b, 1);
+	// Increment counter based on button value
+
+	if (btn_value == 8)
+	{
+		if (led8On)
+			led_data = 0;
+		else
+			led_data = 8;
+
+		led8On = !led8On;
+		XGpio_DiscreteWrite(&l, 1, led_data);
+
+	}
+
+	(void)XGpio_InterruptClear(&b, BTN_INT);
+    // Enable GPIO interrupts
+    XGpio_InterruptEnable(&b, BTN_INT);
+
+}
+
+static void convolve(T_data in[img_rows][img_cols], T_data out[img_rows][img_cols], T_kernel kernel[kernel_size][kernel_size])
+{
+
+}
+
+int main(int, char**)
+{
+	xil_printf("Starting program\r\n");
+
+
+
+
+	/*
+	 * Image processing part
+	 */
+	int size = img_cols*img_rows;
+	memcpy(fileNames, minishapesFileNames, 5*sizeof(char*));
+
+	// Initialization
+	LoaderSDFile<T_data> loader = LoaderSDFile<T_data>(fileNames[0], fileNames[1]);
+	ConvolutionSW<T_data, T_kernel, img_rows, img_cols, kernel_size, kernel_size> processorSW =
+			ConvolutionSW<T_data, T_kernel, img_rows, img_cols, kernel_size, kernel_size>();
+	ConvolutionHW<T_data, T_kernel, img_rows, img_cols, kernel_size, kernel_size> processorHW =
+			ConvolutionHW<T_data, T_kernel, img_rows, img_cols, kernel_size, kernel_size>();
+	IConvolution<T_data, T_kernel, img_rows, img_cols, kernel_size, kernel_size>& hwConvolution = processorHW;
+	IConvolution<T_data, T_kernel, img_rows, img_cols, kernel_size, kernel_size> swConvolution = processorSW;
+	HoughTransformSW hough;
+	XTimer timer;
+
+	/*
+	* Interrupt handler part
+	*/
+	HWInterrupt interrupt(b, BTN_INT, XPAR_FABRIC_BUTTONS_IP2INTC_IRPT_INTR, (void*)BTN_Intr_Handler);
+
+	// Load image from binary file
+	loader.LoadData(in.vect, size);
+
+	// Find mean value of image
+	T_data meanVal = ImageMaths::mean<T_data, img_rows, img_cols>(in.mat);
+
+	// Blur image
+	timer.start();
+	//processorSW.convolve(in.mat, buffer.mat, blur_kernel.mat);
+	//convolve(buffer.mat, buffer.mat, sobel_kernel.mat);
+	//hwConvolution.convolve(in.mat, buffer.mat, blur_kernel.mat);
+	timer.stop();
+	ImageMaths::scaleImage<T_data, img_rows, img_cols>(buffer.mat, buffer.mat, f);
+	loader.ExportData(buffer.vect, size);
+
+	//printf("Time for HW blur using int for kernel and img minishapes: %lu\r\n", timer.durationTicks());
+
+	// Edge detection with sobel
+	loader.SetOutputFile(fileNames[2]);
+	timer.start();
+//	hwConvolution.convolve(in.mat, out.mat, sobel_kernel.mat);
+	timer.stop();
+	loader.ExportData(out.vect, size);
+
+	//printf("Time for HW edge using int for kernel and img minishapes: %lu\r\n", timer.durationTicks());
+
+
+	loader.SetOutputFile(fileNames[3]);
+//	timer.start();
+	//processorSW.convolve(in.mat, buffer.mat, blur_kernel.mat);
+//	timer.stop();
+//	ImageMaths::scaleImage<T_data, img_rows, img_cols>(buffer.mat, buffer.mat, f);
+//	loader.ExportData(buffer.vect, size);
+
+	//printf("Time for SW blur using int for kernel and img minishapes: %lu\r\n", timer.durationTicks());
+
+	// Edge detection with sobel
+
+//	loader.SetOutputFile(fileNames[4]);
+//	timer.start();
+//	swConvolution.convolve(buffer.mat, out.mat, sobel_kernel.mat);
+//	timer.stop();
+//	loader.ExportData(out.vect, size);
+
+	//printf("Time for SW edge using int for kernel and img minishapes: %lu\r\n", timer.durationTicks());
+
+
+
+
+	// Just keep running until user quits program
+	char value = inbyte();
+	inbyte(); // CR
+
+	while (value != '1')
+	{
+		value = inbyte();
+		inbyte();
+	}
+
+
+
+	xil_printf("Exiting program\r\n");
+
+	return 0;
+}
+
+

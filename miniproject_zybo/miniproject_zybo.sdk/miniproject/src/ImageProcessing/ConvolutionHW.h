@@ -3,9 +3,10 @@
 #include "xparameters.h"
 #include "xconvolve.h"
 #include "xconvolvemedium.h"
+#include "IConvolution.h"
 
-template<typename T_img, typename T_kernel, size_t i_rows, size_t i_cols, size_t k_rows, size_t k_cols>
-class ConvolutionHW
+template<typename T_img, typename T_kernel, T_size i_rows, T_size i_cols, T_size k_rows, T_size k_cols>
+class ConvolutionHW: public IConvolution<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols>
 {
 public:
 
@@ -24,7 +25,7 @@ public:
 			printf("Error: no hardware supports convolution with kernel size with %d rows and %d cols\r\n", k_rows, k_cols);
 	}
 
-	void convolve(T_img in[i_rows][i_cols], T_img out[i_rows][i_cols], T_kernel kernel[k_rows][k_cols])
+	virtual void convolve(T_img in[i_rows][i_cols], T_img out[i_rows][i_cols], T_kernel kernel[k_rows][k_cols]) override
 	{
 		// TODO: check kernel size
 		if (i_rows == img_size1 && i_cols == img_size1)
