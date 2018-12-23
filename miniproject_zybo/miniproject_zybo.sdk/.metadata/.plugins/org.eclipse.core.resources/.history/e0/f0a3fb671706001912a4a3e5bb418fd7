@@ -1,0 +1,17 @@
+#pragma once
+
+#include "On.h"
+
+class Idle : public On {
+public:
+  using On::On;
+
+
+
+  void Entry()  {
+	  context->ChangeState(StateTypes::s_SWMode);
+  }
+
+  virtual std::string Name() const override { return "Idle"; }
+
+};

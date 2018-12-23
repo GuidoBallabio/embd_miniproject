@@ -1,0 +1,23 @@
+#pragma once
+
+#include "State.h"
+
+class On<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols> : public State<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols> {
+public:
+  using State::State;
+
+  virtual void Quit() override {
+    context->ChangeState(StateTypes::s_Off);
+  }
+
+  virtual void entry() override {
+	  State::entry();
+	  context->ChangeState(StateTypes::s_Idle);
+  }
+
+  virtual std::string Name() const override { return "On"; }
+
+  virtual int Number() const override { return 1; }
+
+private:
+};

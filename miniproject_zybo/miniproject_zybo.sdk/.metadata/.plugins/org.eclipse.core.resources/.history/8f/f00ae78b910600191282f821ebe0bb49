@@ -1,0 +1,100 @@
+#pragma once
+
+#include <iostream>
+
+
+#include "IVPS.h"
+#include "../../DataLoader/ILoader.h"
+#include "../../ImageProcessing/ImageMaths.h"
+#include "../../ImageProcessing/HoughTransformSW.h"
+#include "../../ImageProcessing/ConvolutionSW.h"
+#include "../../ImageProcessing/ConvolutionHW.h"
+#include "../../Timer/XTimer.h"
+#include "../../types.h"
+
+
+
+template<typename T_img, typename T_kernel, T_size i_rows, T_size i_cols, T_size k_rows, T_size k_cols,
+		typename T_accumulator, T_size acc_rows, T_size acc_cols>
+class VideoProcessingSystem : public IVPS<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols, T_accumulator, acc_rows, acc_cols> {
+public:
+  VideoProcessingSystem(ILoader<T_img> *dataLoader, char* fileNames[6]): hw(false){
+	  this->processor = new ConvolutionSW<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols>();
+	  _dataLoader = dataLoader;
+	  memcpy(_fileNames, fileNames, 6*sizeof(const char*));
+  }
+  ~VideoProcessingSystem() {}
+
+  void run(std::vector<bool> filters) override {
+	  std::cout << "Starting processing..." << std::endl;
+
+	  // out = load image
+	  int size = img_cols*img_rows;
+	  _dataLoader->LoadData(in.vect, size);
+
+	  // Find mean value of image
+	  T_data meanVal = ImageMaths::mean<T_data, img_rows, img_cols>(in.mat);
+
+	  if(filters[3]){
+		  std::cout << "doing blur using " << (hw ? "hw" : "sw") << std::endl;
+		  processor->convolve(in.mat, buffer.mat, blur_kernel.mat);
+		  ImageMaths::scaleImage<T_data, img_rows, img_cols>(buffer.mat, buffer.mat, f);
+		  _dataLoader->SetOutputFile(_fileNames[2]);
+		  _dataLoader->ExportData(buffer.vect, size);
+	  }
+
+	  if(filters[2]){
+		  std::cout << "doing edge detection by " << (hw ? "hw" : "sw")  << std::endl;
+		  processor->convolve(in.mat, out.mat, sobel_kernel.mat);
+		  _dataLoader->SetOutputFile(_fileNames[2]);
+		  _dataLoader->ExportData(out.vect, size);
+	  }
+
+	  if(filters[1]){
+			std::cout << "doing threshold" << std::endl;
+			ImageMaths::threshold<T_data, img_rows, img_cols>(out.mat, out.mat, meanVal);
+			_dataLoader->SetOutputFile(_fileNames[3]);
+			_dataLoader->ExportData(out.vect, size);
+	  }
+
+	  if(filters[0]){
+		  std::cout << "doing hough" << std::endl;
+		  ImageMaths::setImageValues<T_data, img_rows, img_cols>(buffer.mat, 0);
+		  _hough.houghTransform(out.mat, buffer.mat, accumulator.mat, dNonZero, fiNonZero, 0.65f);
+		  _dataLoader->SetOutputFile(_fileNames[4]);
+		  _dataLoader->ExportData(buffer.vect, size);
+
+		  // Add image with lines on top and export
+		  ImageMaths::threshold<T_data, img_rows, img_cols>(in.mat, out.mat, 50);
+		  ImageMaths::addImages<T_data, img_rows, img_cols>(out.mat, buffer.mat, out.mat);
+		  _dataLoader->SetOutputFile(_fileNames[5]);
+		  _dataLoader->ExportData(out.vect, size);
+	  }
+
+	  std::cout << "Finished processing image." << std::endl;
+	  filters.clear();
+  };
+
+  virtual void setSW() override{
+	  hw = false;
+	  delete processor;
+	  processor = new ConvolutionSW<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols>();
+  }
+
+  virtual void setHW() override{
+	  hw = true;
+	  delete processor;
+	  processor = new ConvolutionHW<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols>();
+  }
+
+private:
+  // Convolution hw and sw variables
+  bool hw;
+  IConvolve <T_img, T_kernel, i_rows, i_cols, k_rows, k_cols> *processor;
+  HoughTransformSW<T_img, T_accumulator, i_rows, i_cols, acc_rows, acc_cols> _hough;
+
+  // File loader and file names
+  ILoader<T_img> *_dataLoader;
+  char* _fileNames[6];
+
+};

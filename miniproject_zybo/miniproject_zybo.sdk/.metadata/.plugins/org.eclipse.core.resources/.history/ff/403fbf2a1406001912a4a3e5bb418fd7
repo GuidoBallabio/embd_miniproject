@@ -1,0 +1,37 @@
+#pragma once
+
+#include "../system/IContext.h"
+#include "../GPIOs/Leds.h"
+#include <iostream>
+
+class State {
+public:
+  State(IContext *context) : context(context){};
+  virtual ~State(){};
+
+  virtual std::string Name() const = 0;
+  virtual int Number() const = 0;
+
+  // State machine functions
+  virtual void On(){};
+  virtual void Idle(){};
+  virtual void ChangeMode(){};
+  virtual void Run(){};
+  virtual void Off(){};
+
+  // Filters
+  virtual void setBlur(bool set){};
+  virtual void setEdgeDetection(bool set){};
+  virtual void setThreshold(bool set){};
+  virtual void setHoughTransform(bool set){};
+
+  virtual void entry(Leds *leds) {
+    std::cout << "In " << this->Name() << " state! " << std::endl;
+    leds->setValue(this->Number());
+  }
+
+  virtual void exit() {}
+
+protected:
+  IContext *context;
+};

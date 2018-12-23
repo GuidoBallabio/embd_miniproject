@@ -1,0 +1,23 @@
+#include <iostream>
+#include "system/EmbeddedSystemX.h"
+#include "system/Services.h"
+
+void quit() { std::cout << "Quitting..." << std::endl; }
+
+// start : Defines the entry point for the console application.
+void start() {
+  IStateFactory *stateFactorySingleton = new StateFactorySingleton();
+  IVPS *vps = new VideoProcessingSystem();
+  EmbeddedSystemX *emb = new EmbeddedSystemX(stateFactorySingleton, vps);
+
+  //ManualStateTestService(emb);
+  GetHWInputService(emb);
+}
+
+int main(int, char**)
+{
+	 start();
+	 quit();
+
+	return 0;
+}

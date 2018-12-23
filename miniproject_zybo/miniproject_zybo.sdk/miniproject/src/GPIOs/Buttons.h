@@ -11,6 +11,27 @@
 class Buttons: public IHWInput
 {
 public:
+	static auto getInstance() {
+	    static Buttons instance;
+	    return &instance;
+	  }
+
+	Buttons(const Leds &) = delete;
+	Buttons &operator=(const Buttons) = delete;
+
+	virtual T_value getInputValue() override
+	{
+		return XGpio_DiscreteRead(&_buttons, 1);
+	}
+
+	XGpio getGPIOInstance()
+	{
+		return _buttons;
+	}
+
+private:
+	XGpio _buttons;
+
 	Buttons()
 	{
 		// Initialize buttons driver
@@ -25,16 +46,4 @@ public:
 		XGpio_SetDataDirection(&_buttons, 1, 0xFF);
 	}
 
-	virtual T_value getInputValue() override
-	{
-		return XGpio_DiscreteRead(&_buttons, 1);
-	}
-
-	XGpio getGPIOInstance()
-	{
-		return _buttons;
-	}
-
-private:
-	XGpio _buttons;
 };

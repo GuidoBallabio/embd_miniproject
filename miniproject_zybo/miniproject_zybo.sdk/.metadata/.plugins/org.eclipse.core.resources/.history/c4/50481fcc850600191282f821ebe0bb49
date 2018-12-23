@@ -1,0 +1,60 @@
+#pragma once
+
+#include "On.h"
+#include "Idle.h"
+#include "HWMode.h"
+#include "SWMode.h"
+#include "Running.h"
+#include "Off.h"
+
+template<typename T_img, typename T_kernel, T_size i_rows, size_t i_cols, size_t k_rows, size_t k_cols>
+class IStateFactory {
+public:
+  virtual State<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols> *OnInstance(IContext<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols> *context) = 0;
+  virtual State<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols> *IdleInstance(IContext<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols> *context) = 0;
+  virtual State<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols> *SWModeInstance(IContext<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols> *context) = 0;
+  virtual State<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols> *HWModeInstance(IContext<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols> *context) = 0;
+  virtual State<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols> *RunningInstance(IContext<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols> *context) = 0;
+  virtual State<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols> *OffInstance(IContext<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols> *context) = 0;
+};
+
+template<typename T_img, typename T_kernel, T_size i_rows, size_t i_cols, size_t k_rows, size_t k_cols>
+class StateFactorySingleton : public IStateFactory<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols> {
+public:
+  virtual State<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols> *OnInstance(IContext<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols> *context) override {
+    static On<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols> s(context);
+
+    return &s;
+  }
+
+  virtual State<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols> *IdleInstance(IContext<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols> *context) override {
+    static Idle<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols> s(context);
+
+    return &s;
+  }
+
+  virtual State *HWModeInstance(IContext *context) override {
+    static HWMode s(context);
+
+    return &s;
+  }
+
+  virtual State *SWModeInstance(IContext *context) override {
+    static SWMode s(context);
+
+    return &s;
+  }
+
+  virtual State *RunningInstance(IContext *context) override {
+    static Running s(context);
+
+    return &s;
+  }
+
+  virtual State *OffInstance(IContext *context) override {
+    static Off s(context);
+
+    return &s;
+  }
+
+};

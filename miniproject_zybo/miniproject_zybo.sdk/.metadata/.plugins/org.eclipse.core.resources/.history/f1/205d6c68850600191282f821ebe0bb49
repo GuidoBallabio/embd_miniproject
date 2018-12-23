@@ -1,0 +1,24 @@
+#pragma once
+
+#include "Idle.h"
+
+template<typename T_img, typename T_kernel, T_size i_rows, size_t i_cols, size_t k_rows, size_t k_cols>
+class SWMode : public Idle {
+public:
+  using Idle::Idle;
+
+  virtual void ChangeMode() override {
+    context->ChangeState(StateTypes::s_HWMode);
+  }
+
+  virtual void entry() override{
+	State::entry();
+	context->GetVPS()->setSW();
+  }
+
+  virtual std::string Name() const override { return "SWMode"; }
+
+  virtual int Number() const override { return 3; }
+
+private:
+};

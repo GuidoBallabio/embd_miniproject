@@ -1,0 +1,21 @@
+#pragma once
+
+#include "../system/IContext.h"
+#include "../GPIOs/Leds.h"
+#include <iostream>
+
+class State {
+public:
+  State(IContext *context) : context(context){};
+  virtual ~State(){};
+
+  virtual std::string Name() const = 0;
+  void run() {}
+  void quit() {}
+  void switchHWorSWmode(){}
+  virtual void entry(){}
+  virtual void exit() {}
+
+protected:
+  IContext *context;
+};

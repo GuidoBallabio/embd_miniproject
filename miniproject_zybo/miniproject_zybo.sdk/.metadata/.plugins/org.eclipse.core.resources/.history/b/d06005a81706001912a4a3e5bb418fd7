@@ -1,0 +1,23 @@
+#pragma once
+
+#include "On.h"
+
+class Running : public On {
+public:
+  using On::On;
+
+  virtual void entry(Leds *leds) override {
+	  State::entry(leds);
+	  process();
+	  context->ChangeState(StateTypes::s_SWMode);
+  }
+
+  virtual std::string Name() const override { return "Running"; }
+
+  virtual int Number() const override { return 5; }
+
+private:
+  void process(){
+	  context->GetVPS()->run();
+  }
+};

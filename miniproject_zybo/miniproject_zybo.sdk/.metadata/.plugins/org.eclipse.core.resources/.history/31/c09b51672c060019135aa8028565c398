@@ -1,0 +1,26 @@
+#pragma once
+
+#include "../states/State.h"
+#include "../states/StateFactory.h"
+#include "IContext.h"
+
+class EmbeddedSystemX : public IContext {
+public:
+  EmbeddedSystemX(IStateFactory *stateFactory);
+
+  ~EmbeddedSystemX();
+
+  // State machine functions
+  void quit();
+  void switchHWorSWmode();
+
+  // context
+  virtual void ChangeState(StateTypes state) override;
+  virtual StateTypes GetState() override;
+
+private:
+  State *_state;
+  IStateFactory *_stateFactory;
+  IVPS *_vps;
+  Leds _leds;
+};

@@ -1,0 +1,25 @@
+#pragma once
+
+#include "On.h"
+#include "../GPIOs/Switches.h"
+
+class Running : public On {
+public:
+  using On::On;
+
+  virtual void entry() override {
+	  State::entry();
+	  process();
+	  context->ChangeState(StateTypes::s_SWMode);
+  }
+
+  virtual std::string Name() const override { return "Running"; }
+
+  virtual int Number() const override { return 5; }
+
+private:
+  void process(){
+	  auto filters = Switches::getInstance()->getActiveInputs();
+	  context->GetVPS()->run(filters);
+  }
+};

@@ -1,0 +1,69 @@
+#include <iostream>
+#include "./system/EmbeddedSystemX.h"
+#include "./system/Services.h"
+#include "types.h"
+
+
+// Define variables and images
+// constant values
+constexpr size_t img_rows = 50;
+constexpr size_t img_cols = 50;
+constexpr size_t kernel_size = 3;
+constexpr int8_t f = 9;
+constexpr size_t acc_rows = (img_rows + img_cols) * 2;
+constexpr size_t acc_cols = 180;
+
+// type defs
+typedef int16_t T_data;
+typedef int8_t T_kernel;
+typedef float T_accumulator;
+
+// images
+Image<T_data, img_rows, img_cols> in;
+Image<T_data, img_rows, img_cols> buffer;
+Image<T_data, img_rows, img_cols> out;
+// kernels for blur and edge detection
+Image<T_kernel, kernel_size, kernel_size> blur_kernel = { f,f,f,f,f,f,f,f,f };
+Image<T_kernel, kernel_size, kernel_size> sobel_kernel = { 2,2,0,2,0,-2,0,-2,-2 };
+// arrays for hough transform
+Image<T_accumulator, acc_rows, acc_cols> accumulator = { 0 };
+float dNonZero[img_cols * img_rows] = { 0 };
+float fiNonZero[img_cols * img_rows] = { 0 };
+
+// File names
+constexpr uint8_t nFiles = 6;
+constexpr const char* cameramanFileNames[nFiles] = { "in_file", "blurC", "edgeC", "threshC", "houghC", "outC"};
+constexpr const char* minishapesFileNames[nFiles] = { "input", "blurM", "edgeM", "threshM", "houghM", "outM"};
+char* fileNames[nFiles];
+
+
+int main(int, char**)
+{
+	std::cout << "Starting program\r\n" << std::endl;
+	int size = img_cols*img_rows;
+	memcpy(fileNames, minishapesFileNames, 5*sizeof(const char*));
+
+	// Initialization
+	LoaderSDFile<T_data> loader = LoaderSDFile<T_data>(fileNames[0], fileNames[1]);
+	ConvolutionSW processorSW;
+	ConvolutionHW<T_data, T_kernel, img_rows, img_cols, kernel_size, kernel_size> processorHW;
+	HoughTransformSW hough;
+	XTimer timer;
+
+	// Load image from binary file
+	loader.LoadData(in.vect, size);
+
+	// Find mean value of image
+	T_data meanVal = ImageMaths::mean<T_data, img_rows, img_cols>(in.mat);
+
+
+
+
+	IStateFactory *stateFactorySingleton = new StateFactorySingleton();
+	EmbeddedSystemX *emb = new EmbeddedSystemX(stateFactorySingleton);
+
+	ManualStateTestService(emb);
+	//GetHWInputService(emb);
+
+	return 0;
+}

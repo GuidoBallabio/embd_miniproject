@@ -31,8 +31,8 @@ public:
 		}
 
 		// Call to interrupt setup
-		XGpio_InterruptEnable(&gpio, mask);
-		XGpio_InterruptGlobalEnable(&gpio);
+		//XGpio_InterruptEnable(&gpio, mask);
+		//XGpio_InterruptGlobalEnable(&gpio);
 
 		Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
 									 (Xil_ExceptionHandler)XScuGic_InterruptHandler,

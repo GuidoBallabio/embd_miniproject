@@ -1,0 +1,30 @@
+#pragma once
+
+#include "On.h"
+#include "../GPIOs/Switches.h"
+
+template<typename T_img, typename T_kernel, typename T_accumulator, T_size i_rows, T_size i_cols, T_size k_rows, T_size k_cols, T_size acc_rows, T_size acc_cols>
+class Running : public On<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols, T_accumulator, acc_rows, acc_cols {
+public:
+  using On<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols, T_accumulator, acc_rows, acc_cols::On;
+
+  virtual void entry() override {
+	  State<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols, T_accumulator, acc_rows, acc_cols::entry();
+	  process();
+  }
+
+  virtual void Finished() override
+  {
+	  this->context->ChangeState(StateTypes::s_Idle);
+  }
+
+  virtual std::string Name() const override { return "Running"; }
+
+  virtual int Number() const override { return 5; }
+
+private:
+  void process(){
+	  auto filters = Switches::getInstance()->getActiveInputs();
+	  this->context->GetVPS()->run(filters);
+  }
+};

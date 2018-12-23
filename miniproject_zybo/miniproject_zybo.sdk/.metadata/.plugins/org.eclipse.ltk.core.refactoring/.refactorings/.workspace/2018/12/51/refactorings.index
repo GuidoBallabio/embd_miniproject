@@ -42,3 +42,5 @@
 1545408729525	Delete resource 'standalone_bsp_0'
 1545409618861	Delete resource 'system_wrapper_hw_platform_0'
 1545409623861	Delete resource 'standalone_bsp_0'
+1545549164233	Delete resource 'miniproject/src/ImageProcessing/IConvolution.h'
+1545549558421	Delete resource 'miniproject/src/system/EmbeddedSystemX.cc'

@@ -7,10 +7,26 @@
  */
 #pragma once
 
+#include <vector>
+
 class IHWInput
 {
 public:
 	typedef uint8_t T_value;
 
 	virtual T_value getInputValue() = 0;
+
+	// number of button pressed or switch activated
+	virtual std::vector<bool> getActiveInputs(){
+		T_value num = this->getInputValue();
+
+		std::vector<bool> powers = std::vector<bool>(4);
+		for (uint k = 1, i = 0; i <= powers.size(); k <<= 1, i++)
+			if (k & num)
+				powers[i] = true;
+			else
+				powers[i] = false;
+
+		return powers;
+	}
 };

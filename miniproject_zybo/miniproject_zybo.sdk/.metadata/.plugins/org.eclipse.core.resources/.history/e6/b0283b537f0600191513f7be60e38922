@@ -1,0 +1,79 @@
+#include "EmbeddedSystemX.h"
+#include "../GPIOs/Leds.h"
+#include <string>
+#include "VideoSystem/VideoProcessingSystem.h"
+
+EmbeddedSystemX::EmbeddedSystemX(IStateFactory *stateFactory, IVPS* vps) {
+  _stateFactory = stateFactory;
+  _state = _stateFactory->OnInstance(this);
+  _vps = vps;
+  _state->entry();
+}
+
+EmbeddedSystemX::~EmbeddedSystemX() {
+  delete _state;
+  delete _name;
+  delete _vps;
+}
+
+void EmbeddedSystemX::ChangeState(StateTypes state) {
+  // Call the exit function on the current state before changing it
+  _state->exit();
+
+  switch (state) {
+  case StateTypes::s_On:
+    std::cout << "Changing state from " << _state->Name()
+              << " to On\n";
+    _state = _stateFactory->OnInstance(this);
+    break;
+  case StateTypes::s_Idle:
+    std::cout << "Changing state from " << _state->Name()
+              << " to Idle\n";
+    _state = _stateFactory->IdleInstance(this);
+    break;
+  case StateTypes::s_SWMode:
+    std::cout << "Changing state from " << _state->Name() << " to SWMode\n";
+    _state = _stateFactory->SWModeInstance(this);
+    break;
+  case StateTypes::s_HWMode:
+    std::cout << "Changing state from " << _state->Name()
+              << " to HWMode\n";
+    _state = _stateFactory->HWModeInstance(this);
+    break;
+  case StateTypes::s_Running:
+    std::cout << "Changing state from " << _state->Name()
+              << " to Running\n";
+    _state = _stateFactory->RunningInstance(this);
+    break;
+  case StateTypes::s_Off:
+    std::cout << "Changing state from " << _state->Name() << " to Off\n";
+    _state = _stateFactory->OffInstance(this);
+    break;
+  default:
+    std::cout << "Default, no state is selected :(" << std::endl;
+    break;
+  }
+
+  // Call the entry function on the new state
+  _state->entry();
+}
+
+
+IVPS *EmbeddedSystemX::GetVPS(){
+	return _vps;
+}
+
+void EmbeddedSystemX::ChangeMode() {
+  std::cout << "Called ChangeMode at state " << _state->Name() << "\n";
+  _state->ChangeMode();
+}
+
+void EmbeddedSystemX::Run() {
+  std::cout << "Called Run at state " << _state->Name() << "\n";
+  _state->Run();
+}
+
+void EmbeddedSystemX::Quit() {
+  std::cout << "Called Quit at state " << _state->Name() << "\n";
+  _state->Quit();
+}

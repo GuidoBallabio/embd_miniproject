@@ -1,0 +1,58 @@
+#pragma once
+
+#include "On.h"
+#include "Idle.h"
+#include "HWMode.h"
+#include "SWMode.h"
+#include "Running.h"
+#include "Off.h"
+
+class IStateFactory {
+public:
+  virtual State *OnInstance(IContext *context) = 0;
+  virtual State *IdleInstance(IContext *context) = 0;
+  virtual State *SWModeInstance(IContext *context) = 0;
+  virtual State *HWModeInstance(IContext *context) = 0;
+  virtual State *RunningInstance(IContext *context) = 0;
+  virtual State *OffInstance(IContext *context) = 0;
+};
+
+class StateFactorySingleton : public IStateFactory {
+public:
+  virtual State *OnInstance(IContext *context) override {
+    static On s(context);
+
+    return &s;
+  }
+
+  virtual State *IdleInstance(IContext *context) override {
+    static Idle s(context);
+
+    return &s;
+  }
+
+  virtual State *HWModeInstance(IContext *context) override {
+    static HWMode s(context);
+
+    return &s;
+  }
+
+  virtual State *SWModeInstance(IContext *context) override {
+    static SWMode s(context);
+
+    return &s;
+  }
+
+  virtual State *RunningInstance(IContext *context) override {
+    static Running s(context);
+
+    return &s;
+  }
+
+  virtual State *OffInstance(IContext *context) override {
+    static Off s(context);
+
+    return &s;
+  }
+
+};

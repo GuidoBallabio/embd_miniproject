@@ -1,0 +1,69 @@
+#pragma once
+
+#include <iostream>
+#include <vector>
+
+#include "EmbeddedSystemX.h"
+#include "../GPIOs/Buttons.h"
+#include "../GPIOs/Switches.h"
+#include "sleep.h"
+
+#define BTN4 3
+#define BTN3 2
+#define BTN2 1
+#define BTN1 0
+
+template<typename T_img, typename T_kernel, T_size i_rows, T_size i_cols, T_size k_rows, T_size k_cols,
+		typename T_accumulator, T_size acc_rows, T_size acc_cols>
+void ManualStateTestService(EmbeddedSystemX<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols, T_accumulator, acc_rows, acc_cols> *emb) {
+  emb->ChangeMode();
+  emb->ChangeMode();
+  emb->ChangeMode();
+  emb->Run();
+  emb->ChangeMode();
+  emb->ChangeMode();
+  emb->Run();
+  emb->Quit();
+
+  std::cout << '\n' << "Press a key to continue...\n";
+  std::cin.get();
+}
+
+void DisplayChoices() {
+  std::cout
+  	  << "Use BTN3 to switch between Hardware and Software modes" << std::endl
+      << "Use the switches to set which filters to use:" << std::endl
+      << "\t" << "1 for Blur" << std::endl
+	  << "\t" << "2 for Edge detection" << std::endl
+	  << "\t" << "3 for Threshold" << std::endl
+	  << "\t" << "4 for Hough transformation" << std::endl
+      << "Once decided run with BTN4 (leftmost) or Stop with BTN1(rightmost)" << std::endl
+  	  << std::endl;
+}
+
+template<typename T_img, typename T_kernel, T_size i_rows, T_size i_cols, T_size k_rows, T_size k_cols,
+		typename T_accumulator, T_size acc_rows, T_size acc_cols>
+void GetHWInputService(EmbeddedSystemX<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols, T_accumulator, acc_rows, acc_cols>* emb){
+	DisplayChoices();
+
+	Buttons *buttons = Buttons::getInstance();
+
+	std::vector<bool> inputButtons;
+
+	do {
+		inputButtons = buttons->getActiveInputs();
+
+		if (inputButtons[BTN3])
+			emb->ChangeMode();
+
+		if (inputButtons[BTN4]){
+			emb->Run();
+			emb->Finished();
+		}
+
+		usleep(150000);
+	} while(!inputButtons[BTN1]);
+
+	emb->Quit();
+}
+

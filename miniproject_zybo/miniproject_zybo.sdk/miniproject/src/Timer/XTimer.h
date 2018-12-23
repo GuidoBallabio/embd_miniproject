@@ -1,5 +1,5 @@
 #pragma once
-#include "XScutimer.h"
+#include "xscutimer.h"
 #include "ITimer.h"
 
 class XTimer : public ITimer
@@ -40,6 +40,19 @@ public:
 		u32 ticks = _startVal - _stopVal;
 
 		return ticks;
+	}
+
+	virtual void reset(){
+		XScuTimer_ClearInterruptStatus(&_timer);
+	}
+
+	virtual void enable_autoreload(){
+		// Set AutoLoad mode
+		XScuTimer_EnableAutoReload(&_timer);
+	}
+
+	virtual bool is_expired() {
+		return (bool)XScuTimer_IsExpired(&_timer);
 	}
 
 

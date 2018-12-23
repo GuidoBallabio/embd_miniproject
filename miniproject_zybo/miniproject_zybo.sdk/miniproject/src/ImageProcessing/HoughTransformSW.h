@@ -4,12 +4,11 @@
 #include "ImageMaths.h"
 #include <assert.h>
 
-
+template<typename T_img, typename T_acc, size_t i_rows, size_t i_cols, size_t a_rows, size_t a_cols>
 class HoughTransformSW
 {
 public:
 
-	template<typename T_img, typename T_acc, size_t i_rows, size_t i_cols, size_t a_rows, size_t a_cols>
 	void houghTransform(
 		T_img in[i_rows][i_cols], 
 		T_img out[i_rows][i_cols], 

@@ -6,24 +6,18 @@
  */
 #pragma once
 #include "xgpio.h"
+#include "xil_printf.h"
 
 class Leds
 {
 public:
-	Leds()
-	{
-		// Initialize led driver
-		int status = XGpio_Initialize(&_leds, XPAR_LEDS_DEVICE_ID);
-		if(status != XST_SUCCESS)
-		{
-			printf("Error: Failed to initialize LED hardware driver\r\n");
-			return;
-		}
+	static auto getInstance() {
+	    static Leds instance;
+	    return &instance;
+	  }
 
-		// Set as outputs, and initialize all leds to be turned off
-		XGpio_SetDataDirection(&_leds, 1, 0x00);
-		XGpio_DiscreteWrite(&_leds, 1, 0); // set all values to 0
-	}
+	Leds(const Leds &) = delete;
+	Leds &operator=(const Leds) = delete;
 
 	void setValue(uint8_t value)
 	{
@@ -37,4 +31,19 @@ public:
 
 private:
 	XGpio _leds;
+
+	Leds()
+		{
+			// Initialize led driver
+			int status = XGpio_Initialize(&_leds, XPAR_LEDS_DEVICE_ID);
+			if(status != XST_SUCCESS)
+			{
+				xil_printf("Error: Failed to initialize LED hardware driver\n");
+				return;
+			}
+
+			// Set as outputs, and initialize all leds to be turned off
+			XGpio_SetDataDirection(&_leds, 1, 0x00);
+			XGpio_DiscreteWrite(&_leds, 1, 0); // set all values to 0
+		}
 };

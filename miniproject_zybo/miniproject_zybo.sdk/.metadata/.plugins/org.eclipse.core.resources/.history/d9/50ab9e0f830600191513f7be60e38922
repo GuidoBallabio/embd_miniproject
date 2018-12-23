@@ -1,0 +1,10 @@
+#include "EmbeddedSystemX.h"
+#include "../GPIOs/Leds.h"
+#include <string>
+
+
+
+void EmbeddedSystemX::Quit() {
+  std::cout << "Called Quit at state " << _state->Name() << "\n";
+  _state->Quit();
+}

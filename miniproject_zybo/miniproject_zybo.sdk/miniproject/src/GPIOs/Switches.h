@@ -11,20 +11,13 @@
 class Switches: public IHWInput
 {
 public:
+	static auto getInstance() {
+	    static Switches instance;
+	    return &instance;
+	  }
 
-	Switches()
-	{
-		// Initialize switches driver
-		int status = XGpio_Initialize(&_switches, XPAR_SWITCHES_DEVICE_ID);
-		if(status != XST_SUCCESS)
-		{
-			printf("Error: Failed to initialize switches hardware driver\r\n");
-			return;
-		}
-
-		// Set switches as inputs
-		XGpio_SetDataDirection(&_switches, 1, 0xFF);
-	}
+	Switches(const Switches &) = delete;
+	Switches &operator=(const Switches) = delete;
 
 	virtual T_value getInputValue() override
 	{
@@ -33,4 +26,18 @@ public:
 
 private:
 	XGpio _switches;
+
+	Switches()
+		{
+			// Initialize switches driver
+			int status = XGpio_Initialize(&_switches, XPAR_SWITCHES_DEVICE_ID);
+			if(status != XST_SUCCESS)
+			{
+				printf("Error: Failed to initialize switches hardware driver\r\n");
+				return;
+			}
+
+			// Set switches as inputs
+			XGpio_SetDataDirection(&_switches, 1, 0xFF);
+		}
 };

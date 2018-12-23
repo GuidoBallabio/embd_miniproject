@@ -1,0 +1,15 @@
+#pragma once
+
+#include "State.h"
+
+class Off : public State {
+public:
+  using State::State;
+
+  void Entry() {
+
+  }
+
+  virtual std::string Name() const override { return "Off"; }
+
+};

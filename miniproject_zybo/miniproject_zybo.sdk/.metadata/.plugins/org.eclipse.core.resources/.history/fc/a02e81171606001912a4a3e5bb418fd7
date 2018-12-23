@@ -1,0 +1,37 @@
+#pragma once
+
+#include "On.h"
+
+class Idle : public On {
+public:
+  using On::On;
+
+  virtual void Run() override {
+    context->ChangeState(StateTypes::s_Running);
+  }
+
+  virtual void setBlur(bool set) override{
+	  context->GetVPS()->setBlur(set);
+  };
+
+  virtual void setEdgeDetection(bool set) override{
+	  context->GetVPS()->setEdgeDetection(set);
+  };
+
+  virtual void setThreshold(bool set) override{
+	  context->GetVPS()->setThreshold(set);
+  };
+
+  virtual void setHoughTransform(bool set) override{
+	  context->GetVPS()->setHoughTransform(set);
+  };
+
+  virtual void entry(Leds *leds) override {
+	  State::entry(leds);
+	  context->ChangeState(StateTypes::s_SWMode);
+  }
+
+  virtual std::string Name() const override { return "Idle"; }
+
+  virtual int Number() const override { return 2; }
+};

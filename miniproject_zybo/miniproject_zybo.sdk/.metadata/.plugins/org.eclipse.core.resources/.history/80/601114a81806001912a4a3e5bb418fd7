@@ -1,0 +1,27 @@
+#pragma once
+
+#include "Idle.h"
+
+class SWMode : public Idle {
+public:
+  using Idle::Idle;
+
+  void Entry(){
+
+  }
+
+  void run()
+  {
+	  // run software version of algorithms
+	  context->GetVPS()->setSW();
+  }
+
+  void Exit()
+  {
+	  // clean up before exiting
+  }
+
+  virtual std::string Name() const override { return "SWMode"; }
+
+private:
+};

@@ -1,0 +1,21 @@
+#pragma once
+
+#include "VideoSystem/IVPS.h"
+#include "../types.h"
+
+// Define the state types for the specific context
+enum StateTypes {
+  s_On,
+  s_Idle,
+  s_HWMode,
+  s_SWMode,
+  s_Running,
+  s_Off
+};
+
+template<typename T_img, typename T_kernel, T_size i_rows, size_t i_cols, size_t k_rows, size_t k_cols>
+class IContext {
+public:
+  virtual void ChangeState(StateTypes state) = 0;
+  virtual IVPS<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols, T_accumulator, acc_rows, acc_cols> *GetVPS() = 0;
+};

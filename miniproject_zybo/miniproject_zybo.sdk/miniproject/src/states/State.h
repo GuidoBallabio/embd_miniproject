@@ -1,0 +1,35 @@
+#pragma once
+
+#include "../system/IContext.h"
+#include "../GPIOs/Leds.h"
+#include <iostream>
+
+
+
+
+template<typename T_img, typename T_kernel, T_size i_rows, T_size i_cols, T_size k_rows, T_size k_cols,
+		typename T_accumulator, T_size acc_rows, T_size acc_cols>
+class State {
+public:
+  State(IContext<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols, T_accumulator, acc_rows, acc_cols> *context) : context(context){};
+  virtual ~State(){};
+
+  virtual std::string Name() const = 0;
+  virtual int Number() const = 0;
+
+  // State machine functions
+  virtual void Finished(){};
+  virtual void ChangeMode(){};
+  virtual void Run(){};
+  virtual void Quit(){};
+
+  virtual void entry() {
+    std::cout << "In " << this->Name() << " state! " << std::endl;
+    Leds::getInstance()->setValue(this->Number());
+  }
+
+  virtual void exit() {}
+
+protected:
+  IContext<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols, T_accumulator, acc_rows, acc_cols> *context;
+};

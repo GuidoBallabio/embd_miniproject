@@ -1,0 +1,29 @@
+#include <iostream>
+#include "./system/EmbeddedSystemX.h"
+#include "./system/Services.h"
+#include "types.h"
+#include "./system/VideoSystem/VideoProcessingSystem.h"
+
+
+// File names
+constexpr uint8_t nFiles = 6;
+constexpr const char* cameramanFileNames[nFiles] = { "in_file", "blurC", "edgeC", "threshC", "houghC", "outC"};
+constexpr const char* minishapesFileNames[nFiles] = { "input", "blurM", "edgeM", "threshM", "houghM", "outM"};
+char* fileNames[nFiles];
+
+
+int main(int, char**)
+{
+	std::cout << "Starting program\r\n" << std::endl;
+
+	// Create a new video processing class
+	IVPS* vps = new VideoProcessingSystem();
+
+	IStateFactory *stateFactorySingleton = new StateFactorySingleton();
+	EmbeddedSystemX *emb = new EmbeddedSystemX(stateFactorySingleton, vps);
+
+	ManualStateTestService(emb);
+	//GetHWInputService(emb);
+
+	return 0;
+}

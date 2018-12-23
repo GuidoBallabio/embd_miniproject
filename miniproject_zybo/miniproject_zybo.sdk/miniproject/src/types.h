@@ -1,5 +1,7 @@
 #pragma once
 
+#include <cstddef>
+
 typedef size_t T_size;
 
 typedef char T_kernel_data;
@@ -11,4 +13,38 @@ union Image
 	T vect[rows*cols];
 	T mat[rows][cols];
 };
+
+/*
+ * Definition used for specific images
+ */
+// constant values
+constexpr T_size img_rows = 50;
+constexpr T_size img_cols = 50;
+constexpr T_size kernel_size = 3;
+constexpr int8_t f = 9;
+constexpr T_size acc_rows = (img_rows + img_cols) * 2;
+constexpr T_size acc_cols = 180;
+
+// type defs
+typedef int16_t T_data;
+typedef int8_t T_kernel;
+typedef float T_accumulator;
+
+// images
+Image<T_data, img_rows, img_cols> in;
+Image<T_data, img_rows, img_cols> buffer;
+Image<T_data, img_rows, img_cols> out;
+// kernels for blur and edge detection
+Image<T_kernel, kernel_size, kernel_size> blur_kernel = { f,f,f,f,f,f,f,f,f };
+Image<T_kernel, kernel_size, kernel_size> sobel_kernel = { 2,2,0,2,0,-2,0,-2,-2 };
+// arrays for hough transform
+Image<T_accumulator, acc_rows, acc_cols> accumulator = { 0 };
+float dNonZero[img_cols * img_rows] = { 0 };
+float fiNonZero[img_cols * img_rows] = { 0 };
+
+// File names
+const uint8_t nFiles = 6;
+constexpr const char* cameramanFileNames[nFiles] = { "in_file", "blurC", "edgeC", "threshC", "houghC", "outC"};
+constexpr const char* minishapesFileNames[nFiles] = { "input", "blurM", "edgeM", "threshM", "houghM", "outM"};
+char* fileNames[nFiles];
 

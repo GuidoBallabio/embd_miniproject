@@ -1,0 +1,23 @@
+#pragma once
+
+#include "Idle.h"
+
+class HWMode : public Idle {
+public:
+  using Idle::Idle;
+
+  virtual void ChangeMode() override {
+    context->ChangeState(StateTypes::s_SWMode);
+  }
+
+  virtual void entry() override{
+	State::entry();
+	context->GetVPS()->setHW();
+  }
+
+  virtual std::string Name() const override { return "HWMode"; }
+
+  virtual int Number() const override { return 4; }
+
+private:
+};

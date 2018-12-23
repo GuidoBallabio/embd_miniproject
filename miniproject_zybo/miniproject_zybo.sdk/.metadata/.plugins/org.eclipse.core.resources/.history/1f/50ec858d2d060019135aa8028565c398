@@ -1,0 +1,75 @@
+#pragma once
+
+#include <iostream>
+#include <vector>
+
+#include "EmbeddedSystemX.h"
+#include "../GPIOs/Buttons.h"
+#include "../GPIOs/Switches.h"
+#include "sleep.h"
+
+#define BTN4 3
+#define BTN3 2
+#define BTN2 1
+#define BTN1 0
+
+void ManualStateTestService(EmbeddedSystemX *emb) {
+  emb->switchHWorSWmode();
+  emb->switchHWorSWmode();
+  emb->switchHWorSWmode();
+  emb->run();
+  emb->switchHWorSWmode();
+  emb->switchHWorSWmode();
+  emb->run();
+  emb->quit();
+
+  std::cout << '\n' << "Press a key to continue...\n";
+  std::cin.get();
+}
+
+void DisplayChoices() {
+  std::cout
+  	  << "Use BTN3 to switch between Hardware and Software modes" << std::endl
+      << "Use the switches to set which filters to use:" << std::endl
+      << "\t" << "1 for Blur" << std::endl
+	  << "\t" << "2 for Edge detection" << std::endl
+	  << "\t" << "3 for Hough transformation" << std::endl
+	  << "\t" << "4 for Threshold" << std::endl
+      << "Once decided run with BTN4 (leftmost) or Stop with BTN1(rightmost)" << std::endl
+  	  << std::endl;
+}
+
+void ChooseFilters(EmbeddedSystemX *emb, std::vector<bool> options) {
+	emb->setBlur(options[3]);
+	emb->setEdgeDetection(options[2]);
+	emb->setHoughTransform(options[1]);
+	emb->setThreshold(options[0]);
+}
+
+void GetHWInputService(EmbeddedSystemX* emb){
+	DisplayChoices();
+
+	Buttons buttons = Buttons();
+	Switches switches = Switches();
+
+	std::vector<bool> inputButtons;
+	std::vector<bool> inputSwitches;
+
+	do {
+		inputButtons = buttons.getActiveInputs();
+		inputSwitches = switches.getActiveInputs();
+
+		if (inputButtons[BTN3])
+			emb->switchHWorSWmode();
+
+		if (inputButtons[BTN4]){
+			ChooseFilters(emb, inputSwitches);
+			emb->run();
+		}
+
+		usleep(150000);
+	} while(!inputButtons[BTN1]);
+
+	emb->Off();
+}
+

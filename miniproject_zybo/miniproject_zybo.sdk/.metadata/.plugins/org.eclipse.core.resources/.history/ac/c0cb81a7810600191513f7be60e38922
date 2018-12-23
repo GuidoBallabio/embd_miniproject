@@ -1,0 +1,12 @@
+#pragma once
+
+#include <vector>
+
+class IVPS
+{
+public:
+	virtual void setHW() = 0;
+	virtual void setSW() = 0;
+	virtual void run(std::vector<bool> filters) = 0;
+	virtual ~IVPS(){};
+};

@@ -1,0 +1,141 @@
+Test passed.
+Test passed.
+
+C:\Users\au513437\Desktop\embd_miniproject\ConvolutionInt\convolutionInt.prj\solution3\sim\verilog>call E:/Xilinx/Vivado/2017.2/bin/xelab xil_defaultlib.apatb_convolve_top -prj convolve.prj -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 --initfile "E:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini" --lib "ieee_proposed=./ieee_proposed" -s convolve -debug wave 
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "E:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_convolve_top -prj convolve.prj -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 --initfile E:/Xilinx/Vivado/2017.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s convolve -debug wave 
+Multi-threading is on. Using 6 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/au513437/Desktop/embd_miniproject/ConvolutionInt/convolutionInt.prj/solution3/sim/verilog/AESL_axi_slave_conv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_slave_conv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/au513437/Desktop/embd_miniproject/ConvolutionInt/convolutionInt.prj/solution3/sim/verilog/convolve.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_convolve_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/au513437/Desktop/embd_miniproject/ConvolutionInt/convolutionInt.prj/solution3/sim/verilog/convolve.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module convolve
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/au513437/Desktop/embd_miniproject/ConvolutionInt/convolutionInt.prj/solution3/sim/verilog/convolve_conv_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module convolve_conv_s_axi
+INFO: [VRFC 10-311] analyzing module convolve_conv_s_axi_ram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/au513437/Desktop/embd_miniproject/ConvolutionInt/convolutionInt.prj/solution3/sim/verilog/convolve_mac_muladEe.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module convolve_mac_muladEe_DSP48_1
+INFO: [VRFC 10-311] analyzing module convolve_mac_muladEe
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/au513437/Desktop/embd_miniproject/ConvolutionInt/convolutionInt.prj/solution3/sim/verilog/convolve_mul_6ns_bkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module convolve_mul_6ns_bkb_MulnS_0
+INFO: [VRFC 10-311] analyzing module convolve_mul_6ns_bkb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/au513437/Desktop/embd_miniproject/ConvolutionInt/convolutionInt.prj/solution3/sim/verilog/convolve_mul_mul_cud.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module convolve_mul_mul_cud_DSP48_0
+INFO: [VRFC 10-311] analyzing module convolve_mul_mul_cud
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.convolve_conv_s_axi_ram(DEPTH=12...
+Compiling module xil_defaultlib.convolve_conv_s_axi_ram(DEPTH=3)
+Compiling module xil_defaultlib.convolve_conv_s_axi(C_S_AXI_ADDR...
+Compiling module xil_defaultlib.convolve_mul_6ns_bkb_MulnS_0
+Compiling module xil_defaultlib.convolve_mul_6ns_bkb(ID=1,NUM_ST...
+Compiling module xil_defaultlib.convolve_mul_mul_cud_DSP48_0
+Compiling module xil_defaultlib.convolve_mul_mul_cud(ID=1,NUM_ST...
+Compiling module xil_defaultlib.convolve_mac_muladEe_DSP48_1
+Compiling module xil_defaultlib.convolve_mac_muladEe(ID=1,NUM_ST...
+Compiling module xil_defaultlib.convolve
+Compiling module xil_defaultlib.AESL_axi_slave_conv
+Compiling module xil_defaultlib.apatb_convolve_top
+Built simulation snapshot convolve
+
+****** Webtalk v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/au513437/Desktop/embd_miniproject/ConvolutionInt/convolutionInt.prj/solution3/sim/verilog/xsim.dir/convolve/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/au513437/Desktop/embd_miniproject/ConvolutionInt/convolutionInt.prj/solution3/sim/verilog/xsim.dir/convolve/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sat Dec 22 15:06:14 2018. For additional details about this file, please refer to the WebTalk help file at E:/Xilinx/Vivado/2017.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Sat Dec 22 15:06:14 2018...
+
+****** xsim v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/convolve/xsim_script.tcl
+# xsim {convolve} -autoloadwcfg -tclbatch {convolve.tcl}
+Vivado Simulator 2017.2
+Time resolution is 1 ps
+source convolve.tcl
+## log_wave -r /
+## set designtopgroup [add_wave_group "Design Top Signals"]
+## set cinoutgroup [add_wave_group "C InOuts" -into $designtopgroup]
+## set in__out__krnl__return_group [add_wave_group in__out__krnl__return(axi_slave) -into $cinoutgroup]
+## add_wave /apatb_convolve_top/AESL_inst_convolve/interrupt -into $in__out__krnl__return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_top/AESL_inst_convolve/s_axi_conv_BRESP -into $in__out__krnl__return_group -radix hex
+## add_wave /apatb_convolve_top/AESL_inst_convolve/s_axi_conv_BREADY -into $in__out__krnl__return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_top/AESL_inst_convolve/s_axi_conv_BVALID -into $in__out__krnl__return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_top/AESL_inst_convolve/s_axi_conv_RRESP -into $in__out__krnl__return_group -radix hex
+## add_wave /apatb_convolve_top/AESL_inst_convolve/s_axi_conv_RDATA -into $in__out__krnl__return_group -radix hex
+## add_wave /apatb_convolve_top/AESL_inst_convolve/s_axi_conv_RREADY -into $in__out__krnl__return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_top/AESL_inst_convolve/s_axi_conv_RVALID -into $in__out__krnl__return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_top/AESL_inst_convolve/s_axi_conv_ARREADY -into $in__out__krnl__return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_top/AESL_inst_convolve/s_axi_conv_ARVALID -into $in__out__krnl__return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_top/AESL_inst_convolve/s_axi_conv_ARADDR -into $in__out__krnl__return_group -radix hex
+## add_wave /apatb_convolve_top/AESL_inst_convolve/s_axi_conv_WSTRB -into $in__out__krnl__return_group -radix hex
+## add_wave /apatb_convolve_top/AESL_inst_convolve/s_axi_conv_WDATA -into $in__out__krnl__return_group -radix hex
+## add_wave /apatb_convolve_top/AESL_inst_convolve/s_axi_conv_WREADY -into $in__out__krnl__return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_top/AESL_inst_convolve/s_axi_conv_WVALID -into $in__out__krnl__return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_top/AESL_inst_convolve/s_axi_conv_AWREADY -into $in__out__krnl__return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_top/AESL_inst_convolve/s_axi_conv_AWVALID -into $in__out__krnl__return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_top/AESL_inst_convolve/s_axi_conv_AWADDR -into $in__out__krnl__return_group -radix hex
+## set blocksiggroup [add_wave_group "Block-level IO Handshake(internal)" -into $designtopgroup]
+## add_wave /apatb_convolve_top/AESL_inst_convolve/ap_done -into $blocksiggroup
+## add_wave /apatb_convolve_top/AESL_inst_convolve/ap_idle -into $blocksiggroup
+## add_wave /apatb_convolve_top/AESL_inst_convolve/ap_ready -into $blocksiggroup
+## add_wave /apatb_convolve_top/AESL_inst_convolve/ap_start -into $blocksiggroup
+## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
+## add_wave /apatb_convolve_top/AESL_inst_convolve/ap_rst_n -into $resetgroup
+## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
+## add_wave /apatb_convolve_top/AESL_inst_convolve/ap_clk -into $clockgroup
+## set testbenchgroup [add_wave_group "Test Bench Signals"]
+## set tbinternalsiggroup [add_wave_group "Internal Signals" -into $testbenchgroup]
+## set tb_simstatus_group [add_wave_group "Simulation Status" -into $tbinternalsiggroup]
+## set tb_portdepth_group [add_wave_group "Port Depth" -into $tbinternalsiggroup]
+## add_wave /apatb_convolve_top/AUTOTB_TRANSACTION_NUM -into $tb_simstatus_group -radix hex
+## add_wave /apatb_convolve_top/ready_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_convolve_top/done_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_convolve_top/LENGTH_in_r -into $tb_portdepth_group -radix hex
+## add_wave /apatb_convolve_top/LENGTH_out_r -into $tb_portdepth_group -radix hex
+## add_wave /apatb_convolve_top/LENGTH_krnl -into $tb_portdepth_group -radix hex
+## set tbcinoutgroup [add_wave_group "C InOuts" -into $testbenchgroup]
+## set tb_in__out__krnl__return_group [add_wave_group in__out__krnl__return(axi_slave) -into $tbcinoutgroup]
+## add_wave /apatb_convolve_top/conv_INTERRUPT -into $tb_in__out__krnl__return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_top/conv_BRESP -into $tb_in__out__krnl__return_group -radix hex
+## add_wave /apatb_convolve_top/conv_BREADY -into $tb_in__out__krnl__return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_top/conv_BVALID -into $tb_in__out__krnl__return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_top/conv_RRESP -into $tb_in__out__krnl__return_group -radix hex
+## add_wave /apatb_convolve_top/conv_RDATA -into $tb_in__out__krnl__return_group -radix hex
+## add_wave /apatb_convolve_top/conv_RREADY -into $tb_in__out__krnl__return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_top/conv_RVALID -into $tb_in__out__krnl__return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_top/conv_ARREADY -into $tb_in__out__krnl__return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_top/conv_ARVALID -into $tb_in__out__krnl__return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_top/conv_ARADDR -into $tb_in__out__krnl__return_group -radix hex
+## add_wave /apatb_convolve_top/conv_WSTRB -into $tb_in__out__krnl__return_group -radix hex
+## add_wave /apatb_convolve_top/conv_WDATA -into $tb_in__out__krnl__return_group -radix hex
+## add_wave /apatb_convolve_top/conv_WREADY -into $tb_in__out__krnl__return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_top/conv_WVALID -into $tb_in__out__krnl__return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_top/conv_AWREADY -into $tb_in__out__krnl__return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_top/conv_AWVALID -into $tb_in__out__krnl__return_group -color #ffff00 -radix hex
+## add_wave /apatb_convolve_top/conv_AWADDR -into $tb_in__out__krnl__return_group -radix hex
+## save_wave_config convolve.wcfg
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 1 [0.00%] @ "116000"
+// RTL Simulation : 1 / 1 [0.00%] @ "448108000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 448140 ns : File "C:/Users/au513437/Desktop/embd_miniproject/ConvolutionInt/convolutionInt.prj/solution3/sim/verilog/convolve.autotb.v" Line 282
+## quit
+INFO: [Common 17-206] Exiting xsim at Sat Dec 22 15:06:33 2018...
+Test passed.

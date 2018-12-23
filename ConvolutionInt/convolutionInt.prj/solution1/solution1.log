@@ -7,70 +7,13 @@ Copyright (C) 1986-2017 Xilinx, Inc. All Rights Reserved.
 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
 INFO: [HLS 200-10] Setting target device to 'xc7z010clg400-1'
-INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
-INFO: [HLS 200-10] Analyzing design file 'Convolution.cpp' ... 
-INFO: [HLS 200-10] Validating synthesis directives ...
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 96.516 ; gain = 46.961
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:01:02 . Memory (MB): peak = 96.535 ; gain = 46.980
-INFO: [HLS 200-10] Starting code transformations ...
-INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<137, 84, false, (ap_q_mode)5, (ap_o_mode)3, 0>::operator<<' into 'hls::cast_IEEE754<unsigned int, (ap_q_mode)6, double>' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_round.h:485).
-INFO: [XFORM 203-603] Inlining function 'ap_fixed_base<1, 33, false, (ap_q_mode)5, (ap_o_mode)0, 0>::overflow_adjust' into 'ap_fixed_base<1, 33, false, (ap_q_mode)5, (ap_o_mode)0, 0>::ap_fixed_base<137, 84, false, (ap_q_mode)5, (ap_o_mode)3, 0>' ().
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:36 ; elapsed = 00:02:11 . Memory (MB): peak = 1246.281 ; gain = 1196.727
-INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::mantissa' into 'hls::cast_IEEE754<unsigned int, (ap_q_mode)6, double>' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_round.h:482) automatically.
-INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::expv' into 'hls::cast_IEEE754<unsigned int, (ap_q_mode)6, double>' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_round.h:485) automatically.
-INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::__signbit' into 'hls::cast_IEEE754<unsigned int, (ap_q_mode)6, double>' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_round.h:505) automatically.
-INFO: [XFORM 203-602] Inlining function 'hls::cast_IEEE754<unsigned int, (ap_q_mode)6, double>' into 'hls::cast_IEEE754<unsigned int, double>' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_round.h:523) automatically.
-INFO: [XFORM 203-602] Inlining function 'hls::cast_IEEE754<unsigned int, double>' into '__hls_fptoui_double_i32' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/lib_floatconversion.cpp:61) automatically.
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:48 ; elapsed = 00:02:23 . Memory (MB): peak = 1416.031 ; gain = 1366.477
-INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::mantissa' into 'hls::cast_IEEE754<unsigned int, (ap_q_mode)6, double>' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_round.h:482) automatically.
-INFO: [XFORM 203-602] Inlining function 'hls::cast_IEEE754<unsigned int, (ap_q_mode)6, double>' into 'hls::cast_IEEE754<unsigned int, double>' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/hls/hls_round.h:523) automatically.
-INFO: [XFORM 203-602] Inlining function 'hls::cast_IEEE754<unsigned int, double>' into '__hls_fptoui_double_i32' (r:/builds/2017.2/nightly/2017_06_15_1909853/src/products/hls/hls_lib/src/lib_floatconversion.cpp:61) automatically.
-INFO: [XFORM 203-602] Inlining function '__hls_fptoui_double_i32' into 'convolve' (Convolution.cpp:10) automatically.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:00 ; elapsed = 00:02:45 . Memory (MB): peak = 2022.344 ; gain = 1972.789
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:05 ; elapsed = 00:02:50 . Memory (MB): peak = 2250.605 ; gain = 2201.051
-INFO: [HLS 200-10] Starting hardware synthesis ...
-INFO: [HLS 200-10] Synthesizing 'convolve' ...
-WARNING: [SYN 201-107] Renaming port name 'convolve/in' to 'convolve/in_r' to avoid the conflict with HDL keywords or other object names.
-WARNING: [SYN 201-107] Renaming port name 'convolve/out' to 'convolve/out_r' to avoid the conflict with HDL keywords or other object names.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Implementing module 'convolve' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [SCHED 204-11] Starting scheduling ...
-WARNING: [SCHED 204-21] Estimated clock period (8.95ns) exceeds the target (target clock period: 8ns, clock uncertainty: 1ns, effective delay budget: 7ns).
-WARNING: [SCHED 204-21] The critical path consists of the following:
-	'add' operation ('sum1', Convolution.cpp:16) (0 ns)
-	'mul' operation ('tmp_11', Convolution.cpp:25) (3.36 ns)
-	'add' operation ('tmp_12', Convolution.cpp:25) (3.02 ns)
-	'getelementptr' operation ('in_addr', Convolution.cpp:25) (0 ns)
-	'load' operation ('in_load', Convolution.cpp:25) on array 'in_r' (2.57 ns)
-INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 170.353 seconds; current allocated memory: 1.995 GB.
-INFO: [BIND 205-100] Starting micro-architecture generation ...
-INFO: [BIND 205-101] Performing variable lifetime analysis.
-INFO: [BIND 205-101] Exploring resource sharing.
-INFO: [BIND 205-101] Binding ...
-INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.778 seconds; current allocated memory: 1.995 GB.
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'convolve' 
-INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-500] Setting interface mode on port 'convolve/in_r' to 's_axilite & ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'convolve/out_r' to 's_axilite & ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'convolve/krnl' to 's_axilite & ap_memory'.
-INFO: [RTGEN 206-500] Setting interface mode on function 'convolve' to 's_axilite & ap_ctrl_hs'.
-INFO: [RTGEN 206-100] Bundling port 'return', 'out_r' and 'krnl' to AXI-Lite port conv.
-INFO: [SYN 201-210] Renamed object name 'convolve_mul_6ns_7ns_12_2' to 'convolve_mul_6ns_bkb' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'convolve_ama_addmuladd_6ns_2s_7ns_6ns_12_1' to 'convolve_ama_addmcud' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'convolve_mac_muladd_8s_16s_16ns_16_1' to 'convolve_mac_muladEe' due to the length limit 20
-INFO: [RTGEN 206-100] Generating core module 'convolve_ama_addmcud': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'convolve_mac_muladEe': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'convolve_mul_6ns_bkb': 1 instance(s).
-INFO: [RTGEN 206-100] Finished creating RTL model for 'convolve'.
-INFO: [HLS 200-111]  Elapsed time: 0.812 seconds; current allocated memory: 1.996 GB.
-INFO: [RTMG 210-282] Generating pipelined core: 'convolve_mul_6ns_bkb_MulnS_0'
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:08 ; elapsed = 00:02:53 . Memory (MB): peak = 2250.605 ; gain = 2201.051
-INFO: [SYSC 207-301] Generating SystemC RTL for convolve.
-INFO: [VHDL 208-304] Generating VHDL RTL for convolve.
-INFO: [VLOG 209-307] Generating Verilog RTL for convolve.
-INFO: [HLS 200-112] Total elapsed time: 173.905 seconds; peak allocated memory: 1.996 GB.
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+INFO: [COSIM 212-302] Starting C TB testing ... 
+INFO: [COSIM 212-333] Generating C post check test bench ...
+INFO: [COSIM 212-12] Generating RTL test bench ...
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.

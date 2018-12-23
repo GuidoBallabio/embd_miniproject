@@ -1,8 +1,8 @@
-18:35:23 **** Incremental Build of configuration Debug for project miniproject ****
+10:15:26 **** Incremental Build of configuration Debug for project miniproject ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Ingenting at gøre for 'main-build'.
 
-18:35:23 Build Finished (took 234ms)
+10:15:26 Build Finished (took 312ms)
 

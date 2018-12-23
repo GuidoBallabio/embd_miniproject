@@ -1,18 +1,20 @@
 #pragma once
-#include "../types.h"
-#include "IConvolution.h"
+#include "IConvolve.h"
+#include <math.h>       /* floor */
 
+//(Image<T, i_rows, i_cols>& in, Image<T, i_rows, i_cols>& out, Image<T, k_rows, k_cols>& kernel)
 
-template<typename T_img, typename T_kernel, T_size i_rows, T_size i_cols, T_size k_rows, T_size k_cols>
-class ConvolutionSW : public IConvolution<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols>
+template<typename T_img, typename T_kernel, size_t i_rows, size_t i_cols, size_t k_rows, size_t k_cols >
+class ConvolutionSW : public IConvolve<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols >
 {
 public:
-	virtual void convolve
-	(T_img in[i_rows][i_cols], T_img out[i_rows][i_cols], T_kernel kernel[k_rows][k_cols]) override
+    // Convolution functions
+	void convolve
+	(T_img in[i_rows][i_cols], T_img out[i_rows][i_cols], T_kernel kernel[k_rows][k_cols])
 	{
-		// assert that k rows and cols are uneven
-		assert(k_rows % 2 != 0);
-		assert(k_cols % 2 != 0);
+//		 assert that k rows and cols are uneven
+//		assert(k_rows % 2 != 0);
+//		assert(k_cols % 2 != 0);
 
 		typedef unsigned int TOffset;
 

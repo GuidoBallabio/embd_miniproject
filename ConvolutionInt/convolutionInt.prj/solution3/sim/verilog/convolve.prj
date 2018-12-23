@@ -1,0 +1,8 @@
+sv xil_defaultlib "AESL_axi_slave_conv.v"
+sv xil_defaultlib "convolve.autotb.v"
+sv xil_defaultlib "convolve.v"
+sv xil_defaultlib "convolve_conv_s_axi.v"
+sv xil_defaultlib "convolve_mac_muladEe.v"
+sv xil_defaultlib "convolve_mul_6ns_bkb.v"
+sv xil_defaultlib "convolve_mul_mul_cud.v"
+

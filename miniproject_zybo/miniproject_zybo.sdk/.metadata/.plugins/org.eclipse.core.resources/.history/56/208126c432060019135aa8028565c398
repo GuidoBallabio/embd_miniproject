@@ -1,0 +1,30 @@
+#pragma once
+
+#include "../states/State.h"
+#include "../states/StateFactory.h"
+#include "IContext.h"
+#include "VideoSystem/VideoProcessingSystem.h"
+
+class EmbeddedSystemX : public IContext {
+public:
+  EmbeddedSystemX(IStateFactory *stateFactory, IVPS* vps);
+
+  ~EmbeddedSystemX();
+
+  // State machine functions
+  void quit();
+  void switchHWorSWmode();
+  void run();
+
+private:
+  // context
+  virtual IVPS *GetVPS() override;
+  virtual void ChangeState(StateTypes state) override;
+  virtual StateTypes GetState() override;
+
+  State *_state;
+  IStateFactory *_stateFactory;
+  IVPS *_vps;
+  Leds _leds;
+  StateTypes _stateType;
+};

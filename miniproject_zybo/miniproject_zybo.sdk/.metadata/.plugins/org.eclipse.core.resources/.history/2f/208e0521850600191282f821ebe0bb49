@@ -1,0 +1,17 @@
+#pragma once
+
+#include "State.h"
+
+template<typename T_img, typename T_kernel, T_size i_rows, size_t i_cols, size_t k_rows, size_t k_cols>
+class Off : public Statepublic State<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols> {
+public:
+  using Statepublic State<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols>::State;
+
+  virtual void entry() override {
+  	  Statepublic State<T_img, T_kernel, i_rows, i_cols, k_rows, k_cols>::entry();
+  }
+
+  virtual std::string Name() const override { return "Off"; }
+
+  virtual int Number() const override { return 0; }
+};

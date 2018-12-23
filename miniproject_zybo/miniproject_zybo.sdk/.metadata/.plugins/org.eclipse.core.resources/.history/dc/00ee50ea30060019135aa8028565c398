@@ -1,0 +1,22 @@
+#pragma once
+
+#include "State.h"
+
+class On : public State {
+public:
+  using State::State;
+
+  virtual void quit()
+  {
+	  context->ChangeState(StateTypes::s_Off);
+  }
+
+  virtual void Entry() override {
+	  context->ChangeState(StateTypes::s_Idle);
+  }
+
+  virtual std::string Name() const override { return "On"; }
+
+
+private:
+};

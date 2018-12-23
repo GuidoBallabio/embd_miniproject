@@ -1,0 +1,15 @@
+#pragma once
+
+#include "Idle.h"
+
+class HWMode : public Idle {
+public:
+  using Idle::Idle;
+
+
+
+  virtual std::string Name() const override { return "HWMode"; }
+
+
+private:
+};

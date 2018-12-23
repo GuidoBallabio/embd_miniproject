@@ -1,0 +1,22 @@
+#pragma once
+
+#include "On.h"
+
+template<typename T_img, typename T_kernel, T_size i_rows, size_t i_cols, size_t k_rows, size_t k_cols>
+class Idle : public On {
+public:
+  using On::On;
+
+  virtual void Run() override {
+    context->ChangeState(StateTypes::s_Running);
+  }
+
+  virtual void entry() override {
+	  State::entry();
+	  context->ChangeState(StateTypes::s_SWMode);
+  }
+
+  virtual std::string Name() const override { return "Idle"; }
+
+  virtual int Number() const override { return 2; }
+};

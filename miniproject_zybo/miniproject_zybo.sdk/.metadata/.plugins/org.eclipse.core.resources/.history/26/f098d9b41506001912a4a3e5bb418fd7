@@ -1,0 +1,70 @@
+#include "EmbeddedSystemX.h"
+#include "../GPIOs/Leds.h"
+#include <string>
+#include "VideoSystem/VideoProcessingSystem.h"
+
+EmbeddedSystemX::EmbeddedSystemX(IStateFactory* stateFactory)
+{
+	_stateFactory = stateFactory;
+	_state = _stateFactory->IdleInstance(this);
+}
+
+void EmbeddedSystemX::ChangeState(StateTypes state)
+{
+	_state->exit();
+
+	switch (state) {
+	  case StateTypes::s_On:
+	    std::cout << "Changing state from " << _state->Name()
+	              << " to On\n";
+	    _state = _stateFactory->OnInstance(this);
+	    break;
+	  case StateTypes::s_Idle:
+	    std::cout << "Changing state from " << _state->Name()
+	              << " to Idle\n";
+	    _state = _stateFactory->IdleInstance(this);
+	    break;
+	  case StateTypes::s_SWMode:
+	    std::cout << "Changing state from " << _state->Name() << " to SWMode\n";
+	    _state = _stateFactory->SWModeInstance(this);
+	    break;
+	  case StateTypes::s_HWMode:
+	    std::cout << "Changing state from " << _state->Name()
+	              << " to HWMode\n";
+	    _state = _stateFactory->HWModeInstance(this);
+	    break;
+	  case StateTypes::s_Running:
+	    std::cout << "Changing state from " << _state->Name()
+	              << " to Running\n";
+	    _state = _stateFactory->RunningInstance(this);
+	    break;
+	  case StateTypes::s_Off:
+	    std::cout << "Changing state from " << _state->Name() << " to Off\n";
+	    _state = _stateFactory->OffInstance(this);
+	    break;
+	  default:
+	    std::cout << "Default, no state is selected :(" << std::endl;
+	    break;
+	  }
+
+	  // Call the entry function on the new state
+	  _state->Entry();
+}
+
+void EmbeddedSystemX::run()
+{
+	std::cout << "Called Run at state " << _state->Name() << std::endl;
+	_state->run();
+}
+
+void EmbeddedSystemX::switchHWorSWmode()
+{
+	std::cout << "Called switchHWorSWMode at state " << _state->Name() << std::endl;
+	_state->switchHWorSWmode();
+}
+
+void EmbeddedSystemX::quit()
+{
+	std::cout << "Called quit at state " << _state->Name() << std::endl;
+	_state->quit();
+}

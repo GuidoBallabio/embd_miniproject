@@ -13,5 +13,5 @@ create_clock -period 8 -name default
 source "./convolutionInt.prj/solution1/directives.tcl"
 csim_design
 csynth_design
-cosim_design
+cosim_design -trace_level all
 export_design -format ip_catalog

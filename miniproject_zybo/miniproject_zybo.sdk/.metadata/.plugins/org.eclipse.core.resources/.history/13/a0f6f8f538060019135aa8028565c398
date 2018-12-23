@@ -1,0 +1,19 @@
+#pragma once
+
+#include "State.h"
+#include <stdlib.h>
+
+
+class Off : public State {
+public:
+  using State::State;
+
+  void Entry() {
+	  // Quit the program
+	  std::cout << "Quitting the program\r\n" << std::endl;
+	  exit(EXIT_SUCCESS);
+  }
+
+  virtual std::string Name() const override { return "Off"; }
+
+};

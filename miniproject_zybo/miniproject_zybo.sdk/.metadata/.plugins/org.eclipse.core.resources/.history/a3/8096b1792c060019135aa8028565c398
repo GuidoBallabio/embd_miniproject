@@ -1,0 +1,24 @@
+#pragma once
+
+#include "On.h"
+
+class Idle : public On {
+public:
+  using On::On;
+
+  void switchHWorSWmode()
+  {
+	  // switch between the modes
+	  if (context->GetState() == StateTypes::s_SWMode)
+		  context->ChangeState(StateTypes::s_HWMode);
+	  else
+		  context->ChangeState(StateTypes::s_SWMode);
+  }
+
+  void Entry()  {
+	  context->ChangeState(StateTypes::s_SWMode);
+  }
+
+  virtual std::string Name() const override { return "Idle"; }
+
+};
